@@ -1,0 +1,6 @@
+framework module Pods_AIFC_projectUITests {
+  umbrella header "Pods-AIFC projectUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

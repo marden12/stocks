@@ -1,0 +1,1438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11F32FC8FF060C154B838DE0 /* Pods_AIFC_projectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7322EBA26E71413043AF85B9 /* Pods_AIFC_projectTests.framework */; };
+		1813E7DF1F17D87F001BE892 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1813E6DF1F17D87E001BE892 /* Cartography.framework */; };
+		1813E7E01F17D87F001BE892 /* Pods_AIFC_projectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1813E6E01F17D87E001BE892 /* Pods_AIFC_projectTests.framework */; };
+		1813E7E11F17D87F001BE892 /* Pods_AIFC_projectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1813E6E11F17D87E001BE892 /* Pods_AIFC_projectUITests.framework */; };
+		1813E7E21F17D87F001BE892 /* ScrollableGraphView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1813E6E21F17D87E001BE892 /* ScrollableGraphView.framework */; };
+		182DCEB91F20A6E8009B3BF3 /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DCEB81F20A6E8009B3BF3 /* ShakeAnimation.swift */; };
+		182DCEBB1F20B838009B3BF3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DCEBA1F20B838009B3BF3 /* SearchViewController.swift */; };
+		182DCEBD1F20B85F009B3BF3 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DCEBC1F20B85F009B3BF3 /* SearchTableViewCell.swift */; };
+		182DCEBF1F20B8AD009B3BF3 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DCEBE1F20B8AD009B3BF3 /* StockModel.swift */; };
+		182DCEC31F276519009B3BF3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DCEC21F276519009B3BF3 /* QuizViewController.swift */; };
+		1840496F1F39A25B00EC7C47 /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840496E1F39A25B00EC7C47 /* LineGraphView.swift */; };
+		184558F01F289ECD00422DEE /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184558EF1F289ECD00422DEE /* Questions.swift */; };
+		18479AE01F286C1900AED6F0 /* AnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18479ADF1F286C1900AED6F0 /* AnswersTableViewCell.swift */; };
+		18479AE21F2882ED00AED6F0 /* jsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 18479AE11F2882ED00AED6F0 /* jsonFile.json */; };
+		1849A2FE1F0CA0C80027159F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849A2FD1F0CA0C80027159F /* AppDelegate.swift */; };
+		1849A3061F0CA0C80027159F /* AIFC_project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1849A3041F0CA0C80027159F /* AIFC_project.xcdatamodeld */; };
+		1849A3081F0CA0C80027159F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1849A3071F0CA0C80027159F /* Assets.xcassets */; };
+		1849A30B1F0CA0C80027159F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1849A3091F0CA0C80027159F /* LaunchScreen.storyboard */; };
+		1849A3161F0CA0C80027159F /* AIFC_projectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849A3151F0CA0C80027159F /* AIFC_projectTests.swift */; };
+		1849A3211F0CA0C80027159F /* AIFC_projectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849A3201F0CA0C80027159F /* AIFC_projectUITests.swift */; };
+		1849A3341F0CA23A0027159F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849A3331F0CA23A0027159F /* Colors.swift */; };
+		184ABE081F2F1EDD00B6E0BC /* OwnStocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184ABE071F2F1EDD00B6E0BC /* OwnStocks.swift */; };
+		184BC1C21F3431FB007B8B9A /* SellStocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BC1C11F3431FB007B8B9A /* SellStocksViewController.swift */; };
+		1853FD341F1E115F00E30812 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853FD331F1E115F00E30812 /* RegistrationViewController.swift */; };
+		1853FD3A1F1E15BA00E30812 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853FD391F1E15BA00E30812 /* AuthService.swift */; };
+		1853FD3C1F1E19EC00E30812 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1853FD3B1F1E19EC00E30812 /* GoogleService-Info.plist */; };
+		1853FD401F1F4E5C00E30812 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853FD3F1F1F4E5C00E30812 /* CustomTextField.swift */; };
+		1853FD421F1F502400E30812 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853FD411F1F502400E30812 /* LoginViewController.swift */; };
+		18584EEB1F308E8800E18EA5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18584EEA1F308E8800E18EA5 /* MenuView.swift */; };
+		18584EED1F31D09600E18EA5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18584EEC1F31D09600E18EA5 /* MenuTableViewCell.swift */; };
+		185ED6561F29D48B00856038 /* CustomAnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185ED6551F29D48B00856038 /* CustomAnswerButton.swift */; };
+		185ED6581F2B2D4A00856038 /* TradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185ED6571F2B2D4A00856038 /* TradeViewController.swift */; };
+		185ED65F1F2B428F00856038 /* NumbersKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185ED65D1F2B428F00856038 /* NumbersKeyboard.xib */; };
+		185ED6601F2B428F00856038 /* NumbersKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185ED65E1F2B428F00856038 /* NumbersKeyboardView.swift */; };
+		18B25BB11F12373900274CF0 /* OwnStocksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BB01F12373900274CF0 /* OwnStocksTableViewCell.swift */; };
+		18B25BB51F13988000274CF0 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BB41F13988000274CF0 /* CompanyViewController.swift */; };
+		18B25BBA1F14978C00274CF0 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BB91F14978C00274CF0 /* DateCollectionViewCell.swift */; };
+		18B25BBE1F15E32D00274CF0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BBD1F15E32D00274CF0 /* ProfileViewController.swift */; };
+		18B25BC21F1608A700274CF0 /* CustomGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BC11F1608A700274CF0 /* CustomGraphView.swift */; };
+		18B25BC41F16155400274CF0 /* CustomCashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BC31F16155400274CF0 /* CustomCashView.swift */; };
+		18B25BCA1F1636E900274CF0 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B25BC81F1636DD00274CF0 /* OpenSans-Light.ttf */; };
+		18B25BCB1F1636EB00274CF0 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B25BC91F1636DD00274CF0 /* OpenSans-Regular.ttf */; };
+		18B25BCF1F17446600274CF0 /* CompaniesIncomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BCE1F17446600274CF0 /* CompaniesIncomeView.swift */; };
+		18B25BD11F17840100274CF0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BD01F17840100274CF0 /* NewsTableViewCell.swift */; };
+		47469A442F5CC5260F77C182 /* Pods_AIFC_projectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B83D5090F385109FCC1CACC /* Pods_AIFC_projectUITests.framework */; };
+		B0D88900EA614A21B0A74B59 /* Pods_AIFC_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFA01886E22FE9DB7E8746F /* Pods_AIFC_project.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1849A3121F0CA0C80027159F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1849A2F21F0CA0C80027159F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1849A2F91F0CA0C80027159F;
+			remoteInfo = "AIFC project";
+		};
+		1849A31D1F0CA0C80027159F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1849A2F21F0CA0C80027159F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1849A2F91F0CA0C80027159F;
+			remoteInfo = "AIFC project";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E5FA2AEFAF79D2F60B858D4 /* Pods-AIFC project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC project/Pods-AIFC project.debug.xcconfig"; sourceTree = "<group>"; };
+		1813E6DF1F17D87E001BE892 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = "../../Library/Developer/Xcode/DerivedData/AIFC_project-cnsrethkzxdoxldsgwwdwsixpjuy/Build/Products/Debug-iphoneos/Cartography/Cartography.framework"; sourceTree = "<group>"; };
+		1813E6E01F17D87E001BE892 /* Pods_AIFC_projectTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_AIFC_projectTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_AIFC_projectTests.framework"; sourceTree = "<group>"; };
+		1813E6E11F17D87E001BE892 /* Pods_AIFC_projectUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_AIFC_projectUITests.framework; path = "Pods/../build/Debug-iphoneos/Pods_AIFC_projectUITests.framework"; sourceTree = "<group>"; };
+		1813E6E21F17D87E001BE892 /* ScrollableGraphView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScrollableGraphView.framework; path = "../../Library/Developer/Xcode/DerivedData/AIFC_project-cnsrethkzxdoxldsgwwdwsixpjuy/Build/Products/Debug-iphoneos/ScrollableGraphView/ScrollableGraphView.framework"; sourceTree = "<group>"; };
+		1813E6E31F17D87E001BE892 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		1813E6E41F17D87E001BE892 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		1813E6E51F17D87E001BE892 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		1813E6E61F17D87E001BE892 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		1813E6E71F17D87E001BE892 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		1813E6E81F17D87E001BE892 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		1813E6E91F17D87E001BE892 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1813E6EA1F17D87E001BE892 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		1813E6EB1F17D87E001BE892 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1813E6EC1F17D87E001BE892 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		1813E6ED1F17D87E001BE892 /* CallKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
+		1813E6EE1F17D87E001BE892 /* CarrierBundleUtilities.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = CarrierBundleUtilities.tbd; path = usr/lib/CarrierBundleUtilities.tbd; sourceTree = SDKROOT; };
+		1813E6EF1F17D87E001BE892 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1813E6F01F17D87E001BE892 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		1813E6F11F17D87E001BE892 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		1813E6F21F17D87E001BE892 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		1813E6F31F17D87E001BE892 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		1813E6F41F17D87E001BE892 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		1813E6F51F17D87E001BE892 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		1813E6F61F17D87E001BE892 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1813E6F71F17D87E001BE892 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		1813E6F81F17D87E001BE892 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1813E6F91F17D87E001BE892 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		1813E6FA1F17D87E001BE892 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1813E6FB1F17D87E001BE892 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1813E6FC1F17D87E001BE892 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		1813E6FD1F17D87E001BE892 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		1813E6FE1F17D87E001BE892 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
+		1813E6FF1F17D87E001BE892 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		1813E7001F17D87E001BE892 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		1813E7011F17D87E001BE892 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		1813E7021F17D87E001BE892 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		1813E7031F17D87E001BE892 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		1813E7041F17D87E001BE892 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		1813E7051F17D87E001BE892 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1813E7061F17D87E001BE892 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		1813E7071F17D87E001BE892 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		1813E7081F17D87E001BE892 /* GameplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameplayKit.framework; path = System/Library/Frameworks/GameplayKit.framework; sourceTree = SDKROOT; };
+		1813E7091F17D87E001BE892 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		1813E70A1F17D87E001BE892 /* GSS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GSS.framework; path = System/Library/Frameworks/GSS.framework; sourceTree = SDKROOT; };
+		1813E70B1F17D87E001BE892 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		1813E70C1F17D87E001BE892 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
+		1813E70D1F17D87E001BE892 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		1813E70E1F17D87E001BE892 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		1813E70F1F17D87E001BE892 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		1813E7101F17D87E001BE892 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		1813E7111F17D87E001BE892 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		1813E7121F17D87E001BE892 /* IOABPLib.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = IOABPLib.tbd; path = usr/lib/IOABPLib.tbd; sourceTree = SDKROOT; };
+		1813E7131F17D87E001BE892 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		1813E7141F17D87E001BE892 /* libAccessibility.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAccessibility.tbd; path = usr/lib/libAccessibility.tbd; sourceTree = SDKROOT; };
+		1813E7151F17D87E001BE892 /* libacmobileshim.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libacmobileshim.tbd; path = usr/lib/libacmobileshim.tbd; sourceTree = SDKROOT; };
+		1813E7161F17D87E001BE892 /* libafc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libafc.tbd; path = usr/lib/libafc.tbd; sourceTree = SDKROOT; };
+		1813E7171F17D87E001BE892 /* libamsupport.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libamsupport.tbd; path = usr/lib/libamsupport.tbd; sourceTree = SDKROOT; };
+		1813E7181F17D87E001BE892 /* libAppPatch.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAppPatch.tbd; path = usr/lib/libAppPatch.tbd; sourceTree = SDKROOT; };
+		1813E7191F17D87E001BE892 /* libarchive.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libarchive.2.tbd; path = usr/lib/libarchive.2.tbd; sourceTree = SDKROOT; };
+		1813E71A1F17D87E001BE892 /* libarchive.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libarchive.tbd; path = usr/lib/libarchive.tbd; sourceTree = SDKROOT; };
+		1813E71B1F17D87E001BE892 /* libARI.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libARI.tbd; path = usr/lib/libARI.tbd; sourceTree = SDKROOT; };
+		1813E71C1F17D87E001BE892 /* libARIServer.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libARIServer.tbd; path = usr/lib/libARIServer.tbd; sourceTree = SDKROOT; };
+		1813E71D1F17D87E001BE892 /* libassertion_launchd.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libassertion_launchd.tbd; path = usr/lib/libassertion_launchd.tbd; sourceTree = SDKROOT; };
+		1813E71E1F17D87E001BE892 /* libate.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libate.tbd; path = usr/lib/libate.tbd; sourceTree = SDKROOT; };
+		1813E71F1F17D87E001BE892 /* libauthinstall.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libauthinstall.tbd; path = usr/lib/libauthinstall.tbd; sourceTree = SDKROOT; };
+		1813E7201F17D87E001BE892 /* libAWDProtobufBluetooth.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDProtobufBluetooth.tbd; path = usr/lib/libAWDProtobufBluetooth.tbd; sourceTree = SDKROOT; };
+		1813E7211F17D87E001BE892 /* libAWDProtobufFacetime.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDProtobufFacetime.tbd; path = usr/lib/libAWDProtobufFacetime.tbd; sourceTree = SDKROOT; };
+		1813E7221F17D87E001BE892 /* libAWDProtobufFacetimeiMessage.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDProtobufFacetimeiMessage.tbd; path = usr/lib/libAWDProtobufFacetimeiMessage.tbd; sourceTree = SDKROOT; };
+		1813E7231F17D87E001BE892 /* libAWDProtobufGCK.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDProtobufGCK.tbd; path = usr/lib/libAWDProtobufGCK.tbd; sourceTree = SDKROOT; };
+		1813E7241F17D87E001BE892 /* libAWDProtobufLocation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDProtobufLocation.tbd; path = usr/lib/libAWDProtobufLocation.tbd; sourceTree = SDKROOT; };
+		1813E7251F17D87E001BE892 /* libAWDSupport.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDSupport.tbd; path = usr/lib/libAWDSupport.tbd; sourceTree = SDKROOT; };
+		1813E7261F17D87E001BE892 /* libAWDSupportFramework.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDSupportFramework.tbd; path = usr/lib/libAWDSupportFramework.tbd; sourceTree = SDKROOT; };
+		1813E7271F17D87E001BE892 /* libAXSafeCategoryBundle.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAXSafeCategoryBundle.tbd; path = usr/lib/libAXSafeCategoryBundle.tbd; sourceTree = SDKROOT; };
+		1813E7281F17D87E001BE892 /* libAXSpeechManager.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAXSpeechManager.tbd; path = usr/lib/libAXSpeechManager.tbd; sourceTree = SDKROOT; };
+		1813E7291F17D87E001BE892 /* libBasebandManager.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libBasebandManager.tbd; path = usr/lib/libBasebandManager.tbd; sourceTree = SDKROOT; };
+		1813E72A1F17D87E001BE892 /* libBasebandUSB.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libBasebandUSB.tbd; path = usr/lib/libBasebandUSB.tbd; sourceTree = SDKROOT; };
+		1813E72B1F17D87E001BE892 /* libbsm.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbsm.0.tbd; path = usr/lib/libbsm.0.tbd; sourceTree = SDKROOT; };
+		1813E72C1F17D87E001BE892 /* libbsm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbsm.tbd; path = usr/lib/libbsm.tbd; sourceTree = SDKROOT; };
+		1813E72D1F17D87E001BE892 /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
+		1813E72E1F17D87E001BE892 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		1813E72F1F17D87E001BE892 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		1813E7301F17D87E001BE892 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		1813E7311F17D87E001BE892 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		1813E7321F17D87E001BE892 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		1813E7331F17D87E001BE892 /* libcharset.1.0.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcharset.1.0.0.tbd; path = usr/lib/libcharset.1.0.0.tbd; sourceTree = SDKROOT; };
+		1813E7341F17D87E001BE892 /* libcharset.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcharset.1.tbd; path = usr/lib/libcharset.1.tbd; sourceTree = SDKROOT; };
+		1813E7351F17D87E001BE892 /* libcharset.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcharset.tbd; path = usr/lib/libcharset.tbd; sourceTree = SDKROOT; };
+		1813E7361F17D87E001BE892 /* libChineseTokenizer.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libChineseTokenizer.tbd; path = usr/lib/libChineseTokenizer.tbd; sourceTree = SDKROOT; };
+		1813E7371F17D87F001BE892 /* libcmph.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcmph.tbd; path = usr/lib/libcmph.tbd; sourceTree = SDKROOT; };
+		1813E7381F17D87F001BE892 /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
+		1813E7391F17D87F001BE892 /* libcoretls.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcoretls.tbd; path = usr/lib/libcoretls.tbd; sourceTree = SDKROOT; };
+		1813E73A1F17D87F001BE892 /* libcoretls_cfhelpers.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcoretls_cfhelpers.tbd; path = usr/lib/libcoretls_cfhelpers.tbd; sourceTree = SDKROOT; };
+		1813E73B1F17D87F001BE892 /* libCRFSuite.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libCRFSuite.tbd; path = usr/lib/libCRFSuite.tbd; sourceTree = SDKROOT; };
+		1813E73C1F17D87F001BE892 /* libCRFSuite0.12.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libCRFSuite0.12.tbd; path = usr/lib/libCRFSuite0.12.tbd; sourceTree = SDKROOT; };
+		1813E73D1F17D87F001BE892 /* libCTLogHelper.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libCTLogHelper.tbd; path = usr/lib/libCTLogHelper.tbd; sourceTree = SDKROOT; };
+		1813E73E1F17D87F001BE892 /* libcupolicy.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcupolicy.tbd; path = usr/lib/libcupolicy.tbd; sourceTree = SDKROOT; };
+		1813E73F1F17D87F001BE892 /* libcurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurses.tbd; path = usr/lib/libcurses.tbd; sourceTree = SDKROOT; };
+		1813E7401F17D87F001BE892 /* libdbm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdbm.tbd; path = usr/lib/libdbm.tbd; sourceTree = SDKROOT; };
+		1813E7411F17D87F001BE892 /* libDHCPServer.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libDHCPServer.A.tbd; path = usr/lib/libDHCPServer.A.tbd; sourceTree = SDKROOT; };
+		1813E7421F17D87F001BE892 /* libDHCPServer.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libDHCPServer.tbd; path = usr/lib/libDHCPServer.tbd; sourceTree = SDKROOT; };
+		1813E7431F17D87F001BE892 /* libdl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdl.tbd; path = usr/lib/libdl.tbd; sourceTree = SDKROOT; };
+		1813E7441F17D87F001BE892 /* libdns_services.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdns_services.tbd; path = usr/lib/libdns_services.tbd; sourceTree = SDKROOT; };
+		1813E7451F17D87F001BE892 /* libdscsym.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdscsym.tbd; path = usr/lib/libdscsym.tbd; sourceTree = SDKROOT; };
+		1813E7461F17D87F001BE892 /* libedit.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libedit.2.tbd; path = usr/lib/libedit.2.tbd; sourceTree = SDKROOT; };
+		1813E7471F17D87F001BE892 /* libedit.3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libedit.3.0.tbd; path = usr/lib/libedit.3.0.tbd; sourceTree = SDKROOT; };
+		1813E7481F17D87F001BE892 /* libedit.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libedit.3.tbd; path = usr/lib/libedit.3.tbd; sourceTree = SDKROOT; };
+		1813E7491F17D87F001BE892 /* libedit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libedit.tbd; path = usr/lib/libedit.tbd; sourceTree = SDKROOT; };
+		1813E74A1F17D87F001BE892 /* libenergytrace.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libenergytrace.tbd; path = usr/lib/libenergytrace.tbd; sourceTree = SDKROOT; };
+		1813E74B1F17D87F001BE892 /* libETLDIAGLoggingDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDIAGLoggingDynamic.tbd; path = usr/lib/libETLDIAGLoggingDynamic.tbd; sourceTree = SDKROOT; };
+		1813E74C1F17D87F001BE892 /* libETLDLFDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDLFDynamic.tbd; path = usr/lib/libETLDLFDynamic.tbd; sourceTree = SDKROOT; };
+		1813E74D1F17D87F001BE892 /* libETLDLOADCoreDumpDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDLOADCoreDumpDynamic.tbd; path = usr/lib/libETLDLOADCoreDumpDynamic.tbd; sourceTree = SDKROOT; };
+		1813E74E1F17D87F001BE892 /* libETLDLOADDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDLOADDynamic.tbd; path = usr/lib/libETLDLOADDynamic.tbd; sourceTree = SDKROOT; };
+		1813E74F1F17D87F001BE892 /* libETLDMCDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDMCDynamic.tbd; path = usr/lib/libETLDMCDynamic.tbd; sourceTree = SDKROOT; };
+		1813E7501F17D87F001BE892 /* libETLDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDynamic.tbd; path = usr/lib/libETLDynamic.tbd; sourceTree = SDKROOT; };
+		1813E7511F17D87F001BE892 /* libETLEFSDumpDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLEFSDumpDynamic.tbd; path = usr/lib/libETLEFSDumpDynamic.tbd; sourceTree = SDKROOT; };
+		1813E7521F17D87F001BE892 /* libETLSAHDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLSAHDynamic.tbd; path = usr/lib/libETLSAHDynamic.tbd; sourceTree = SDKROOT; };
+		1813E7531F17D87F001BE892 /* libETLTransportDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLTransportDynamic.tbd; path = usr/lib/libETLTransportDynamic.tbd; sourceTree = SDKROOT; };
+		1813E7541F17D87F001BE892 /* libexslt.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libexslt.0.tbd; path = usr/lib/libexslt.0.tbd; sourceTree = SDKROOT; };
+		1813E7551F17D87F001BE892 /* libexslt.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libexslt.tbd; path = usr/lib/libexslt.tbd; sourceTree = SDKROOT; };
+		1813E7561F17D87F001BE892 /* libextension.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libextension.tbd; path = usr/lib/libextension.tbd; sourceTree = SDKROOT; };
+		1813E7571F17D87F001BE892 /* libform.5.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libform.5.4.tbd; path = usr/lib/libform.5.4.tbd; sourceTree = SDKROOT; };
+		1813E7581F17D87F001BE892 /* libform.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libform.tbd; path = usr/lib/libform.tbd; sourceTree = SDKROOT; };
+		1813E7591F17D87F001BE892 /* libgcc_s.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libgcc_s.1.tbd; path = usr/lib/libgcc_s.1.tbd; sourceTree = SDKROOT; };
+		1813E75A1F17D87F001BE892 /* libgermantok.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libgermantok.tbd; path = usr/lib/libgermantok.tbd; sourceTree = SDKROOT; };
+		1813E75B1F17D87F001BE892 /* libH5Dynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libH5Dynamic.tbd; path = usr/lib/libH5Dynamic.tbd; sourceTree = SDKROOT; };
+		1813E75C1F17D87F001BE892 /* libHDLCDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libHDLCDynamic.tbd; path = usr/lib/libHDLCDynamic.tbd; sourceTree = SDKROOT; };
+		1813E75D1F17D87F001BE892 /* libheimdal-asn1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libheimdal-asn1.tbd"; path = "usr/lib/libheimdal-asn1.tbd"; sourceTree = SDKROOT; };
+		1813E75E1F17D87F001BE892 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		1813E75F1F17D87F001BE892 /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
+		1813E7601F17D87F001BE892 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		1813E7611F17D87F001BE892 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
+		1813E7621F17D87F001BE892 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		1813E7631F17D87F001BE892 /* libInFieldCollection.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libInFieldCollection.tbd; path = usr/lib/libInFieldCollection.tbd; sourceTree = SDKROOT; };
+		1813E7641F17D87F001BE892 /* libinfo.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libinfo.tbd; path = usr/lib/libinfo.tbd; sourceTree = SDKROOT; };
+		1813E7651F17D87F001BE892 /* libIOAccessoryManager.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libIOAccessoryManager.tbd; path = usr/lib/libIOAccessoryManager.tbd; sourceTree = SDKROOT; };
+		1813E7661F17D87F001BE892 /* libipconfig.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libipconfig.tbd; path = usr/lib/libipconfig.tbd; sourceTree = SDKROOT; };
+		1813E7671F17D87F001BE892 /* libipsec.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libipsec.A.tbd; path = usr/lib/libipsec.A.tbd; sourceTree = SDKROOT; };
+		1813E7681F17D87F001BE892 /* libipsec.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libipsec.tbd; path = usr/lib/libipsec.tbd; sourceTree = SDKROOT; };
+		1813E7691F17D87F001BE892 /* libktrace.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libktrace.tbd; path = usr/lib/libktrace.tbd; sourceTree = SDKROOT; };
+		1813E76A1F17D87F001BE892 /* liblangid.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblangid.tbd; path = usr/lib/liblangid.tbd; sourceTree = SDKROOT; };
+		1813E76B1F17D87F001BE892 /* libLLVM-C.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libLLVM-C.tbd"; path = "usr/lib/libLLVM-C.tbd"; sourceTree = SDKROOT; };
+		1813E76C1F17D87F001BE892 /* libLLVM.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libLLVM.tbd; path = usr/lib/libLLVM.tbd; sourceTree = SDKROOT; };
+		1813E76D1F17D87F001BE892 /* liblockdown.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblockdown.tbd; path = usr/lib/liblockdown.tbd; sourceTree = SDKROOT; };
+		1813E76E1F17D87F001BE892 /* liblzma.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblzma.5.tbd; path = usr/lib/liblzma.5.tbd; sourceTree = SDKROOT; };
+		1813E76F1F17D87F001BE892 /* liblzma.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblzma.tbd; path = usr/lib/liblzma.tbd; sourceTree = SDKROOT; };
+		1813E7701F17D87F001BE892 /* libm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libm.tbd; path = usr/lib/libm.tbd; sourceTree = SDKROOT; };
+		1813E7711F17D87F001BE892 /* libmarisa.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmarisa.tbd; path = usr/lib/libmarisa.tbd; sourceTree = SDKROOT; };
+		1813E7721F17D87F001BE892 /* libMatch.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMatch.1.tbd; path = usr/lib/libMatch.1.tbd; sourceTree = SDKROOT; };
+		1813E7731F17D87F001BE892 /* libMatch.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMatch.tbd; path = usr/lib/libMatch.tbd; sourceTree = SDKROOT; };
+		1813E7741F17D87F001BE892 /* libmav_ipc_router_dynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmav_ipc_router_dynamic.tbd; path = usr/lib/libmav_ipc_router_dynamic.tbd; sourceTree = SDKROOT; };
+		1813E7751F17D87F001BE892 /* libmecab_em.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmecab_em.tbd; path = usr/lib/libmecab_em.tbd; sourceTree = SDKROOT; };
+		1813E7761F17D87F001BE892 /* libmecabra.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmecabra.tbd; path = usr/lib/libmecabra.tbd; sourceTree = SDKROOT; };
+		1813E7771F17D87F001BE892 /* libmis.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmis.tbd; path = usr/lib/libmis.tbd; sourceTree = SDKROOT; };
+		1813E7781F17D87F001BE892 /* libMobileCheckpoint.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMobileCheckpoint.tbd; path = usr/lib/libMobileCheckpoint.tbd; sourceTree = SDKROOT; };
+		1813E7791F17D87F001BE892 /* libMobileGestalt.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMobileGestalt.tbd; path = usr/lib/libMobileGestalt.tbd; sourceTree = SDKROOT; };
+		1813E77A1F17D87F001BE892 /* libMobileGestaltExtensions.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMobileGestaltExtensions.tbd; path = usr/lib/libMobileGestaltExtensions.tbd; sourceTree = SDKROOT; };
+		1813E77B1F17D87F001BE892 /* libncurses.5.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.5.4.tbd; path = usr/lib/libncurses.5.4.tbd; sourceTree = SDKROOT; };
+		1813E77C1F17D87F001BE892 /* libncurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.tbd; path = usr/lib/libncurses.tbd; sourceTree = SDKROOT; };
+		1813E77D1F17D87F001BE892 /* libnetwork.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libnetwork.tbd; path = usr/lib/libnetwork.tbd; sourceTree = SDKROOT; };
+		1813E77E1F17D87F001BE892 /* libnfshared.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libnfshared.tbd; path = usr/lib/libnfshared.tbd; sourceTree = SDKROOT; };
+		1813E77F1F17D87F001BE892 /* libobjc.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libobjc.A.tbd; path = usr/lib/libobjc.A.tbd; sourceTree = SDKROOT; };
+		1813E7801F17D87F001BE892 /* libobjc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libobjc.tbd; path = usr/lib/libobjc.tbd; sourceTree = SDKROOT; };
+		1813E7811F17D87F001BE892 /* libomadm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libomadm.tbd; path = usr/lib/libomadm.tbd; sourceTree = SDKROOT; };
+		1813E7821F17D87F001BE892 /* libPCITransport.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libPCITransport.tbd; path = usr/lib/libPCITransport.tbd; sourceTree = SDKROOT; };
+		1813E7831F17D87F001BE892 /* libpoll.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpoll.tbd; path = usr/lib/libpoll.tbd; sourceTree = SDKROOT; };
+		1813E7841F17D87F001BE892 /* libPPM.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libPPM.tbd; path = usr/lib/libPPM.tbd; sourceTree = SDKROOT; };
+		1813E7851F17D87F001BE892 /* libprequelite.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libprequelite.tbd; path = usr/lib/libprequelite.tbd; sourceTree = SDKROOT; };
+		1813E7861F17D87F001BE892 /* libproc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libproc.tbd; path = usr/lib/libproc.tbd; sourceTree = SDKROOT; };
+		1813E7871F17D87F001BE892 /* libprotobuf.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libprotobuf.tbd; path = usr/lib/libprotobuf.tbd; sourceTree = SDKROOT; };
+		1813E7881F17D87F001BE892 /* libpthread.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpthread.tbd; path = usr/lib/libpthread.tbd; sourceTree = SDKROOT; };
+		1813E7891F17D87F001BE892 /* libQLCharts.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libQLCharts.tbd; path = usr/lib/libQLCharts.tbd; sourceTree = SDKROOT; };
+		1813E78A1F17D87F001BE892 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		1813E78B1F17D87F001BE892 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		1813E78C1F17D87F001BE892 /* librpcsvc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = librpcsvc.tbd; path = usr/lib/librpcsvc.tbd; sourceTree = SDKROOT; };
+		1813E78D1F17D87F001BE892 /* libsandbox.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsandbox.1.tbd; path = usr/lib/libsandbox.1.tbd; sourceTree = SDKROOT; };
+		1813E78E1F17D87F001BE892 /* libsandbox.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsandbox.tbd; path = usr/lib/libsandbox.tbd; sourceTree = SDKROOT; };
+		1813E78F1F17D87F001BE892 /* libsp.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsp.tbd; path = usr/lib/libsp.tbd; sourceTree = SDKROOT; };
+		1813E7901F17D87F001BE892 /* libspindump.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libspindump.tbd; path = usr/lib/libspindump.tbd; sourceTree = SDKROOT; };
+		1813E7911F17D87F001BE892 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		1813E7921F17D87F001BE892 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		1813E7931F17D87F001BE892 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		1813E7941F17D87F001BE892 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		1813E7951F17D87F001BE892 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		1813E7961F17D87F001BE892 /* libsysdiagnose.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsysdiagnose.tbd; path = usr/lib/libsysdiagnose.tbd; sourceTree = SDKROOT; };
+		1813E7971F17D87F001BE892 /* libSystem.B.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B.tbd; path = usr/lib/libSystem.B.tbd; sourceTree = SDKROOT; };
+		1813E7981F17D87F001BE892 /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
+		1813E7991F17D87F001BE892 /* libsystemstats.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsystemstats.tbd; path = usr/lib/libsystemstats.tbd; sourceTree = SDKROOT; };
+		1813E79A1F17D87F001BE892 /* libtailspin.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libtailspin.tbd; path = usr/lib/libtailspin.tbd; sourceTree = SDKROOT; };
+		1813E79B1F17D87F001BE892 /* libTelephonyBasebandBulkUSBDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyBasebandBulkUSBDynamic.tbd; path = usr/lib/libTelephonyBasebandBulkUSBDynamic.tbd; sourceTree = SDKROOT; };
+		1813E79C1F17D87F001BE892 /* libTelephonyBasebandDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyBasebandDynamic.tbd; path = usr/lib/libTelephonyBasebandDynamic.tbd; sourceTree = SDKROOT; };
+		1813E79D1F17D87F001BE892 /* libTelephonyDebugDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyDebugDynamic.tbd; path = usr/lib/libTelephonyDebugDynamic.tbd; sourceTree = SDKROOT; };
+		1813E79E1F17D87F001BE892 /* libTelephonyIOKitDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyIOKitDynamic.tbd; path = usr/lib/libTelephonyIOKitDynamic.tbd; sourceTree = SDKROOT; };
+		1813E79F1F17D87F001BE892 /* libTelephonyUSBDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyUSBDynamic.tbd; path = usr/lib/libTelephonyUSBDynamic.tbd; sourceTree = SDKROOT; };
+		1813E7A01F17D87F001BE892 /* libTelephonyUtilDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyUtilDynamic.tbd; path = usr/lib/libTelephonyUtilDynamic.tbd; sourceTree = SDKROOT; };
+		1813E7A11F17D87F001BE892 /* libThaiTokenizer.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libThaiTokenizer.tbd; path = usr/lib/libThaiTokenizer.tbd; sourceTree = SDKROOT; };
+		1813E7A21F17D87F001BE892 /* libtidy.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libtidy.A.tbd; path = usr/lib/libtidy.A.tbd; sourceTree = SDKROOT; };
+		1813E7A31F17D87F001BE892 /* libtidy.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libtidy.tbd; path = usr/lib/libtidy.tbd; sourceTree = SDKROOT; };
+		1813E7A41F17D87F001BE892 /* libtzupdate.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libtzupdate.tbd; path = usr/lib/libtzupdate.tbd; sourceTree = SDKROOT; };
+		1813E7A51F17D87F001BE892 /* libutil.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libutil.tbd; path = usr/lib/libutil.tbd; sourceTree = SDKROOT; };
+		1813E7A61F17D87F001BE892 /* libutil1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libutil1.0.tbd; path = usr/lib/libutil1.0.tbd; sourceTree = SDKROOT; };
+		1813E7A71F17D87F001BE892 /* libWAPI.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libWAPI.tbd; path = usr/lib/libWAPI.tbd; sourceTree = SDKROOT; };
+		1813E7A81F17D87F001BE892 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		1813E7A91F17D87F001BE892 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		1813E7AA1F17D87F001BE892 /* libxslt.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxslt.1.tbd; path = usr/lib/libxslt.1.tbd; sourceTree = SDKROOT; };
+		1813E7AB1F17D87F001BE892 /* libxslt.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxslt.tbd; path = usr/lib/libxslt.tbd; sourceTree = SDKROOT; };
+		1813E7AC1F17D87F001BE892 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		1813E7AD1F17D87F001BE892 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		1813E7AE1F17D87F001BE892 /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
+		1813E7AF1F17D87F001BE892 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
+		1813E7B01F17D87F001BE892 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1813E7B11F17D87F001BE892 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		1813E7B21F17D87F001BE892 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1813E7B31F17D87F001BE892 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
+		1813E7B41F17D87F001BE892 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		1813E7B51F17D87F001BE892 /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
+		1813E7B61F17D87F001BE892 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		1813E7B71F17D87F001BE892 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1813E7B81F17D87F001BE892 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		1813E7B91F17D87F001BE892 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		1813E7BA1F17D87F001BE892 /* MetalPerformanceShaders.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShaders.framework; path = System/Library/Frameworks/MetalPerformanceShaders.framework; sourceTree = SDKROOT; };
+		1813E7BB1F17D87F001BE892 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1813E7BC1F17D87F001BE892 /* ModelIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ModelIO.framework; path = System/Library/Frameworks/ModelIO.framework; sourceTree = SDKROOT; };
+		1813E7BD1F17D87F001BE892 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		1813E7BE1F17D87F001BE892 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		1813E7BF1F17D87F001BE892 /* NewsstandKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NewsstandKit.framework; path = System/Library/Frameworks/NewsstandKit.framework; sourceTree = SDKROOT; };
+		1813E7C01F17D87F001BE892 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		1813E7C11F17D87F001BE892 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		1813E7C21F17D87F001BE892 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		1813E7C31F17D87F001BE892 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		1813E7C41F17D87F001BE892 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		1813E7C51F17D87F001BE892 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		1813E7C61F17D87F001BE892 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		1813E7C71F17D87F001BE892 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1813E7C81F17D87F001BE892 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		1813E7C91F17D87F001BE892 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		1813E7CA1F17D87F001BE892 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		1813E7CB1F17D87F001BE892 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		1813E7CC1F17D87F001BE892 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1813E7CD1F17D87F001BE892 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		1813E7CE1F17D87F001BE892 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		1813E7CF1F17D87F001BE892 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		1813E7D01F17D87F001BE892 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1813E7D11F17D87F001BE892 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1813E7D21F17D87F001BE892 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		1813E7D31F17D87F001BE892 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1813E7D41F17D87F001BE892 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		1813E7D51F17D87F001BE892 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		1813E7D61F17D87F001BE892 /* VideoSubscriberAccount.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoSubscriberAccount.framework; path = System/Library/Frameworks/VideoSubscriberAccount.framework; sourceTree = SDKROOT; };
+		1813E7D71F17D87F001BE892 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		1813E7D81F17D87F001BE892 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		1813E7D91F17D87F001BE892 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		1813E7DA1F17D87F001BE892 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1813E7DB1F17D87F001BE892 /* DTPerformanceSession.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DTPerformanceSession.framework; path = Library/Frameworks/DTPerformanceSession.framework; sourceTree = DEVELOPER_DIR; };
+		1813E7DC1F17D87F001BE892 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = DEVELOPER_DIR; };
+		1813E7DD1F17D87F001BE892 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		1813E7DE1F17D87F001BE892 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		182DCEB81F20A6E8009B3BF3 /* ShakeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
+		182DCEBA1F20B838009B3BF3 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		182DCEBC1F20B85F009B3BF3 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		182DCEBE1F20B8AD009B3BF3 /* StockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		182DCEC21F276519009B3BF3 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		1840496E1F39A25B00EC7C47 /* LineGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
+		184558EF1F289ECD00422DEE /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		18479ADF1F286C1900AED6F0 /* AnswersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCell.swift; sourceTree = "<group>"; };
+		18479AE11F2882ED00AED6F0 /* jsonFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonFile.json; sourceTree = "<group>"; };
+		1849A2FA1F0CA0C80027159F /* AIFC project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIFC project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1849A2FD1F0CA0C80027159F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1849A3051F0CA0C80027159F /* AIFC_project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AIFC_project.xcdatamodel; sourceTree = "<group>"; };
+		1849A3071F0CA0C80027159F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1849A30A1F0CA0C80027159F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1849A30C1F0CA0C80027159F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1849A3111F0CA0C80027159F /* AIFC projectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AIFC projectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1849A3151F0CA0C80027159F /* AIFC_projectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFC_projectTests.swift; sourceTree = "<group>"; };
+		1849A3171F0CA0C80027159F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1849A31C1F0CA0C80027159F /* AIFC projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AIFC projectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1849A3201F0CA0C80027159F /* AIFC_projectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFC_projectUITests.swift; sourceTree = "<group>"; };
+		1849A3221F0CA0C80027159F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1849A3331F0CA23A0027159F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		184ABE071F2F1EDD00B6E0BC /* OwnStocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnStocks.swift; sourceTree = "<group>"; };
+		184BC1C11F3431FB007B8B9A /* SellStocksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellStocksViewController.swift; sourceTree = "<group>"; };
+		1853FD331F1E115F00E30812 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		1853FD391F1E15BA00E30812 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		1853FD3B1F1E19EC00E30812 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1853FD3F1F1F4E5C00E30812 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		1853FD411F1F502400E30812 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		18584EEA1F308E8800E18EA5 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		18584EEC1F31D09600E18EA5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		185ED6551F29D48B00856038 /* CustomAnswerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnswerButton.swift; sourceTree = "<group>"; };
+		185ED6571F2B2D4A00856038 /* TradeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeViewController.swift; sourceTree = "<group>"; };
+		185ED65D1F2B428F00856038 /* NumbersKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumbersKeyboard.xib; sourceTree = "<group>"; };
+		185ED65E1F2B428F00856038 /* NumbersKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersKeyboardView.swift; sourceTree = "<group>"; };
+		18B25BB01F12373900274CF0 /* OwnStocksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnStocksTableViewCell.swift; sourceTree = "<group>"; };
+		18B25BB41F13988000274CF0 /* CompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		18B25BB91F14978C00274CF0 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		18B25BBD1F15E32D00274CF0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		18B25BC11F1608A700274CF0 /* CustomGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomGraphView.swift; sourceTree = "<group>"; };
+		18B25BC31F16155400274CF0 /* CustomCashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCashView.swift; sourceTree = "<group>"; };
+		18B25BC81F1636DD00274CF0 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		18B25BC91F1636DD00274CF0 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		18B25BCE1F17446600274CF0 /* CompaniesIncomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompaniesIncomeView.swift; sourceTree = "<group>"; };
+		18B25BD01F17840100274CF0 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		2B83D5090F385109FCC1CACC /* Pods_AIFC_projectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIFC_projectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57BED87EC8942493937CC56C /* Pods-AIFC projectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC projectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC projectTests/Pods-AIFC projectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7322EBA26E71413043AF85B9 /* Pods_AIFC_projectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIFC_projectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB597430B6E0DAFCBA0D723 /* Pods-AIFC projectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC projectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC projectTests/Pods-AIFC projectTests.release.xcconfig"; sourceTree = "<group>"; };
+		82333BAC604E947F8606BD01 /* Pods-AIFC projectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC projectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC projectUITests/Pods-AIFC projectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9BFA01886E22FE9DB7E8746F /* Pods_AIFC_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIFC_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F36C43EAC5962364527B2296 /* Pods-AIFC project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC project.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC project/Pods-AIFC project.release.xcconfig"; sourceTree = "<group>"; };
+		F4DEC13C2DFAE4B8BDF6AB6B /* Pods-AIFC projectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC projectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC projectUITests/Pods-AIFC projectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1849A2F71F0CA0C80027159F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1813E7DF1F17D87F001BE892 /* Cartography.framework in Frameworks */,
+				1813E7E01F17D87F001BE892 /* Pods_AIFC_projectTests.framework in Frameworks */,
+				1813E7E11F17D87F001BE892 /* Pods_AIFC_projectUITests.framework in Frameworks */,
+				1813E7E21F17D87F001BE892 /* ScrollableGraphView.framework in Frameworks */,
+				B0D88900EA614A21B0A74B59 /* Pods_AIFC_project.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1849A30E1F0CA0C80027159F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F32FC8FF060C154B838DE0 /* Pods_AIFC_projectTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1849A3191F0CA0C80027159F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47469A442F5CC5260F77C182 /* Pods_AIFC_projectUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1813E9221F18D33C001BE892 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18B25BB91F14978C00274CF0 /* DateCollectionViewCell.swift */,
+				18B25BB01F12373900274CF0 /* OwnStocksTableViewCell.swift */,
+				18B25BD01F17840100274CF0 /* NewsTableViewCell.swift */,
+				182DCEBC1F20B85F009B3BF3 /* SearchTableViewCell.swift */,
+				18479ADF1F286C1900AED6F0 /* AnswersTableViewCell.swift */,
+				18584EEC1F31D09600E18EA5 /* MenuTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		1849A2F11F0CA0C80027159F = {
+			isa = PBXGroup;
+			children = (
+				1849A2FC1F0CA0C80027159F /* AIFC project */,
+				1849A3141F0CA0C80027159F /* AIFC projectTests */,
+				1849A31F1F0CA0C80027159F /* AIFC projectUITests */,
+				1849A2FB1F0CA0C80027159F /* Products */,
+				B00434B42BB7F467FD755F05 /* Pods */,
+				DD08CF9B8325BC8710C877F3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1849A2FB1F0CA0C80027159F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1849A2FA1F0CA0C80027159F /* AIFC project.app */,
+				1849A3111F0CA0C80027159F /* AIFC projectTests.xctest */,
+				1849A31C1F0CA0C80027159F /* AIFC projectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1849A2FC1F0CA0C80027159F /* AIFC project */ = {
+			isa = PBXGroup;
+			children = (
+				1849A3321F0CA13B0027159F /* Sources */,
+				1849A3311F0CA1210027159F /* Extensions */,
+				1813E9221F18D33C001BE892 /* Cells */,
+				1849A32F1F0CA1030027159F /* Model */,
+				1849A3301F0CA10A0027159F /* Views */,
+				1849A32E1F0CA0F30027159F /* Controllers */,
+			);
+			path = "AIFC project";
+			sourceTree = "<group>";
+		};
+		1849A3141F0CA0C80027159F /* AIFC projectTests */ = {
+			isa = PBXGroup;
+			children = (
+				1849A3151F0CA0C80027159F /* AIFC_projectTests.swift */,
+				1849A3171F0CA0C80027159F /* Info.plist */,
+			);
+			path = "AIFC projectTests";
+			sourceTree = "<group>";
+		};
+		1849A31F1F0CA0C80027159F /* AIFC projectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1849A3201F0CA0C80027159F /* AIFC_projectUITests.swift */,
+				1849A3221F0CA0C80027159F /* Info.plist */,
+			);
+			path = "AIFC projectUITests";
+			sourceTree = "<group>";
+		};
+		1849A32E1F0CA0F30027159F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				182DCEC21F276519009B3BF3 /* QuizViewController.swift */,
+				1853FD411F1F502400E30812 /* LoginViewController.swift */,
+				1853FD331F1E115F00E30812 /* RegistrationViewController.swift */,
+				18B25BBD1F15E32D00274CF0 /* ProfileViewController.swift */,
+				18B25BB41F13988000274CF0 /* CompanyViewController.swift */,
+				182DCEBA1F20B838009B3BF3 /* SearchViewController.swift */,
+				185ED6571F2B2D4A00856038 /* TradeViewController.swift */,
+				184BC1C11F3431FB007B8B9A /* SellStocksViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1849A32F1F0CA1030027159F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1853FD391F1E15BA00E30812 /* AuthService.swift */,
+				182DCEBE1F20B8AD009B3BF3 /* StockModel.swift */,
+				184ABE071F2F1EDD00B6E0BC /* OwnStocks.swift */,
+				184558EF1F289ECD00422DEE /* Questions.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1849A3301F0CA10A0027159F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				182DCEB81F20A6E8009B3BF3 /* ShakeAnimation.swift */,
+				18B25BC11F1608A700274CF0 /* CustomGraphView.swift */,
+				18B25BC31F16155400274CF0 /* CustomCashView.swift */,
+				18B25BCE1F17446600274CF0 /* CompaniesIncomeView.swift */,
+				1853FD3F1F1F4E5C00E30812 /* CustomTextField.swift */,
+				185ED6551F29D48B00856038 /* CustomAnswerButton.swift */,
+				18584EEA1F308E8800E18EA5 /* MenuView.swift */,
+				1840496E1F39A25B00EC7C47 /* LineGraphView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1849A3311F0CA1210027159F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18B25BC81F1636DD00274CF0 /* OpenSans-Light.ttf */,
+				18B25BC91F1636DD00274CF0 /* OpenSans-Regular.ttf */,
+				1849A3331F0CA23A0027159F /* Colors.swift */,
+				18479AE11F2882ED00AED6F0 /* jsonFile.json */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		1849A3321F0CA13B0027159F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1849A3041F0CA0C80027159F /* AIFC_project.xcdatamodeld */,
+				1849A2FD1F0CA0C80027159F /* AppDelegate.swift */,
+				1853FD3B1F1E19EC00E30812 /* GoogleService-Info.plist */,
+				1849A30C1F0CA0C80027159F /* Info.plist */,
+				1849A3071F0CA0C80027159F /* Assets.xcassets */,
+				1849A3091F0CA0C80027159F /* LaunchScreen.storyboard */,
+				185ED65D1F2B428F00856038 /* NumbersKeyboard.xib */,
+				185ED65E1F2B428F00856038 /* NumbersKeyboardView.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		B00434B42BB7F467FD755F05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E5FA2AEFAF79D2F60B858D4 /* Pods-AIFC project.debug.xcconfig */,
+				F36C43EAC5962364527B2296 /* Pods-AIFC project.release.xcconfig */,
+				57BED87EC8942493937CC56C /* Pods-AIFC projectTests.debug.xcconfig */,
+				7EB597430B6E0DAFCBA0D723 /* Pods-AIFC projectTests.release.xcconfig */,
+				F4DEC13C2DFAE4B8BDF6AB6B /* Pods-AIFC projectUITests.debug.xcconfig */,
+				82333BAC604E947F8606BD01 /* Pods-AIFC projectUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD08CF9B8325BC8710C877F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1813E6DF1F17D87E001BE892 /* Cartography.framework */,
+				1813E6E01F17D87E001BE892 /* Pods_AIFC_projectTests.framework */,
+				1813E6E11F17D87E001BE892 /* Pods_AIFC_projectUITests.framework */,
+				1813E6E21F17D87E001BE892 /* ScrollableGraphView.framework */,
+				1813E6E31F17D87E001BE892 /* Accelerate.framework */,
+				1813E6E41F17D87E001BE892 /* Accounts.framework */,
+				1813E6E51F17D87E001BE892 /* AddressBook.framework */,
+				1813E6E61F17D87E001BE892 /* AddressBookUI.framework */,
+				1813E6E71F17D87E001BE892 /* AdSupport.framework */,
+				1813E6E81F17D87E001BE892 /* AssetsLibrary.framework */,
+				1813E6E91F17D87E001BE892 /* AudioToolbox.framework */,
+				1813E6EA1F17D87E001BE892 /* AudioUnit.framework */,
+				1813E6EB1F17D87E001BE892 /* AVFoundation.framework */,
+				1813E6EC1F17D87E001BE892 /* AVKit.framework */,
+				1813E6ED1F17D87E001BE892 /* CallKit.framework */,
+				1813E6EE1F17D87E001BE892 /* CarrierBundleUtilities.tbd */,
+				1813E6EF1F17D87E001BE892 /* CFNetwork.framework */,
+				1813E6F01F17D87E001BE892 /* CloudKit.framework */,
+				1813E6F11F17D87E001BE892 /* Contacts.framework */,
+				1813E6F21F17D87E001BE892 /* ContactsUI.framework */,
+				1813E6F31F17D87E001BE892 /* CoreAudio.framework */,
+				1813E6F41F17D87E001BE892 /* CoreAudioKit.framework */,
+				1813E6F51F17D87E001BE892 /* CoreBluetooth.framework */,
+				1813E6F61F17D87E001BE892 /* CoreData.framework */,
+				1813E6F71F17D87E001BE892 /* CoreFoundation.framework */,
+				1813E6F81F17D87E001BE892 /* CoreGraphics.framework */,
+				1813E6F91F17D87E001BE892 /* CoreImage.framework */,
+				1813E6FA1F17D87E001BE892 /* CoreLocation.framework */,
+				1813E6FB1F17D87E001BE892 /* CoreMedia.framework */,
+				1813E6FC1F17D87E001BE892 /* CoreMIDI.framework */,
+				1813E6FD1F17D87E001BE892 /* CoreMotion.framework */,
+				1813E6FE1F17D87E001BE892 /* CoreSpotlight.framework */,
+				1813E6FF1F17D87E001BE892 /* CoreTelephony.framework */,
+				1813E7001F17D87E001BE892 /* CoreText.framework */,
+				1813E7011F17D87E001BE892 /* CoreVideo.framework */,
+				1813E7021F17D87E001BE892 /* EventKit.framework */,
+				1813E7031F17D87E001BE892 /* EventKitUI.framework */,
+				1813E7041F17D87E001BE892 /* ExternalAccessory.framework */,
+				1813E7051F17D87E001BE892 /* Foundation.framework */,
+				1813E7061F17D87E001BE892 /* GameController.framework */,
+				1813E7071F17D87E001BE892 /* GameKit.framework */,
+				1813E7081F17D87E001BE892 /* GameplayKit.framework */,
+				1813E7091F17D87E001BE892 /* GLKit.framework */,
+				1813E70A1F17D87E001BE892 /* GSS.framework */,
+				1813E70B1F17D87E001BE892 /* HealthKit.framework */,
+				1813E70C1F17D87E001BE892 /* HealthKitUI.framework */,
+				1813E70D1F17D87E001BE892 /* HomeKit.framework */,
+				1813E70E1F17D87E001BE892 /* iAd.framework */,
+				1813E70F1F17D87E001BE892 /* ImageIO.framework */,
+				1813E7101F17D87E001BE892 /* Intents.framework */,
+				1813E7111F17D87E001BE892 /* IntentsUI.framework */,
+				1813E7121F17D87E001BE892 /* IOABPLib.tbd */,
+				1813E7131F17D87E001BE892 /* JavaScriptCore.framework */,
+				1813E7141F17D87E001BE892 /* libAccessibility.tbd */,
+				1813E7151F17D87E001BE892 /* libacmobileshim.tbd */,
+				1813E7161F17D87E001BE892 /* libafc.tbd */,
+				1813E7171F17D87E001BE892 /* libamsupport.tbd */,
+				1813E7181F17D87E001BE892 /* libAppPatch.tbd */,
+				1813E7191F17D87E001BE892 /* libarchive.2.tbd */,
+				1813E71A1F17D87E001BE892 /* libarchive.tbd */,
+				1813E71B1F17D87E001BE892 /* libARI.tbd */,
+				1813E71C1F17D87E001BE892 /* libARIServer.tbd */,
+				1813E71D1F17D87E001BE892 /* libassertion_launchd.tbd */,
+				1813E71E1F17D87E001BE892 /* libate.tbd */,
+				1813E71F1F17D87E001BE892 /* libauthinstall.tbd */,
+				1813E7201F17D87E001BE892 /* libAWDProtobufBluetooth.tbd */,
+				1813E7211F17D87E001BE892 /* libAWDProtobufFacetime.tbd */,
+				1813E7221F17D87E001BE892 /* libAWDProtobufFacetimeiMessage.tbd */,
+				1813E7231F17D87E001BE892 /* libAWDProtobufGCK.tbd */,
+				1813E7241F17D87E001BE892 /* libAWDProtobufLocation.tbd */,
+				1813E7251F17D87E001BE892 /* libAWDSupport.tbd */,
+				1813E7261F17D87E001BE892 /* libAWDSupportFramework.tbd */,
+				1813E7271F17D87E001BE892 /* libAXSafeCategoryBundle.tbd */,
+				1813E7281F17D87E001BE892 /* libAXSpeechManager.tbd */,
+				1813E7291F17D87E001BE892 /* libBasebandManager.tbd */,
+				1813E72A1F17D87E001BE892 /* libBasebandUSB.tbd */,
+				1813E72B1F17D87E001BE892 /* libbsm.0.tbd */,
+				1813E72C1F17D87E001BE892 /* libbsm.tbd */,
+				1813E72D1F17D87E001BE892 /* libbz2.1.0.tbd */,
+				1813E72E1F17D87E001BE892 /* libbz2.tbd */,
+				1813E72F1F17D87E001BE892 /* libc++.1.tbd */,
+				1813E7301F17D87E001BE892 /* libc++.tbd */,
+				1813E7311F17D87E001BE892 /* libc++abi.tbd */,
+				1813E7321F17D87E001BE892 /* libc.tbd */,
+				1813E7331F17D87E001BE892 /* libcharset.1.0.0.tbd */,
+				1813E7341F17D87E001BE892 /* libcharset.1.tbd */,
+				1813E7351F17D87E001BE892 /* libcharset.tbd */,
+				1813E7361F17D87E001BE892 /* libChineseTokenizer.tbd */,
+				1813E7371F17D87F001BE892 /* libcmph.tbd */,
+				1813E7381F17D87F001BE892 /* libcompression.tbd */,
+				1813E7391F17D87F001BE892 /* libcoretls.tbd */,
+				1813E73A1F17D87F001BE892 /* libcoretls_cfhelpers.tbd */,
+				1813E73B1F17D87F001BE892 /* libCRFSuite.tbd */,
+				1813E73C1F17D87F001BE892 /* libCRFSuite0.12.tbd */,
+				1813E73D1F17D87F001BE892 /* libCTLogHelper.tbd */,
+				1813E73E1F17D87F001BE892 /* libcupolicy.tbd */,
+				1813E73F1F17D87F001BE892 /* libcurses.tbd */,
+				1813E7401F17D87F001BE892 /* libdbm.tbd */,
+				1813E7411F17D87F001BE892 /* libDHCPServer.A.tbd */,
+				1813E7421F17D87F001BE892 /* libDHCPServer.tbd */,
+				1813E7431F17D87F001BE892 /* libdl.tbd */,
+				1813E7441F17D87F001BE892 /* libdns_services.tbd */,
+				1813E7451F17D87F001BE892 /* libdscsym.tbd */,
+				1813E7461F17D87F001BE892 /* libedit.2.tbd */,
+				1813E7471F17D87F001BE892 /* libedit.3.0.tbd */,
+				1813E7481F17D87F001BE892 /* libedit.3.tbd */,
+				1813E7491F17D87F001BE892 /* libedit.tbd */,
+				1813E74A1F17D87F001BE892 /* libenergytrace.tbd */,
+				1813E74B1F17D87F001BE892 /* libETLDIAGLoggingDynamic.tbd */,
+				1813E74C1F17D87F001BE892 /* libETLDLFDynamic.tbd */,
+				1813E74D1F17D87F001BE892 /* libETLDLOADCoreDumpDynamic.tbd */,
+				1813E74E1F17D87F001BE892 /* libETLDLOADDynamic.tbd */,
+				1813E74F1F17D87F001BE892 /* libETLDMCDynamic.tbd */,
+				1813E7501F17D87F001BE892 /* libETLDynamic.tbd */,
+				1813E7511F17D87F001BE892 /* libETLEFSDumpDynamic.tbd */,
+				1813E7521F17D87F001BE892 /* libETLSAHDynamic.tbd */,
+				1813E7531F17D87F001BE892 /* libETLTransportDynamic.tbd */,
+				1813E7541F17D87F001BE892 /* libexslt.0.tbd */,
+				1813E7551F17D87F001BE892 /* libexslt.tbd */,
+				1813E7561F17D87F001BE892 /* libextension.tbd */,
+				1813E7571F17D87F001BE892 /* libform.5.4.tbd */,
+				1813E7581F17D87F001BE892 /* libform.tbd */,
+				1813E7591F17D87F001BE892 /* libgcc_s.1.tbd */,
+				1813E75A1F17D87F001BE892 /* libgermantok.tbd */,
+				1813E75B1F17D87F001BE892 /* libH5Dynamic.tbd */,
+				1813E75C1F17D87F001BE892 /* libHDLCDynamic.tbd */,
+				1813E75D1F17D87F001BE892 /* libheimdal-asn1.tbd */,
+				1813E75E1F17D87F001BE892 /* libiconv.2.4.0.tbd */,
+				1813E75F1F17D87F001BE892 /* libiconv.2.tbd */,
+				1813E7601F17D87F001BE892 /* libiconv.tbd */,
+				1813E7611F17D87F001BE892 /* libicucore.A.tbd */,
+				1813E7621F17D87F001BE892 /* libicucore.tbd */,
+				1813E7631F17D87F001BE892 /* libInFieldCollection.tbd */,
+				1813E7641F17D87F001BE892 /* libinfo.tbd */,
+				1813E7651F17D87F001BE892 /* libIOAccessoryManager.tbd */,
+				1813E7661F17D87F001BE892 /* libipconfig.tbd */,
+				1813E7671F17D87F001BE892 /* libipsec.A.tbd */,
+				1813E7681F17D87F001BE892 /* libipsec.tbd */,
+				1813E7691F17D87F001BE892 /* libktrace.tbd */,
+				1813E76A1F17D87F001BE892 /* liblangid.tbd */,
+				1813E76B1F17D87F001BE892 /* libLLVM-C.tbd */,
+				1813E76C1F17D87F001BE892 /* libLLVM.tbd */,
+				1813E76D1F17D87F001BE892 /* liblockdown.tbd */,
+				1813E76E1F17D87F001BE892 /* liblzma.5.tbd */,
+				1813E76F1F17D87F001BE892 /* liblzma.tbd */,
+				1813E7701F17D87F001BE892 /* libm.tbd */,
+				1813E7711F17D87F001BE892 /* libmarisa.tbd */,
+				1813E7721F17D87F001BE892 /* libMatch.1.tbd */,
+				1813E7731F17D87F001BE892 /* libMatch.tbd */,
+				1813E7741F17D87F001BE892 /* libmav_ipc_router_dynamic.tbd */,
+				1813E7751F17D87F001BE892 /* libmecab_em.tbd */,
+				1813E7761F17D87F001BE892 /* libmecabra.tbd */,
+				1813E7771F17D87F001BE892 /* libmis.tbd */,
+				1813E7781F17D87F001BE892 /* libMobileCheckpoint.tbd */,
+				1813E7791F17D87F001BE892 /* libMobileGestalt.tbd */,
+				1813E77A1F17D87F001BE892 /* libMobileGestaltExtensions.tbd */,
+				1813E77B1F17D87F001BE892 /* libncurses.5.4.tbd */,
+				1813E77C1F17D87F001BE892 /* libncurses.tbd */,
+				1813E77D1F17D87F001BE892 /* libnetwork.tbd */,
+				1813E77E1F17D87F001BE892 /* libnfshared.tbd */,
+				1813E77F1F17D87F001BE892 /* libobjc.A.tbd */,
+				1813E7801F17D87F001BE892 /* libobjc.tbd */,
+				1813E7811F17D87F001BE892 /* libomadm.tbd */,
+				1813E7821F17D87F001BE892 /* libPCITransport.tbd */,
+				1813E7831F17D87F001BE892 /* libpoll.tbd */,
+				1813E7841F17D87F001BE892 /* libPPM.tbd */,
+				1813E7851F17D87F001BE892 /* libprequelite.tbd */,
+				1813E7861F17D87F001BE892 /* libproc.tbd */,
+				1813E7871F17D87F001BE892 /* libprotobuf.tbd */,
+				1813E7881F17D87F001BE892 /* libpthread.tbd */,
+				1813E7891F17D87F001BE892 /* libQLCharts.tbd */,
+				1813E78A1F17D87F001BE892 /* libresolv.9.tbd */,
+				1813E78B1F17D87F001BE892 /* libresolv.tbd */,
+				1813E78C1F17D87F001BE892 /* librpcsvc.tbd */,
+				1813E78D1F17D87F001BE892 /* libsandbox.1.tbd */,
+				1813E78E1F17D87F001BE892 /* libsandbox.tbd */,
+				1813E78F1F17D87F001BE892 /* libsp.tbd */,
+				1813E7901F17D87F001BE892 /* libspindump.tbd */,
+				1813E7911F17D87F001BE892 /* libsqlite3.0.tbd */,
+				1813E7921F17D87F001BE892 /* libsqlite3.tbd */,
+				1813E7931F17D87F001BE892 /* libstdc++.6.0.9.tbd */,
+				1813E7941F17D87F001BE892 /* libstdc++.6.tbd */,
+				1813E7951F17D87F001BE892 /* libstdc++.tbd */,
+				1813E7961F17D87F001BE892 /* libsysdiagnose.tbd */,
+				1813E7971F17D87F001BE892 /* libSystem.B.tbd */,
+				1813E7981F17D87F001BE892 /* libSystem.tbd */,
+				1813E7991F17D87F001BE892 /* libsystemstats.tbd */,
+				1813E79A1F17D87F001BE892 /* libtailspin.tbd */,
+				1813E79B1F17D87F001BE892 /* libTelephonyBasebandBulkUSBDynamic.tbd */,
+				1813E79C1F17D87F001BE892 /* libTelephonyBasebandDynamic.tbd */,
+				1813E79D1F17D87F001BE892 /* libTelephonyDebugDynamic.tbd */,
+				1813E79E1F17D87F001BE892 /* libTelephonyIOKitDynamic.tbd */,
+				1813E79F1F17D87F001BE892 /* libTelephonyUSBDynamic.tbd */,
+				1813E7A01F17D87F001BE892 /* libTelephonyUtilDynamic.tbd */,
+				1813E7A11F17D87F001BE892 /* libThaiTokenizer.tbd */,
+				1813E7A21F17D87F001BE892 /* libtidy.A.tbd */,
+				1813E7A31F17D87F001BE892 /* libtidy.tbd */,
+				1813E7A41F17D87F001BE892 /* libtzupdate.tbd */,
+				1813E7A51F17D87F001BE892 /* libutil.tbd */,
+				1813E7A61F17D87F001BE892 /* libutil1.0.tbd */,
+				1813E7A71F17D87F001BE892 /* libWAPI.tbd */,
+				1813E7A81F17D87F001BE892 /* libxml2.2.tbd */,
+				1813E7A91F17D87F001BE892 /* libxml2.tbd */,
+				1813E7AA1F17D87F001BE892 /* libxslt.1.tbd */,
+				1813E7AB1F17D87F001BE892 /* libxslt.tbd */,
+				1813E7AC1F17D87F001BE892 /* libz.1.1.3.tbd */,
+				1813E7AD1F17D87F001BE892 /* libz.1.2.5.tbd */,
+				1813E7AE1F17D87F001BE892 /* libz.1.2.8.tbd */,
+				1813E7AF1F17D87F001BE892 /* libz.1.tbd */,
+				1813E7B01F17D87F001BE892 /* libz.tbd */,
+				1813E7B11F17D87F001BE892 /* LocalAuthentication.framework */,
+				1813E7B21F17D87F001BE892 /* MapKit.framework */,
+				1813E7B31F17D87F001BE892 /* MediaAccessibility.framework */,
+				1813E7B41F17D87F001BE892 /* MediaPlayer.framework */,
+				1813E7B51F17D87F001BE892 /* MediaToolbox.framework */,
+				1813E7B61F17D87F001BE892 /* Messages.framework */,
+				1813E7B71F17D87F001BE892 /* MessageUI.framework */,
+				1813E7B81F17D87F001BE892 /* Metal.framework */,
+				1813E7B91F17D87F001BE892 /* MetalKit.framework */,
+				1813E7BA1F17D87F001BE892 /* MetalPerformanceShaders.framework */,
+				1813E7BB1F17D87F001BE892 /* MobileCoreServices.framework */,
+				1813E7BC1F17D87F001BE892 /* ModelIO.framework */,
+				1813E7BD1F17D87F001BE892 /* MultipeerConnectivity.framework */,
+				1813E7BE1F17D87F001BE892 /* NetworkExtension.framework */,
+				1813E7BF1F17D87F001BE892 /* NewsstandKit.framework */,
+				1813E7C01F17D87F001BE892 /* NotificationCenter.framework */,
+				1813E7C11F17D87F001BE892 /* OpenAL.framework */,
+				1813E7C21F17D87F001BE892 /* OpenGLES.framework */,
+				1813E7C31F17D87F001BE892 /* PassKit.framework */,
+				1813E7C41F17D87F001BE892 /* Photos.framework */,
+				1813E7C51F17D87F001BE892 /* PhotosUI.framework */,
+				1813E7C61F17D87F001BE892 /* PushKit.framework */,
+				1813E7C71F17D87F001BE892 /* QuartzCore.framework */,
+				1813E7C81F17D87F001BE892 /* QuickLook.framework */,
+				1813E7C91F17D87F001BE892 /* ReplayKit.framework */,
+				1813E7CA1F17D87F001BE892 /* SafariServices.framework */,
+				1813E7CB1F17D87F001BE892 /* SceneKit.framework */,
+				1813E7CC1F17D87F001BE892 /* Security.framework */,
+				1813E7CD1F17D87F001BE892 /* Social.framework */,
+				1813E7CE1F17D87F001BE892 /* Speech.framework */,
+				1813E7CF1F17D87F001BE892 /* SpriteKit.framework */,
+				1813E7D01F17D87F001BE892 /* StoreKit.framework */,
+				1813E7D11F17D87F001BE892 /* SystemConfiguration.framework */,
+				1813E7D21F17D87F001BE892 /* Twitter.framework */,
+				1813E7D31F17D87F001BE892 /* UIKit.framework */,
+				1813E7D41F17D87F001BE892 /* UserNotifications.framework */,
+				1813E7D51F17D87F001BE892 /* UserNotificationsUI.framework */,
+				1813E7D61F17D87F001BE892 /* VideoSubscriberAccount.framework */,
+				1813E7D71F17D87F001BE892 /* VideoToolbox.framework */,
+				1813E7D81F17D87F001BE892 /* WatchConnectivity.framework */,
+				1813E7D91F17D87F001BE892 /* WatchKit.framework */,
+				1813E7DA1F17D87F001BE892 /* WebKit.framework */,
+				1813E7DB1F17D87F001BE892 /* DTPerformanceSession.framework */,
+				1813E7DC1F17D87F001BE892 /* InterfaceBuilderKit.framework */,
+				1813E7DD1F17D87F001BE892 /* XcodeKit.framework */,
+				1813E7DE1F17D87F001BE892 /* XCTest.framework */,
+				9BFA01886E22FE9DB7E8746F /* Pods_AIFC_project.framework */,
+				7322EBA26E71413043AF85B9 /* Pods_AIFC_projectTests.framework */,
+				2B83D5090F385109FCC1CACC /* Pods_AIFC_projectUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1849A2F91F0CA0C80027159F /* AIFC project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1849A3251F0CA0C80027159F /* Build configuration list for PBXNativeTarget "AIFC project" */;
+			buildPhases = (
+				4F72076C155286505FB640F7 /* [CP] Check Pods Manifest.lock */,
+				1849A2F61F0CA0C80027159F /* Sources */,
+				1849A2F71F0CA0C80027159F /* Frameworks */,
+				1849A2F81F0CA0C80027159F /* Resources */,
+				25C1CCC780B7073C2A31F1EC /* [CP] Embed Pods Frameworks */,
+				CBC446F72EF47E5394769944 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AIFC project";
+			productName = "AIFC project";
+			productReference = 1849A2FA1F0CA0C80027159F /* AIFC project.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1849A3101F0CA0C80027159F /* AIFC projectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1849A3281F0CA0C80027159F /* Build configuration list for PBXNativeTarget "AIFC projectTests" */;
+			buildPhases = (
+				CE5DAC59604935831612EAE4 /* [CP] Check Pods Manifest.lock */,
+				1849A30D1F0CA0C80027159F /* Sources */,
+				1849A30E1F0CA0C80027159F /* Frameworks */,
+				1849A30F1F0CA0C80027159F /* Resources */,
+				1141D4B5502324F5F1CE8FD7 /* [CP] Embed Pods Frameworks */,
+				0ED4365290BF953B5519273B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1849A3131F0CA0C80027159F /* PBXTargetDependency */,
+			);
+			name = "AIFC projectTests";
+			productName = "AIFC projectTests";
+			productReference = 1849A3111F0CA0C80027159F /* AIFC projectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1849A31B1F0CA0C80027159F /* AIFC projectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1849A32B1F0CA0C80027159F /* Build configuration list for PBXNativeTarget "AIFC projectUITests" */;
+			buildPhases = (
+				08C386F6BA879D171246EDE2 /* [CP] Check Pods Manifest.lock */,
+				1849A3181F0CA0C80027159F /* Sources */,
+				1849A3191F0CA0C80027159F /* Frameworks */,
+				1849A31A1F0CA0C80027159F /* Resources */,
+				075FA8D01EDCE523011759A6 /* [CP] Embed Pods Frameworks */,
+				FD5E862F015B5E27FDECE210 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1849A31E1F0CA0C80027159F /* PBXTargetDependency */,
+			);
+			name = "AIFC projectUITests";
+			productName = "AIFC projectUITests";
+			productReference = 1849A31C1F0CA0C80027159F /* AIFC projectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1849A2F21F0CA0C80027159F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Dayana Marden";
+				TargetAttributes = {
+					1849A2F91F0CA0C80027159F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2Y62544U83;
+						ProvisioningStyle = Automatic;
+					};
+					1849A3101F0CA0C80027159F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1849A2F91F0CA0C80027159F;
+					};
+					1849A31B1F0CA0C80027159F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1849A2F91F0CA0C80027159F;
+					};
+				};
+			};
+			buildConfigurationList = 1849A2F51F0CA0C80027159F /* Build configuration list for PBXProject "AIFC project" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1849A2F11F0CA0C80027159F;
+			productRefGroup = 1849A2FB1F0CA0C80027159F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1849A2F91F0CA0C80027159F /* AIFC project */,
+				1849A3101F0CA0C80027159F /* AIFC projectTests */,
+				1849A31B1F0CA0C80027159F /* AIFC projectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1849A2F81F0CA0C80027159F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B25BCB1F1636EB00274CF0 /* OpenSans-Regular.ttf in Resources */,
+				185ED65F1F2B428F00856038 /* NumbersKeyboard.xib in Resources */,
+				1849A30B1F0CA0C80027159F /* LaunchScreen.storyboard in Resources */,
+				1853FD3C1F1E19EC00E30812 /* GoogleService-Info.plist in Resources */,
+				18479AE21F2882ED00AED6F0 /* jsonFile.json in Resources */,
+				18B25BCA1F1636E900274CF0 /* OpenSans-Light.ttf in Resources */,
+				1849A3081F0CA0C80027159F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1849A30F1F0CA0C80027159F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1849A31A1F0CA0C80027159F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		075FA8D01EDCE523011759A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIFC projectUITests/Pods-AIFC projectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		08C386F6BA879D171246EDE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0ED4365290BF953B5519273B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIFC projectTests/Pods-AIFC projectTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1141D4B5502324F5F1CE8FD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIFC projectTests/Pods-AIFC projectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25C1CCC780B7073C2A31F1EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIFC project/Pods-AIFC project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F72076C155286505FB640F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBC446F72EF47E5394769944 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIFC project/Pods-AIFC project-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE5DAC59604935831612EAE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD5E862F015B5E27FDECE210 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIFC projectUITests/Pods-AIFC projectUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1849A2F61F0CA0C80027159F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B25BC41F16155400274CF0 /* CustomCashView.swift in Sources */,
+				18B25BCF1F17446600274CF0 /* CompaniesIncomeView.swift in Sources */,
+				185ED6561F29D48B00856038 /* CustomAnswerButton.swift in Sources */,
+				1849A3061F0CA0C80027159F /* AIFC_project.xcdatamodeld in Sources */,
+				1853FD341F1E115F00E30812 /* RegistrationViewController.swift in Sources */,
+				1849A3341F0CA23A0027159F /* Colors.swift in Sources */,
+				18B25BBE1F15E32D00274CF0 /* ProfileViewController.swift in Sources */,
+				18B25BC21F1608A700274CF0 /* CustomGraphView.swift in Sources */,
+				185ED6581F2B2D4A00856038 /* TradeViewController.swift in Sources */,
+				18B25BBA1F14978C00274CF0 /* DateCollectionViewCell.swift in Sources */,
+				18584EED1F31D09600E18EA5 /* MenuTableViewCell.swift in Sources */,
+				1840496F1F39A25B00EC7C47 /* LineGraphView.swift in Sources */,
+				182DCEBF1F20B8AD009B3BF3 /* StockModel.swift in Sources */,
+				18B25BD11F17840100274CF0 /* NewsTableViewCell.swift in Sources */,
+				182DCEBD1F20B85F009B3BF3 /* SearchTableViewCell.swift in Sources */,
+				182DCEB91F20A6E8009B3BF3 /* ShakeAnimation.swift in Sources */,
+				1849A2FE1F0CA0C80027159F /* AppDelegate.swift in Sources */,
+				18B25BB51F13988000274CF0 /* CompanyViewController.swift in Sources */,
+				184ABE081F2F1EDD00B6E0BC /* OwnStocks.swift in Sources */,
+				185ED6601F2B428F00856038 /* NumbersKeyboardView.swift in Sources */,
+				18479AE01F286C1900AED6F0 /* AnswersTableViewCell.swift in Sources */,
+				1853FD421F1F502400E30812 /* LoginViewController.swift in Sources */,
+				184BC1C21F3431FB007B8B9A /* SellStocksViewController.swift in Sources */,
+				182DCEC31F276519009B3BF3 /* QuizViewController.swift in Sources */,
+				18584EEB1F308E8800E18EA5 /* MenuView.swift in Sources */,
+				18B25BB11F12373900274CF0 /* OwnStocksTableViewCell.swift in Sources */,
+				182DCEBB1F20B838009B3BF3 /* SearchViewController.swift in Sources */,
+				1853FD3A1F1E15BA00E30812 /* AuthService.swift in Sources */,
+				1853FD401F1F4E5C00E30812 /* CustomTextField.swift in Sources */,
+				184558F01F289ECD00422DEE /* Questions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1849A30D1F0CA0C80027159F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1849A3161F0CA0C80027159F /* AIFC_projectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1849A3181F0CA0C80027159F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1849A3211F0CA0C80027159F /* AIFC_projectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1849A3131F0CA0C80027159F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1849A2F91F0CA0C80027159F /* AIFC project */;
+			targetProxy = 1849A3121F0CA0C80027159F /* PBXContainerItemProxy */;
+		};
+		1849A31E1F0CA0C80027159F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1849A2F91F0CA0C80027159F /* AIFC project */;
+			targetProxy = 1849A31D1F0CA0C80027159F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1849A3091F0CA0C80027159F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1849A30A1F0CA0C80027159F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1849A3231F0CA0C80027159F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1849A3241F0CA0C80027159F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1849A3261F0CA0C80027159F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E5FA2AEFAF79D2F60B858D4 /* Pods-AIFC project.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2Y62544U83;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = "AIFC project/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.AIFC-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1849A3271F0CA0C80027159F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F36C43EAC5962364527B2296 /* Pods-AIFC project.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2Y62544U83;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = "AIFC project/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.AIFC-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1849A3291F0CA0C80027159F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57BED87EC8942493937CC56C /* Pods-AIFC projectTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "AIFC projectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.AIFC-projectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIFC project.app/AIFC project";
+			};
+			name = Debug;
+		};
+		1849A32A1F0CA0C80027159F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EB597430B6E0DAFCBA0D723 /* Pods-AIFC projectTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "AIFC projectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.AIFC-projectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIFC project.app/AIFC project";
+			};
+			name = Release;
+		};
+		1849A32C1F0CA0C80027159F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4DEC13C2DFAE4B8BDF6AB6B /* Pods-AIFC projectUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "AIFC projectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.AIFC-projectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "AIFC project";
+			};
+			name = Debug;
+		};
+		1849A32D1F0CA0C80027159F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82333BAC604E947F8606BD01 /* Pods-AIFC projectUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "AIFC projectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.AIFC-projectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "AIFC project";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1849A2F51F0CA0C80027159F /* Build configuration list for PBXProject "AIFC project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1849A3231F0CA0C80027159F /* Debug */,
+				1849A3241F0CA0C80027159F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1849A3251F0CA0C80027159F /* Build configuration list for PBXNativeTarget "AIFC project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1849A3261F0CA0C80027159F /* Debug */,
+				1849A3271F0CA0C80027159F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1849A3281F0CA0C80027159F /* Build configuration list for PBXNativeTarget "AIFC projectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1849A3291F0CA0C80027159F /* Debug */,
+				1849A32A1F0CA0C80027159F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1849A32B1F0CA0C80027159F /* Build configuration list for PBXNativeTarget "AIFC projectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1849A32C1F0CA0C80027159F /* Debug */,
+				1849A32D1F0CA0C80027159F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1849A3041F0CA0C80027159F /* AIFC_project.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1849A3051F0CA0C80027159F /* AIFC_project.xcdatamodel */,
+			);
+			currentVersion = 1849A3051F0CA0C80027159F /* AIFC_project.xcdatamodel */;
+			path = AIFC_project.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1849A2F21F0CA0C80027159F /* Project object */;
+}
