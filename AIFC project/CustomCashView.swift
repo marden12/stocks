@@ -13,21 +13,21 @@ class CustomCashView: UIView {
     fileprivate lazy var cashLabel: UILabel = {
         let label = UILabel()
         label.text = "$1206.08"
-        label.font = UIFont(name: Standart.font.rawValue, size: 48)
+        label.font = UIFont(name: Standart.regularFont.rawValue, size: 48)
         label.textColor = .white
         return label
     }()
     fileprivate lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.text = "+$83(16%)"
-        label.font = UIFont(name: Standart.font.rawValue, size: 24)
+        label.font = UIFont(name: Standart.regularFont.rawValue, size: 24)
         label.textColor = .white
         return label
     }()
     fileprivate lazy var incomeLabel: UILabel = {
         let label = UILabel()
         label.text = "today"
-        label.font = UIFont(name: Standart.font.rawValue, size: 24)
+        label.font = UIFont(name: Standart.regularFont.rawValue, size: 24)
         label.textColor = .white
         return label
     }()

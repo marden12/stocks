@@ -11,7 +11,7 @@ import Cartography
 import ScrollableGraphView
 
 class OwnStocksTableViewCell: UITableViewCell {
-    
+    lazy var data: [Double] = []
     public lazy var companyNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -19,25 +19,9 @@ class OwnStocksTableViewCell: UITableViewCell {
         label.font = UIFont(name: Standart.font.rawValue, size: 24)
         return label
     }()
-    public lazy var tinyGraphView: ScrollableGraphView = {
-        let graphView = ScrollableGraphView()
-        var data: [Double] = [4, 8, 15, 3]
-        let labels = ["one", "two", "three", "four", "five", "six"]
-        graphView.referenceLineColor = .clear
-        graphView.shouldShowLabels = false
-        graphView.shouldShowReferenceLineUnits = false
-        graphView.set(data: data, withLabels: labels)
-        graphView.backgroundFillColor = .clear
-        graphView.fillColor = .clear
-        graphView.rangeMax = 40
-        graphView.lineWidth = 1
-        graphView.lineColor = UIColor.backgroundColor
-        graphView.lineStyle = ScrollableGraphViewLineStyle.smooth
-        graphView.shouldFill = true
-        graphView.dataPointSpacing = 5
-        graphView.dataPointSize = 2
-        graphView.dataPointFillColor = UIColor.clear
-        graphView.referenceLineLabelColor = .clear
+    public lazy var tinyGraphView: CustomGraphView = {
+        let graphView = CustomGraphView()
+        graphView.data = self.data
         return graphView
 
     }()

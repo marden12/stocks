@@ -512,6 +512,7 @@
 		1849A3301F0CA10A0027159F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				185ED65E1F2B428F00856038 /* NumbersKeyboardView.swift */,
 				182DCEB81F20A6E8009B3BF3 /* ShakeAnimation.swift */,
 				18B25BC11F1608A700274CF0 /* CustomGraphView.swift */,
 				18B25BC31F16155400274CF0 /* CustomCashView.swift */,
@@ -545,7 +546,6 @@
 				1849A3071F0CA0C80027159F /* Assets.xcassets */,
 				1849A3091F0CA0C80027159F /* LaunchScreen.storyboard */,
 				185ED65D1F2B428F00856038 /* NumbersKeyboard.xib */,
-				185ED65E1F2B428F00856038 /* NumbersKeyboardView.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";

@@ -11,7 +11,8 @@ import Cartography
 
 enum Standart: String {
     
-    case font = "OpenSans-Light"
+    case font = "OpenSans-Regular"
+    case regularFont = "OpenSans-Light"
 }
 
 

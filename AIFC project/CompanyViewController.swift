@@ -20,6 +20,14 @@ class CompanyViewController: UIViewController {
     var pointsArray:[Double] = []
     var type = ""
     
+    var dayPointsArray:[Double] = []
+    var weekPointsArray:[Double] = []
+    var monthPointsArray:[Double] = []
+    var threeMonthsPointsArray:[Double] = []
+    var sixMonthsPointsArray:[Double] = []
+    var yearPointsArray:[Double] = []
+
+    
     fileprivate lazy var  containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .clear
@@ -28,7 +36,7 @@ class CompanyViewController: UIViewController {
     }()
     fileprivate lazy var graphView: CustomGraphView = {
         let view = CustomGraphView()
-//        view.data = self.pointsArray
+        view.data = self.pointsArray
         return view
     }()
     fileprivate lazy var cashView: CustomCashView = {
@@ -117,14 +125,21 @@ class CompanyViewController: UIViewController {
         return label
     }()
         override func viewDidLoad() {
-        view.backgroundColor = .backgroundColor
-        setupViews()
-        setupConstraints()
-        fetchGraph(newType: "day")
+            print("THERE ID \(nameOfCompany)")
+            view.backgroundColor = .backgroundColor
+            
+            
+            setupViews()
+            setupConstraints()
+            
+            
+        
     }
     override func viewWillAppear(_ animated: Bool) {
-        print("THERE ID \(nameOfCompany)")
+        
         nameOfCompanyLabel.text = nameOfCompany
+        fetchGraph(newType: "day")
+        fetchALL()
     }
 
     func setupViews(){
@@ -218,12 +233,43 @@ class CompanyViewController: UIViewController {
         
     }
     func fetchGraph(newType: String){
-        StocksModel.getGraphPoints("GOOG", type: newType) { points in
+        StocksModel.getGraphPoints(nameOfCompanyLabel.text!, type: newType) { points in
+            self.graphView.maxRange = points.min()!
+            self.graphView.minRange = points.max()!
             self.graphView.data = points
-            print(self.graphView.data)
             self.containerView.addSubview(self.graphView)
             self.constraintsToGraph()
         }
+    }
+    func drawGraph(array: [Double]){
+        
+        self.graphView.minRange = array.min()!
+        self.graphView.maxRange = array.max()!
+        self.graphView.data = array
+        self.containerView.addSubview(self.graphView)
+        self.constraintsToGraph()
+    }
+    
+    func fetchALL(){
+        StocksModel.getGraphPoints(nameOfCompanyLabel.text!, type: "day") { points in
+            self.dayPointsArray = points
+        }
+        StocksModel.getGraphPoints(nameOfCompany, type: "week") { points in
+            self.weekPointsArray = points
+        }
+        StocksModel.getGraphPoints(nameOfCompany, type: "month") { points in
+            self.monthPointsArray = points
+        }
+        StocksModel.getGraphPoints(nameOfCompany, type: "threeMonths") { points in
+            self.threeMonthsPointsArray = points
+        }
+        StocksModel.getGraphPoints(nameOfCompany, type: "halfYear") { points in
+            self.sixMonthsPointsArray = points
+        }
+        StocksModel.getGraphPoints(nameOfCompany, type: "year") { points in
+            self.yearPointsArray = points
+        }
+        
     }
 }
 
@@ -296,13 +342,18 @@ extension CompanyViewController: UICollectionViewDelegate,UICollectionViewDataSo
         selectedRow.setBottomBorder()
         self.selectedIndexPath = indexPath
         if selectedRow.dateLabel.text == "1D"{
-            type = "day"
-            
+            drawGraph(array: self.dayPointsArray)
         }else if selectedRow.dateLabel.text == "1W"{
-            type = "week"
-            
+            drawGraph(array: self.weekPointsArray)
+        }else if selectedRow.dateLabel.text == "1M"{
+            drawGraph(array: self.monthPointsArray)
+        }else if selectedRow.dateLabel.text == "3M"{
+            drawGraph(array: self.threeMonthsPointsArray)
+        }else if selectedRow.dateLabel.text == "6M"{
+            drawGraph(array: self.sixMonthsPointsArray)
+        }else if selectedRow.dateLabel.text == "1Y"{
+            drawGraph(array: self.yearPointsArray)
         }
-        fetchGraph(newType: type)
         
     }
     

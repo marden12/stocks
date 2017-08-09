@@ -2,7 +2,7 @@
 //  CustomCashView.swift
 //  AIFC project
 //
-//  Created by Dayana Marden on 12.07.17.
+//  Created by Dayana Marden on 12.07.17.[
 //  Copyright © 2017 Dayana Marden. All rights reserved.
 //
 
@@ -19,6 +19,31 @@ class CustomGraphView: UIView{
             graphView.reloadInputViews()
         }
     }
+    var minRange = Double() {
+        didSet{
+            graphView.rangeMin = self.minRange
+            graphView.reloadInputViews()
+        }
+    }
+    var maxRange = Double() {
+        didSet{
+            graphView.rangeMax = self.maxRange
+            graphView.reloadInputViews()
+        }
+    }
+    
+    var minRange2 = Double() {
+        didSet{
+            graphView.rangeMin = self.minRange
+            graphView.reloadInputViews()
+        }
+    }
+    var maxRange2 = Double() {
+        didSet{
+            graphView.rangeMax = self.maxRange
+            graphView.reloadInputViews()
+        }
+    }
     var last = Double()
     fileprivate lazy var graphView: ScrollableGraphView = {
         let graphView = ScrollableGraphView()
@@ -26,15 +51,14 @@ class CustomGraphView: UIView{
         graphView.shouldShowLabels = false
         graphView.shouldShowReferenceLineUnits = false
         graphView.set(data: self.data, withLabels: [String(describing: self.data)])
-        graphView.rangeMax = 931
-        graphView.rangeMin = 927
+        graphView.rangeMax = self.maxRange
+        graphView.rangeMin = self.minRange
         graphView.backgroundFillColor = .backgroundColor
         graphView.fillColor = .clear
         graphView.lineWidth = 2
         graphView.lineColor = UIColor.white
         graphView.lineStyle = ScrollableGraphViewLineStyle.smooth
-//        graphView.adaptAnimationType = ScrollableGraphViewAnimationType.
-//        graphView.animationDuration = 0.00007
+        graphView.shouldAnimateOnStartup = false
         graphView.shouldFill = true
         graphView.dataPointSpacing = 3
         graphView.dataPointFillColor = UIColor.clear

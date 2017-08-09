@@ -33,7 +33,8 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
         textField.delegate = self
         textField.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingChanged)
         textField.placeholder = "0"
-        textField.inputView = self.keyboardView
+        textField.addTarget(self, action: #selector(deleteKey), for: .allEvents)
+        textField.addTarget(self, action: #selector(keyWasTapped(character:)), for: .allEvents)
         return textField
     }()
     fileprivate lazy var numberOfShares: UILabel = {
@@ -105,6 +106,9 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        keyboardView.delegate = self
+        keyboardView.becomeFirstResponder()
+        deleteKey()
         navigationController?.navigationBar.barTintColor = .white
         marketPrice = 12.0
         print(items)
@@ -118,6 +122,7 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     }
     override func viewDidAppear(_ animated: Bool) {
         inputTextField.becomeFirstResponder()
+        keyboardView.becomeFirstResponder()
     }
     func setupViews(){
         view.addSubview(inputTextField)
@@ -178,9 +183,11 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
         }
     }
     func keyWasTapped(character: String) {
+        print("vlvlvl")
         inputTextField.insertText(character)
+        print("YEEES\(character)")
     }
-    
+
     
     func deleteKey(){
         inputTextField.deleteBackward()

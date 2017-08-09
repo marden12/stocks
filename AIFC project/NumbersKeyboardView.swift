@@ -55,6 +55,7 @@ class NumbersKeyboardView: UIView {
             self.delegate?.deleteKey()
         } else {
             self.delegate?.keyWasTapped(character: sender.titleLabel!.text!)
+            print(sender.titleLabel!.text!)
         }
         
     }

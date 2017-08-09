@@ -25,6 +25,13 @@ class ProfileViewController: UIViewController {
     var type = ""
     var pointsArray:[Double] = []
     
+    var dayPointsArray:[Double] = []
+    var weekPointsArray:[Double] = []
+    var monthPointsArray:[Double] = []
+    var threeMonthsPointsArray:[Double] = []
+    var sixMonthsPointsArray:[Double] = []
+    var yearPointsArray:[Double] = []
+    
     var ref: DatabaseReference?
     var databaseHandle:DatabaseHandle?
     
@@ -97,11 +104,13 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchALL()
         fetchData()
         fetchGraph(newType: "day")
         setupViews()
         setupConstraints()
         listOfStocks.reloadData()
+        
     }
 
     
@@ -215,19 +224,41 @@ class ProfileViewController: UIViewController {
     
     func fetchGraph(newType: String){
         StocksModel.getGraphPoints("GOOG", type: newType) { points in
+            self.graphView.maxRange = points.min()!
+            self.graphView.minRange = points.max()!
             self.graphView.data = points
-            print(self.graphView.data)
             self.containerView.addSubview(self.graphView)
             self.constraintsToGraph()
         }
     }
-    func fetchGraphWeek(newType: String){
-        StocksModel.getGraphPoints("GOOG", type: newType) { points in
-            self.graphView.data = points
-            print(self.graphView.data)
-            self.containerView.addSubview(self.graphView)
-            self.constraintsToGraph()
+    func drawGraph(array: [Double]){
+        self.graphView.minRange = array.min()!
+        self.graphView.maxRange = array.max()!
+        self.graphView.data = array
+        self.containerView.addSubview(self.graphView)
+        self.constraintsToGraph()
+    }
+    
+    func fetchALL(){
+        StocksModel.getGraphPoints("GOOG", type: "day") { points in
+            self.dayPointsArray = points
         }
+        StocksModel.getGraphPoints("GOOG", type: "week") { points in
+            self.weekPointsArray = points
+        }
+        StocksModel.getGraphPoints("GOOG", type: "month") { points in
+            self.monthPointsArray = points
+        }
+        StocksModel.getGraphPoints("GOOG", type: "threeMonths") { points in
+            self.threeMonthsPointsArray = points
+        }
+        StocksModel.getGraphPoints("GOOG", type: "halfYear") { points in
+            self.sixMonthsPointsArray = points
+        }
+        StocksModel.getGraphPoints("GOOG", type: "year") { points in
+            self.yearPointsArray = points
+        }
+        
     }
 }
 //MARK:: List of Stocks, Table View
@@ -256,6 +287,7 @@ extension ProfileViewController: UITableViewDelegate,UITableViewDataSource{
         nextViewController.nameOfCompany = currentCell.companyNameLabel.text!
         nextViewController.costOfStock = currentCell.сompanyRevenue.text!
         nextViewController.stocks = currentCell.stockCount.text!
+        
     }
 }
 extension ProfileViewController: UICollectionViewDelegate,UICollectionViewDataSource{
@@ -279,15 +311,27 @@ extension ProfileViewController: UICollectionViewDelegate,UICollectionViewDataSo
         let selectedRow = collectionView.cellForItem(at: indexPath) as! DateCollectionViewCell
         selectedRow.setBottomBorder()
         self.selectedIndexPath = indexPath
-       
-        
-        
+        if selectedRow.dateLabel.text == "1D"{
+            drawGraph(array: self.dayPointsArray)
+        }else if selectedRow.dateLabel.text == "1W"{
+            drawGraph(array: self.weekPointsArray)
+        }else if selectedRow.dateLabel.text == "1M"{
+            drawGraph(array: self.monthPointsArray)
+        }else if selectedRow.dateLabel.text == "3M"{
+            drawGraph(array: self.threeMonthsPointsArray)
+        }else if selectedRow.dateLabel.text == "6M"{
+            drawGraph(array: self.sixMonthsPointsArray)
+        }else if selectedRow.dateLabel.text == "1Y"{
+            drawGraph(array: self.yearPointsArray)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         collectionView.cellForItem(at: indexPath)?.setWhiteBottomBorder()
         selectedIndexPath = nil
     }
+    
+ 
     
 }
 extension UIView {
