@@ -69,6 +69,7 @@ struct StocksModel {
                 var finalResuts: String = ""
                 for result in result{
                     finalResuts = (result["des"])!
+                    print(finalResuts)
                     
                 }
             

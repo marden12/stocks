@@ -125,10 +125,7 @@ class CompanyViewController: UIViewController {
         return label
     }()
         override func viewDidLoad() {
-            print("THERE ID \(nameOfCompany)")
-            view.backgroundColor = .backgroundColor
-            
-            
+
             setupViews()
             setupConstraints()
             
@@ -136,10 +133,10 @@ class CompanyViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        
         nameOfCompanyLabel.text = nameOfCompany
-        fetchGraph(newType: "day")
         fetchALL()
+        fetchGraph(newType: "day")
+        
     }
 
     func setupViews(){
@@ -287,15 +284,15 @@ extension CompanyViewController: UITableViewDelegate,UITableViewDataSource{
 
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsTableViewCell
-        if(indexPath.section == 0) {
-
-
-        }else if(indexPath.section == 1){
-         
-        }else if(indexPath.section == 2){
-          
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) 
+//        if(indexPath.section == 0) {
+//
+//
+//        }else if(indexPath.section == 1){
+//         
+//        }else if(indexPath.section == 2){
+//          
+//        }
         
         return cell
     }

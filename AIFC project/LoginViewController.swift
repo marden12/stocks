@@ -83,8 +83,8 @@ class LoginViewController: UIViewController {
     }
     
     func setupConstraints(){
-        var group = ConstraintGroup()
-        group = constrain(logoTite,view,emailTextField,passwordTextField,submitButton){ logo,v,eTF,pTF,button in
+
+        constrain(logoTite,view,emailTextField,passwordTextField,submitButton){ logo,v,eTF,pTF,button in
             logo.centerX == v.centerX
             logo.top == v.top + 50
             
@@ -105,7 +105,7 @@ class LoginViewController: UIViewController {
             button.centerX == v.centerX
         }
         
-        group = constrain(regButton,submitButton,view){ reg,button,v in
+        constrain(regButton,submitButton,view){ reg,button,v in
             reg.width == v.width/2
             reg.height == 45
             reg.top == button.bottom + 10

@@ -104,7 +104,6 @@ class QuizViewController: UIViewController {
     }
     
     func setupConstraints(){
-        var group = ConstraintGroup()
         constrain(view,viewForQuestion,questionLabel){ v, qv,ql in
             ql.center == qv.center
             qv.width == v.width - 64
@@ -128,7 +127,7 @@ class QuizViewController: UIViewController {
             a.centerX == qv.centerX
             
         }
-        group = constrain(aVariant,bVariant,cVariant,dVariant,view){a,b,c,d,v in
+        constrain(aVariant,bVariant,cVariant,dVariant,view){a,b,c,d,v in
             b.top == a.bottom + 24
             c.top == b.bottom + 24
             d.top == c.bottom + 24

@@ -20,11 +20,13 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     var ref = Database.database().reference(withPath: "companies_of_users")
     let usersRef = Database.database().reference(withPath: "online")
     var user: User!
-    let keyboardView = NumbersKeyboardView(frame: CGRect(x: 0, y: 0, width: 0, height: UIScreen.main.bounds.height * 0.45))
+    
     
     
     fileprivate lazy var inputTextField: UITextField = {
         let textField = UITextField()
+        let keyboardView = NumbersKeyboardView(frame: CGRect(x: 0, y: 0, width: 0, height: UIScreen.main.bounds.height * 0.45))
+        keyboardView.delegate = self
         textField.keyboardType = .numberPad
         textField.textAlignment = .right
         textField.font = UIFont(name: Standart.font.rawValue, size: 48)
@@ -33,8 +35,7 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
         textField.delegate = self
         textField.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingChanged)
         textField.placeholder = "0"
-        textField.addTarget(self, action: #selector(deleteKey), for: .allEvents)
-        textField.addTarget(self, action: #selector(keyWasTapped(character:)), for: .allEvents)
+        textField.inputView = keyboardView
         return textField
     }()
     fileprivate lazy var numberOfShares: UILabel = {
@@ -106,8 +107,7 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        keyboardView.delegate = self
-        keyboardView.becomeFirstResponder()
+
         deleteKey()
         navigationController?.navigationBar.barTintColor = .white
         marketPrice = 12.0
@@ -122,7 +122,7 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     }
     override func viewDidAppear(_ animated: Bool) {
         inputTextField.becomeFirstResponder()
-        keyboardView.becomeFirstResponder()
+    
     }
     func setupViews(){
         view.addSubview(inputTextField)

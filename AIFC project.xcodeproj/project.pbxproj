@@ -906,7 +906,7 @@
 				TargetAttributes = {
 					1849A2F91F0CA0C80027159F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2Y62544U83;
+						DevelopmentTeam = AB65P3C5XF;
 						ProvisioningStyle = Automatic;
 					};
 					1849A3101F0CA0C80027159F = {
@@ -1289,17 +1289,14 @@
 			baseConfigurationReference = 0E5FA2AEFAF79D2F60B858D4 /* Pods-AIFC project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2Y62544U83;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
+				DEVELOPMENT_TEAM = AB65P3C5XF;
 				INFOPLIST_FILE = "AIFC project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.AIFC-project";
+				PRODUCT_BUNDLE_IDENTIFIER = com.capitalMarket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1308,17 +1305,14 @@
 			baseConfigurationReference = F36C43EAC5962364527B2296 /* Pods-AIFC project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2Y62544U83;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
+				DEVELOPMENT_TEAM = AB65P3C5XF;
 				INFOPLIST_FILE = "AIFC project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-50107085.AIFC-project";
+				PRODUCT_BUNDLE_IDENTIFIER = com.capitalMarket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

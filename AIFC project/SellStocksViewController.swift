@@ -13,27 +13,29 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseCore
 
-class SellStocksViewController: UIViewController {
-
+class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
+    
     var name = ""
     var stocks = ""
     var items: [OwnStock] = []
     var ref = Database.database().reference(withPath: "companies_of_users")
     let usersRef = Database.database().reference(withPath: "online")
     var user: User!
-    let keyboardView = NumbersKeyboardView(frame: CGRect(x: 0, y: 0, width: 0, height: UIScreen.main.bounds.height * 0.45))
     
     fileprivate lazy var inputTextField: UITextField = {
         let textField = UITextField()
-        textField.keyboardType = .numberPad
+        
+        let keyboardView = NumbersKeyboardView(frame: CGRect(x: 0, y: 0, width: 0, height: UIScreen.main.bounds.height * 0.45))
+        keyboardView.delegate = self
+        
         textField.textAlignment = .right
         textField.font = UIFont(name: Standart.font.rawValue, size: 48)
         textField.textColor = .backgroundColor
         textField.tintColor = .backgroundColor
-        textField.delegate = self
+        
         textField.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingChanged)
         textField.placeholder = "0"
-        textField.inputView = self.keyboardView
+        textField.inputView = keyboardView
         return textField
     }()
     fileprivate lazy var numberOfShares: UILabel = {
@@ -123,6 +125,7 @@ class SellStocksViewController: UIViewController {
         view.addSubview(inputTextField)
         view.addSubview(numberOfShares)
         view.addSubview(costOnTrade)
+        
         view.addSubview(totalCost)
         view.addSubview(marketPriceLAbel)
         view.addSubview(totalCostLabel)
@@ -169,8 +172,8 @@ class SellStocksViewController: UIViewController {
             label.centerX == nav.centerX
         }
         
-        
     }
+    
     func textFieldDidChanged(textField: UITextField){
         if let text = textField.text as NSString? {
             let amount = text.doubleValue
@@ -196,7 +199,7 @@ class SellStocksViewController: UIViewController {
         let totalPrice = Int(stocks)! - Int(inputTextField.text!)!
         comItemRef.updateChildValues(["stocks": String(totalPrice)])
         self.dismiss(animated: true, completion: nil)
-    
+        
     }
     
 }

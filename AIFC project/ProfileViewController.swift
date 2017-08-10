@@ -35,7 +35,11 @@ class ProfileViewController: UIViewController {
     var ref: DatabaseReference?
     var databaseHandle:DatabaseHandle?
     
-    
+    fileprivate lazy var loadingSpinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView()
+        spinner.frame = CGRect(x: self.view.center.x, y: self.view.center.y, width: 24, height: 24)
+        return spinner
+    }()
     fileprivate lazy var  containerView: UIView = {
         let view = UIView()
         view.isUserInteractionEnabled = true
@@ -104,11 +108,14 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
+        setupConstraints()
+        loadingSpinner.startAnimating()
         fetchALL()
         fetchData()
         fetchGraph(newType: "day")
-        setupViews()
-        setupConstraints()
+        
+        
         listOfStocks.reloadData()
         
     }
@@ -125,6 +132,7 @@ class ProfileViewController: UIViewController {
     
     func setupViews(){
         containerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 64)
+        view.addSubview(loadingSpinner)
         view.addSubview(listOfStocks)
         view.addSubview(searchButton)
         containerView.addSubview(cashView)
@@ -160,6 +168,7 @@ class ProfileViewController: UIViewController {
             collectionView.width == v.width
             collectionView.height == 64
         }
+    
         
         
         
@@ -181,7 +190,7 @@ class ProfileViewController: UIViewController {
         }
     }
     func logOutAction(_:UIButton){
-        authService.logout()
+//        authService.logout()
     }
     func openListOfStocks(_:UIButton){
         let indexPath = NSIndexPath(item: 0, section: 0)

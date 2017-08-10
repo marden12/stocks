@@ -12,6 +12,8 @@ import ScrollableGraphView
 
 class OwnStocksTableViewCell: UITableViewCell {
     lazy var data: [Double] = []
+    lazy var maxRange = Double()
+    lazy var minRange = Double()
     public lazy var companyNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -22,6 +24,8 @@ class OwnStocksTableViewCell: UITableViewCell {
     public lazy var tinyGraphView: CustomGraphView = {
         let graphView = CustomGraphView()
         graphView.data = self.data
+        graphView.maxRange = self.maxRange
+        graphView.minRange = self.minRange
         return graphView
 
     }()

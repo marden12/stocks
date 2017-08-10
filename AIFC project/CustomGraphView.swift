@@ -47,9 +47,9 @@ class CustomGraphView: UIView{
     var last = Double()
     fileprivate lazy var graphView: ScrollableGraphView = {
         let graphView = ScrollableGraphView()
-        graphView.referenceLineColor = .clear
+        graphView.referenceLineColor = .white
         graphView.shouldShowLabels = false
-        graphView.shouldShowReferenceLineUnits = false
+        graphView.shouldShowReferenceLineUnits = true
         graphView.set(data: self.data, withLabels: [String(describing: self.data)])
         graphView.rangeMax = self.maxRange
         graphView.rangeMin = self.minRange
@@ -58,11 +58,12 @@ class CustomGraphView: UIView{
         graphView.lineWidth = 2
         graphView.lineColor = UIColor.white
         graphView.lineStyle = ScrollableGraphViewLineStyle.smooth
-        graphView.shouldAnimateOnStartup = false
+//        graphView.shouldAnimateOnStartup = false
+        graphView.animationDuration = 0.07
         graphView.shouldFill = true
         graphView.dataPointSpacing = 3
         graphView.dataPointFillColor = UIColor.clear
-        graphView.referenceLineLabelColor = .clear
+        graphView.referenceLineLabelColor = .white
         graphView.topMargin = 32
 
         return graphView
