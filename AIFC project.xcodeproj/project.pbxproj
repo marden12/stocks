@@ -18,6 +18,7 @@
 		182DCEBF1F20B8AD009B3BF3 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DCEBE1F20B8AD009B3BF3 /* StockModel.swift */; };
 		182DCEC31F276519009B3BF3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DCEC21F276519009B3BF3 /* QuizViewController.swift */; };
 		1840496F1F39A25B00EC7C47 /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840496E1F39A25B00EC7C47 /* LineGraphView.swift */; };
+		184049751F3C202200EC7C47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 184049741F3C202200EC7C47 /* GoogleService-Info.plist */; };
 		184558F01F289ECD00422DEE /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184558EF1F289ECD00422DEE /* Questions.swift */; };
 		18479AE01F286C1900AED6F0 /* AnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18479ADF1F286C1900AED6F0 /* AnswersTableViewCell.swift */; };
 		18479AE21F2882ED00AED6F0 /* jsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 18479AE11F2882ED00AED6F0 /* jsonFile.json */; };
@@ -32,7 +33,6 @@
 		184BC1C21F3431FB007B8B9A /* SellStocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BC1C11F3431FB007B8B9A /* SellStocksViewController.swift */; };
 		1853FD341F1E115F00E30812 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853FD331F1E115F00E30812 /* RegistrationViewController.swift */; };
 		1853FD3A1F1E15BA00E30812 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853FD391F1E15BA00E30812 /* AuthService.swift */; };
-		1853FD3C1F1E19EC00E30812 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1853FD3B1F1E19EC00E30812 /* GoogleService-Info.plist */; };
 		1853FD401F1F4E5C00E30812 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853FD3F1F1F4E5C00E30812 /* CustomTextField.swift */; };
 		1853FD421F1F502400E30812 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853FD411F1F502400E30812 /* LoginViewController.swift */; };
 		18584EEB1F308E8800E18EA5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18584EEA1F308E8800E18EA5 /* MenuView.swift */; };
@@ -336,6 +336,7 @@
 		182DCEBE1F20B8AD009B3BF3 /* StockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		182DCEC21F276519009B3BF3 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		1840496E1F39A25B00EC7C47 /* LineGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
+		184049741F3C202200EC7C47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		184558EF1F289ECD00422DEE /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		18479ADF1F286C1900AED6F0 /* AnswersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCell.swift; sourceTree = "<group>"; };
 		18479AE11F2882ED00AED6F0 /* jsonFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonFile.json; sourceTree = "<group>"; };
@@ -356,7 +357,6 @@
 		184BC1C11F3431FB007B8B9A /* SellStocksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellStocksViewController.swift; sourceTree = "<group>"; };
 		1853FD331F1E115F00E30812 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		1853FD391F1E15BA00E30812 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		1853FD3B1F1E19EC00E30812 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1853FD3F1F1F4E5C00E30812 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1853FD411F1F502400E30812 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18584EEA1F308E8800E18EA5 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -541,7 +541,7 @@
 			children = (
 				1849A3041F0CA0C80027159F /* AIFC_project.xcdatamodeld */,
 				1849A2FD1F0CA0C80027159F /* AppDelegate.swift */,
-				1853FD3B1F1E19EC00E30812 /* GoogleService-Info.plist */,
+				184049741F3C202200EC7C47 /* GoogleService-Info.plist */,
 				1849A30C1F0CA0C80027159F /* Info.plist */,
 				1849A3071F0CA0C80027159F /* Assets.xcassets */,
 				1849A3091F0CA0C80027159F /* LaunchScreen.storyboard */,
@@ -949,10 +949,10 @@
 				18B25BCB1F1636EB00274CF0 /* OpenSans-Regular.ttf in Resources */,
 				185ED65F1F2B428F00856038 /* NumbersKeyboard.xib in Resources */,
 				1849A30B1F0CA0C80027159F /* LaunchScreen.storyboard in Resources */,
-				1853FD3C1F1E19EC00E30812 /* GoogleService-Info.plist in Resources */,
 				18479AE21F2882ED00AED6F0 /* jsonFile.json in Resources */,
 				18B25BCA1F1636E900274CF0 /* OpenSans-Light.ttf in Resources */,
 				1849A3081F0CA0C80027159F /* Assets.xcassets in Resources */,
+				184049751F3C202200EC7C47 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
