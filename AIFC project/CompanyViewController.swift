@@ -64,12 +64,12 @@ class CompanyViewController: UIViewController {
         layout.scrollDirection = .vertical
         return layout
     }()
-    fileprivate lazy var openTableButton: UIButton = {
-        let button = UIButton()
-        button.setImage(#imageLiteral(resourceName: "down-arrow"), for: .normal)
-        button.addTarget(self, action: #selector(openListOfStocks(_:)), for: .touchUpInside)
-        return button
-    }()
+//    fileprivate lazy var openTableButton: UIButton = {
+//        let button = UIButton()
+//        button.setImage(#imageLiteral(resourceName: "down-arrow"), for: .normal)
+//        button.addTarget(self, action: #selector(openListOfStocks(_:)), for: .touchUpInside)
+//        return button
+//    }()
     fileprivate lazy var buyButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
@@ -105,7 +105,7 @@ class CompanyViewController: UIViewController {
         tableView.dataSource = self
         tableView.tableHeaderView = self.containerView
         tableView.rowHeight = 90
-        tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: "cell")
+//        tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.sectionHeaderHeight = 50
         return tableView
     }()
@@ -148,7 +148,7 @@ class CompanyViewController: UIViewController {
         containerView.addSubview(companiesIncome)
         containerView.addSubview(sellButton)
         containerView.addSubview(buyButton)
-        containerView.addSubview(openTableButton)
+//        containerView.addSubview(openTableButton)
         navBar.addSubview(nameOfCompanyLabel)
         view.addSubview(collectionView)
     }
@@ -180,13 +180,13 @@ class CompanyViewController: UIViewController {
             collectionView.bottom == sb.top - 32
             collectionView.centerX == view.centerX
         }
-        constrain(openTableButton,view,containerView){ button,v,container in
-            button.bottom == container.bottom - 10
-            button.width == 24
-            button.height == 24
-            button.centerX == v.centerX
-            
-        }
+//        constrain(view,containerView){ button,v,container in
+//            button.bottom == container.bottom - 10
+//            button.width == 24
+//            button.height == 24
+//            button.centerX == v.centerX
+//            
+//        }
         constrain(navBar,closeButton,nameOfCompanyLabel){ nav,cb,label in
             cb.width == 24
             cb.height == 24
@@ -206,11 +206,11 @@ class CompanyViewController: UIViewController {
             
         }
     }
-    func openListOfStocks(_:UIButton){
-        let indexPath = NSIndexPath(item: 0, section: 0)
-        listOfCompanies.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
-
-    }
+//    func openListOfStocks(_:UIButton){
+//        let indexPath = NSIndexPath(item: 0, section: 0)
+//        listOfCompanies.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
+//
+//    }
     
     func goToProfileViewController(_: UIButton){
         presentingViewController?.dismiss(animated: true, completion: nil)
@@ -338,18 +338,22 @@ extension CompanyViewController: UICollectionViewDelegate,UICollectionViewDataSo
         let selectedRow = collectionView.cellForItem(at: indexPath) as! DateCollectionViewCell
         selectedRow.setBottomBorder()
         self.selectedIndexPath = indexPath
-        if selectedRow.dateLabel.text == "1D"{
-            drawGraph(array: self.dayPointsArray)
-        }else if selectedRow.dateLabel.text == "1W"{
-            drawGraph(array: self.weekPointsArray)
-        }else if selectedRow.dateLabel.text == "1M"{
-            drawGraph(array: self.monthPointsArray)
-        }else if selectedRow.dateLabel.text == "3M"{
-            drawGraph(array: self.threeMonthsPointsArray)
-        }else if selectedRow.dateLabel.text == "6M"{
-            drawGraph(array: self.sixMonthsPointsArray)
-        }else if selectedRow.dateLabel.text == "1Y"{
-            drawGraph(array: self.yearPointsArray)
+        if self.dayPointsArray.isEmpty || self.weekPointsArray.isEmpty || self.monthPointsArray.isEmpty || self.threeMonthsPointsArray.isEmpty || self.sixMonthsPointsArray.isEmpty || self.yearPointsArray.isEmpty{
+            print("Waiting please")
+        }else{
+            if selectedRow.dateLabel.text == "1D"{
+                drawGraph(array: self.dayPointsArray)
+            }else if selectedRow.dateLabel.text == "1W"{
+                drawGraph(array: self.weekPointsArray)
+            }else if selectedRow.dateLabel.text == "1M"{
+                drawGraph(array: self.monthPointsArray)
+            }else if selectedRow.dateLabel.text == "3M"{
+                drawGraph(array: self.threeMonthsPointsArray)
+            }else if selectedRow.dateLabel.text == "6M"{
+                drawGraph(array: self.sixMonthsPointsArray)
+            }else if selectedRow.dateLabel.text == "1Y"{
+                drawGraph(array: self.yearPointsArray)
+            }
         }
         
     }

@@ -124,8 +124,8 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let item1 = UIBarButtonItem(customView: searchButton)
         self.navigationItem.setRightBarButton(item1, animated: true)
-        let item2 = UIBarButtonItem(customView: menuButton)
-        self.navigationItem.setLeftBarButton(item2, animated: true)
+//        let item2 = UIBarButtonItem(customView: menuButton)
+//        self.navigationItem.setLeftBarButton(item2, animated: true)
    
         
     }
@@ -193,8 +193,13 @@ class ProfileViewController: UIViewController {
 //        authService.logout()
     }
     func openListOfStocks(_:UIButton){
-        let indexPath = NSIndexPath(item: 0, section: 0)
-        listOfStocks.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
+        if items.isEmpty{
+            print("Wait please")
+        }else{
+            let indexPath = NSIndexPath(item: 0, section: 0)
+            listOfStocks.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
+        }
+        
     }
     func goToSearhViewController(_: UIButton){
         let nextViewController = SearchViewController()
@@ -320,19 +325,24 @@ extension ProfileViewController: UICollectionViewDelegate,UICollectionViewDataSo
         let selectedRow = collectionView.cellForItem(at: indexPath) as! DateCollectionViewCell
         selectedRow.setBottomBorder()
         self.selectedIndexPath = indexPath
-        if selectedRow.dateLabel.text == "1D"{
-            drawGraph(array: self.dayPointsArray)
-        }else if selectedRow.dateLabel.text == "1W"{
-            drawGraph(array: self.weekPointsArray)
-        }else if selectedRow.dateLabel.text == "1M"{
-            drawGraph(array: self.monthPointsArray)
-        }else if selectedRow.dateLabel.text == "3M"{
-            drawGraph(array: self.threeMonthsPointsArray)
-        }else if selectedRow.dateLabel.text == "6M"{
-            drawGraph(array: self.sixMonthsPointsArray)
-        }else if selectedRow.dateLabel.text == "1Y"{
-            drawGraph(array: self.yearPointsArray)
+        if self.dayPointsArray.isEmpty || self.weekPointsArray.isEmpty || self.monthPointsArray.isEmpty || self.threeMonthsPointsArray.isEmpty || self.sixMonthsPointsArray.isEmpty || self.yearPointsArray.isEmpty{
+            print("Waiting please")
+        }else{
+            if selectedRow.dateLabel.text == "1D"{
+                drawGraph(array: self.dayPointsArray)
+            }else if selectedRow.dateLabel.text == "1W"{
+                drawGraph(array: self.weekPointsArray)
+            }else if selectedRow.dateLabel.text == "1M"{
+                drawGraph(array: self.monthPointsArray)
+            }else if selectedRow.dateLabel.text == "3M"{
+                drawGraph(array: self.threeMonthsPointsArray)
+            }else if selectedRow.dateLabel.text == "6M"{
+                drawGraph(array: self.sixMonthsPointsArray)
+            }else if selectedRow.dateLabel.text == "1Y"{
+                drawGraph(array: self.yearPointsArray)
+            }
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

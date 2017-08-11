@@ -11,7 +11,7 @@ import ScrollableGraphView
 import Cartography
 
 class CustomGraphView: UIView{
-    let dateArray = ["1m","3m","6m","1y","2y"]
+    let dateArray = ["1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m"]
     lazy var labels: [String] = []
     var data: [Double] = [] {
         didSet{
@@ -50,7 +50,8 @@ class CustomGraphView: UIView{
         graphView.referenceLineColor = .white
         graphView.shouldShowLabels = false
         graphView.shouldShowReferenceLineUnits = true
-        graphView.set(data: self.data, withLabels: [String(describing: self.data)])
+
+        graphView.set(data: self.data, withLabels: self.dateArray)
         graphView.rangeMax = self.maxRange
         graphView.rangeMin = self.minRange
         graphView.backgroundFillColor = .backgroundColor
@@ -58,12 +59,13 @@ class CustomGraphView: UIView{
         graphView.lineWidth = 2
         graphView.lineColor = UIColor.white
         graphView.lineStyle = ScrollableGraphViewLineStyle.smooth
-//        graphView.shouldAnimateOnStartup = false
+        graphView.shouldAnimateOnStartup = false
         graphView.animationDuration = 0.07
         graphView.shouldFill = true
         graphView.dataPointSpacing = 3
         graphView.dataPointFillColor = UIColor.clear
         graphView.referenceLineLabelColor = .white
+        graphView.shouldRangeAlwaysStartAtZero = true
         graphView.topMargin = 32
 
         return graphView
