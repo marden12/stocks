@@ -9,6 +9,7 @@
 import UIKit
 import Cartography
 import FirebaseAuth
+import SkyFloatingLabelTextField
 class LoginViewController: UIViewController {
     let authService = AuthenticationService()
     fileprivate lazy var logoTite: UILabel = {
@@ -24,7 +25,7 @@ class LoginViewController: UIViewController {
         textField.placeholder = "Email"
         textField.placeholderColor = .white
         textField.title = "Write yout email"
-        
+        textField.titleColor = .white
         return textField
         
     }()
@@ -33,6 +34,7 @@ class LoginViewController: UIViewController {
         textField.placeholder = "Password"
         textField.placeholderColor = .white
         textField.title = "Write yout password"
+        textField.titleColor = .white
         textField.isSecureTextEntry = true
         return textField
     }()

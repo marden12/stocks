@@ -19,6 +19,8 @@
 		182DCEC31F276519009B3BF3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DCEC21F276519009B3BF3 /* QuizViewController.swift */; };
 		1840496F1F39A25B00EC7C47 /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840496E1F39A25B00EC7C47 /* LineGraphView.swift */; };
 		184049751F3C202200EC7C47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 184049741F3C202200EC7C47 /* GoogleService-Info.plist */; };
+		184049771F3D751800EC7C47 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 184049761F3D751100EC7C47 /* OpenSans-Bold.ttf */; };
+		184049791F3DCDBB00EC7C47 /* PersonaInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184049781F3DCDBB00EC7C47 /* PersonaInformation.swift */; };
 		184558F01F289ECD00422DEE /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184558EF1F289ECD00422DEE /* Questions.swift */; };
 		18479AE01F286C1900AED6F0 /* AnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18479ADF1F286C1900AED6F0 /* AnswersTableViewCell.swift */; };
 		18479AE21F2882ED00AED6F0 /* jsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 18479AE11F2882ED00AED6F0 /* jsonFile.json */; };
@@ -337,6 +339,8 @@
 		182DCEC21F276519009B3BF3 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		1840496E1F39A25B00EC7C47 /* LineGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
 		184049741F3C202200EC7C47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		184049761F3D751100EC7C47 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../Downloads/gakkuApp-master/GakkuApp/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		184049781F3DCDBB00EC7C47 /* PersonaInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonaInformation.swift; sourceTree = "<group>"; };
 		184558EF1F289ECD00422DEE /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		18479ADF1F286C1900AED6F0 /* AnswersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCell.swift; sourceTree = "<group>"; };
 		18479AE11F2882ED00AED6F0 /* jsonFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonFile.json; sourceTree = "<group>"; };
@@ -457,8 +461,8 @@
 			children = (
 				1849A3321F0CA13B0027159F /* Sources */,
 				1849A3311F0CA1210027159F /* Extensions */,
-				1813E9221F18D33C001BE892 /* Cells */,
 				1849A32F1F0CA1030027159F /* Model */,
+				1813E9221F18D33C001BE892 /* Cells */,
 				1849A3301F0CA10A0027159F /* Views */,
 				1849A32E1F0CA0F30027159F /* Controllers */,
 			);
@@ -505,6 +509,7 @@
 				182DCEBE1F20B8AD009B3BF3 /* StockModel.swift */,
 				184ABE071F2F1EDD00B6E0BC /* OwnStocks.swift */,
 				184558EF1F289ECD00422DEE /* Questions.swift */,
+				184049781F3DCDBB00EC7C47 /* PersonaInformation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 			children = (
 				18B25BC81F1636DD00274CF0 /* OpenSans-Light.ttf */,
 				18B25BC91F1636DD00274CF0 /* OpenSans-Regular.ttf */,
+				184049761F3D751100EC7C47 /* OpenSans-Bold.ttf */,
 				1849A3331F0CA23A0027159F /* Colors.swift */,
 				18479AE11F2882ED00AED6F0 /* jsonFile.json */,
 			);
@@ -948,6 +954,7 @@
 			files = (
 				18B25BCB1F1636EB00274CF0 /* OpenSans-Regular.ttf in Resources */,
 				185ED65F1F2B428F00856038 /* NumbersKeyboard.xib in Resources */,
+				184049771F3D751800EC7C47 /* OpenSans-Bold.ttf in Resources */,
 				1849A30B1F0CA0C80027159F /* LaunchScreen.storyboard in Resources */,
 				18479AE21F2882ED00AED6F0 /* jsonFile.json in Resources */,
 				18B25BCA1F1636E900274CF0 /* OpenSans-Light.ttf in Resources */,
@@ -1135,6 +1142,7 @@
 				18B25BB51F13988000274CF0 /* CompanyViewController.swift in Sources */,
 				184ABE081F2F1EDD00B6E0BC /* OwnStocks.swift in Sources */,
 				185ED6601F2B428F00856038 /* NumbersKeyboardView.swift in Sources */,
+				184049791F3DCDBB00EC7C47 /* PersonaInformation.swift in Sources */,
 				18479AE01F286C1900AED6F0 /* AnswersTableViewCell.swift in Sources */,
 				1853FD421F1F502400E30812 /* LoginViewController.swift in Sources */,
 				184BC1C21F3431FB007B8B9A /* SellStocksViewController.swift in Sources */,

@@ -7,7 +7,12 @@
 //
 
 import UIKit
-
+enum Standart: String {
+    
+    case font = "OpenSans-Regular"
+    case regularFont = "OpenSans-Light"
+    case boldFont = "OpenSans-Bold"
+}
 extension UIColor {
     static let backgroundColor = UIColor(colorLiteralRed: 128/255, green: 199/255, blue: 131/255, alpha: 1)
     static let specialBrown = UIColor(colorLiteralRed: 153/255, green: 72/255, blue: 40/255, alpha: 1)

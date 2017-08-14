@@ -9,14 +9,6 @@
 import UIKit
 import Cartography
 
-enum Standart: String {
-    
-    case font = "OpenSans-Regular"
-    case regularFont = "OpenSans-Light"
-}
-
-
-
 class CompaniesIncomeView: UIView {
     var text:String = ""
     fileprivate lazy var todayCost: UILabel = {

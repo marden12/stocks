@@ -25,6 +25,7 @@ class RegistrationViewController: UIViewController {
         textField.placeholder = "Nickname"
         textField.placeholderColor = .white
         textField.title = "Write yout nickname"
+        textField.titleColor = .white
         return textField
     }()
     fileprivate lazy var emailTextField: CustomTextField = {
@@ -32,6 +33,7 @@ class RegistrationViewController: UIViewController {
         textField.placeholder = "Email"
         textField.placeholderColor = .white
         textField.title = "Write yout email"
+        textField.titleColor = .white
         return textField
         
     }()
@@ -40,14 +42,15 @@ class RegistrationViewController: UIViewController {
         textField.placeholder = "Password"
         textField.placeholderColor = .white
         textField.title = "Write yout password"
+
         textField.isSecureTextEntry = true
         return textField
     }()
     fileprivate lazy var loginBitton: UIButton = {
         let button = UIButton()
         button.setTitle("Have an account?", for: .normal)
+        button.addTarget(self, action: #selector(gotoLogin), for: .touchUpInside)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(goToLogin(_:)), for: .touchUpInside)
         button.backgroundColor = .clear
         return button
     }()
@@ -80,6 +83,10 @@ class RegistrationViewController: UIViewController {
         }
 
     }
+    func gotoLogin(){
+        let nc = LoginViewController()
+        self.dismiss(animated: true, completion: nil)
+    }
     func setupViews(){
         view.addSubview(nameTextField)
         view.addSubview(emailTextField)
@@ -88,11 +95,7 @@ class RegistrationViewController: UIViewController {
         view.addSubview(loginBitton)
         view.addSubview(logoTite)
     }
-    
-    func goToLogin(_:UIButton){
-        print("KSKSKSK")
-        presentingViewController?.dismiss(animated: true, completion: nil)
-    }
+
     
     func setupConstraints(){
         

@@ -31,29 +31,16 @@ class CustomGraphView: UIView{
             graphView.reloadInputViews()
         }
     }
-    
-    var minRange2 = Double() {
-        didSet{
-            graphView.rangeMin = self.minRange
-            graphView.reloadInputViews()
-        }
-    }
-    var maxRange2 = Double() {
-        didSet{
-            graphView.rangeMax = self.maxRange
-            graphView.reloadInputViews()
-        }
-    }
+
     var last = Double()
     fileprivate lazy var graphView: ScrollableGraphView = {
         let graphView = ScrollableGraphView()
         graphView.referenceLineColor = .white
         graphView.shouldShowLabels = false
         graphView.shouldShowReferenceLineUnits = true
-
         graphView.set(data: self.data, withLabels: self.dateArray)
-        graphView.rangeMax = self.maxRange
         graphView.rangeMin = self.minRange
+        graphView.rangeMax = self.maxRange
         graphView.backgroundFillColor = .backgroundColor
         graphView.fillColor = .clear
         graphView.lineWidth = 2
@@ -65,9 +52,7 @@ class CustomGraphView: UIView{
         graphView.dataPointSpacing = 3
         graphView.dataPointFillColor = UIColor.clear
         graphView.referenceLineLabelColor = .white
-        graphView.shouldRangeAlwaysStartAtZero = true
         graphView.topMargin = 32
-
         return graphView
     }()
 

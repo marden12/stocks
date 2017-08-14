@@ -27,7 +27,11 @@ class CompanyViewController: UIViewController {
     var sixMonthsPointsArray:[Double] = []
     var yearPointsArray:[Double] = []
 
-    
+    fileprivate lazy var spinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView()
+        spinner.activityIndicatorViewStyle = .white
+        return spinner
+    }()
     fileprivate lazy var  containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .clear
@@ -120,14 +124,14 @@ class CompanyViewController: UIViewController {
     fileprivate lazy var nameOfCompanyLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = UIFont(name: Standart.font.rawValue, size: 24)
+        label.font = UIFont(name: Standart.boldFont.rawValue, size: 24)
         
         return label
     }()
         override func viewDidLoad() {
-
             setupViews()
             setupConstraints()
+            spinner.startAnimating()
             
             
         
@@ -148,9 +152,11 @@ class CompanyViewController: UIViewController {
         containerView.addSubview(companiesIncome)
         containerView.addSubview(sellButton)
         containerView.addSubview(buyButton)
+        containerView.addSubview(spinner)
 //        containerView.addSubview(openTableButton)
         navBar.addSubview(nameOfCompanyLabel)
         view.addSubview(collectionView)
+        
     }
     
     func setupConstraints(){
@@ -160,7 +166,6 @@ class CompanyViewController: UIViewController {
             income.centerY == container.centerY
             income.width == container.width
             income.height == container.height/4
-            
 
         }
         constrain(collectionView,sellButton,containerView,buyButton,closeButton){ collectionView,sb,view,bb,cb in
@@ -168,25 +173,15 @@ class CompanyViewController: UIViewController {
             sb.width == collectionView.width/2.5
             sb.height == 45
             sb.left == view.left + 24
-            sb.bottom == view.bottom - 64
+            sb.bottom == view.bottom - 48
             
             bb.width == collectionView.width/2.5
             bb.height == 45
             bb.right == view.right - 24
-            bb.bottom == view.bottom - 64
+            bb.bottom == view.bottom - 48
             
-            collectionView.width == view.width
-            collectionView.height == 64
-            collectionView.bottom == sb.top - 32
-            collectionView.centerX == view.centerX
         }
-//        constrain(view,containerView){ button,v,container in
-//            button.bottom == container.bottom - 10
-//            button.width == 24
-//            button.height == 24
-//            button.centerX == v.centerX
-//            
-//        }
+
         constrain(navBar,closeButton,nameOfCompanyLabel){ nav,cb,label in
             cb.width == 24
             cb.height == 24
@@ -195,6 +190,13 @@ class CompanyViewController: UIViewController {
             label.centerY == cb.centerY
             label.centerX == nav.centerX
         }
+        constrain(containerView,spinner){ containerView,spinner in
+            spinner.width == 32
+            spinner.height == 32
+            spinner.top == containerView.top + 150
+            spinner.centerX == containerView.centerX
+        }
+        
         
     }
     func constraintsToGraph(){
@@ -203,6 +205,12 @@ class CompanyViewController: UIViewController {
             graphView.centerX == v.centerX
             graphView.width == v.width - 16
             graphView.height == v.height/2
+            
+            collectionView.width == v.width
+            collectionView.height == 45
+            collectionView.top == graphView.bottom + 16
+            collectionView.centerX == v.centerX
+
             
         }
     }
@@ -300,18 +308,18 @@ extension CompanyViewController: UITableViewDelegate,UITableViewDataSource{
         return 90
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 0
     }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if(section == 0) {
-            return "News"
-        }else if(section == 1){
-            return "Statistics"
-        }else if(section == 2){
-            return "Orders"
-        }
-        return ""
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if(section == 0) {
+//            return "News"
+//        }else if(section == 1){
+//            return "Statistics"
+//        }else if(section == 2){
+//            return "Orders"
+//        }
+//        return ""
+//    }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = .lightgray

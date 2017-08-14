@@ -55,13 +55,14 @@ class SearchViewController: UIViewController {
         textField.placeholder = "Search"
         textField.addTarget(self, action: #selector(textChanged(sender:)), for: .editingChanged)
         textField.becomeFirstResponder()
+        textField.tintColor = .black
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.backgroundColor.cgColor
         textField.layer.cornerRadius = 5
         textField.leftViewMode = .always
         
-        let emailImgContainer = UIView(frame: CGRect(x:textField.frame.origin.x, y:textField.frame.origin.y, width:30.0, height:30.0))
-        let emailImView = UIImageView(frame: CGRect(x:0,y: 0,width: 16.0,height: 16.0))
+        let emailImgContainer = UIView(frame: CGRect(x:textField.frame.origin.x + 5, y:textField.frame.origin.y, width:30.0, height:30.0))
+        let emailImView = UIImageView(frame: CGRect(x:0,y: 0,width: 15.0,height: 16.0))
         emailImView.image = UIImage(named: "searchPlaceholder")
         emailImView.center = emailImgContainer.center
         emailImgContainer.addSubview(emailImView)
@@ -100,6 +101,8 @@ class SearchViewController: UIViewController {
 
         }
         constrain(navBar,closeButton,searchInputTextField){ nav,cb,textField in
+            cb.width == 24
+            cb.height == 24
             cb.left == nav.left + 16
             cb.top == nav.top + 26
             cb.right == textField.left - 8

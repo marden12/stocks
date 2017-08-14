@@ -64,6 +64,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
     }
     
+    func hideDoneBotton(){
+        IQKeyboardManager.sharedManager().enable = false
+    }
+    
     
     
     

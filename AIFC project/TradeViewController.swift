@@ -100,14 +100,15 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     fileprivate lazy var nameOfCompany: UILabel = {
         let label = UILabel()
         label.textColor = .backgroundColor
-        label.font = UIFont(name: Standart.font.rawValue, size: 18)
+        label.font = UIFont(name: Standart.boldFont.rawValue, size: 24)
         return label
     }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let appDel: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDel.hideDoneBotton()
         deleteKey()
         navigationController?.navigationBar.barTintColor = .white
         marketPrice = 12.0
@@ -168,6 +169,8 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
             button.top == t.bottom + 16
         }
         constrain(closeButton,navBar,nameOfCompany) { cb,nav,label in
+            cb.width == 24
+            cb.height == 24
             cb.left == nav.left + 16
             cb.top == nav.bottom - 32
             label.centerY == cb.centerY

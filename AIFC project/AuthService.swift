@@ -13,7 +13,6 @@ import FirebaseStorage
 import FirebaseDatabase
 
 struct AuthenticationService {
-    var navigationControler = UINavigationController()
     var databaseRef: DatabaseReference! {
         return Database.database().reference()
     }
@@ -60,9 +59,7 @@ struct AuthenticationService {
                     
                     print("You have successfully logged in")
                     (UIApplication.shared.delegate as? AppDelegate)?.loadMainPages()
-                    
-                    //                    let nextViewController = ProfileViewController()
-                    //                    self.navigationControler.pushViewController(nextViewController, animated: true)
+    
                 } else {
                     print("FIREBASE error")
                 }
@@ -77,7 +74,6 @@ struct AuthenticationService {
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             if error == nil {
                 
-//                self.setUserInfo(user, username: username, password: password)
                 (UIApplication.shared.delegate as? AppDelegate)?.loadMainPages()
                 
                 
@@ -102,11 +98,17 @@ struct AuthenticationService {
     }
     
     // 2 - We set the User Info
-    fileprivate func setUserInfo(_ username: User!, password: String){
+    fileprivate func saveInfo(_ user: User!, username: String, password: String, country: String, biography: String){
         
-//        self.saveInfo(username, password: password)
+        let userInfo = ["email": user.email!, "name": username, "country": country]
+        
+        let userRef = databaseRef.child("users").child(user.uid)
+        
+        userRef.setValue(userInfo)
+        
+        signIn(user.email!, password: password)
+        
         
     }
-    
     
 }

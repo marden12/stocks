@@ -9,7 +9,7 @@
 import UIKit
 import Cartography
 import SkyFloatingLabelTextField
-class CustomTextField: SkyFloatingLabelTextField {
+class CustomTextField: SkyFloatingLabelTextField{
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,4 +38,5 @@ class CustomTextField: SkyFloatingLabelTextField {
     func setupConstraints(){
         
     }
+
 }

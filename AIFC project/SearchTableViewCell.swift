@@ -49,7 +49,6 @@ class SearchTableViewCell: UITableViewCell {
             n.centerY == s.centerY
             p.top == n.bottom
             p.left == s.left + 10
-            
         }
     }
 

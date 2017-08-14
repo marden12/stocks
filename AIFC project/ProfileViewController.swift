@@ -35,11 +35,12 @@ class ProfileViewController: UIViewController {
     var ref: DatabaseReference?
     var databaseHandle:DatabaseHandle?
     
-    fileprivate lazy var loadingSpinner: UIActivityIndicatorView = {
+    fileprivate lazy var spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView()
-        spinner.frame = CGRect(x: self.view.center.x, y: self.view.center.y, width: 24, height: 24)
+        spinner.activityIndicatorViewStyle = .white
         return spinner
     }()
+
     fileprivate lazy var  containerView: UIView = {
         let view = UIView()
         view.isUserInteractionEnabled = true
@@ -82,7 +83,7 @@ class ProfileViewController: UIViewController {
     
     fileprivate lazy var menuButton: UIButton = {
         let button = UIButton()
-        button.setImage(#imageLiteral(resourceName: "menu"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "exit"), for: .normal)
         button.addTarget(self, action: #selector(logOutAction(_:)), for: .touchUpInside)
         return button
     }()
@@ -110,7 +111,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
-        loadingSpinner.startAnimating()
+        spinner.startAnimating()
         fetchALL()
         fetchData()
         fetchGraph(newType: "day")
@@ -124,20 +125,20 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let item1 = UIBarButtonItem(customView: searchButton)
         self.navigationItem.setRightBarButton(item1, animated: true)
-//        let item2 = UIBarButtonItem(customView: menuButton)
-//        self.navigationItem.setLeftBarButton(item2, animated: true)
+        let item2 = UIBarButtonItem(customView: menuButton)
+        self.navigationItem.setLeftBarButton(item2, animated: true)
    
         
     }
     
     func setupViews(){
         containerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 64)
-        view.addSubview(loadingSpinner)
         view.addSubview(listOfStocks)
         view.addSubview(searchButton)
         containerView.addSubview(cashView)
         containerView.addSubview(openTableButton)
         containerView.addSubview(collectionView)
+        containerView.addSubview(spinner)
         
     }
     
@@ -162,13 +163,13 @@ class ProfileViewController: UIViewController {
             button.width == 24
             button.height == 24
         }
-        constrain(collectionView,view,cashView){ collectionView,v,cashView in
-            collectionView.bottom == cashView.top - 16
-            collectionView.centerX == v.centerX
-            collectionView.width == v.width
-            collectionView.height == 64
+        
+        constrain(containerView,spinner){ containerView,spinner in
+            spinner.width == 32
+            spinner.height == 32
+            spinner.top == containerView.top + 150
+            spinner.centerX == containerView.centerX
         }
-    
         
         
         
@@ -179,6 +180,12 @@ class ProfileViewController: UIViewController {
             graphView.centerX == v.centerX
             graphView.width == v.width - 16
             graphView.height == v.height/2
+    
+            collectionView.width == v.width
+            collectionView.height == 45
+            collectionView.top == graphView.bottom + 16
+            collectionView.centerX == v.centerX
+
         }
     }
     func constraintsToGraphWeek(){
@@ -190,7 +197,7 @@ class ProfileViewController: UIViewController {
         }
     }
     func logOutAction(_:UIButton){
-//        authService.logout()
+        authService.logout()
     }
     func openListOfStocks(_:UIButton){
         if items.isEmpty{
@@ -219,6 +226,9 @@ class ProfileViewController: UIViewController {
                         self.price = childElement["price"]! as! String
                         self.stocks = childElement["stocks"]! as! String
                         print(self.name)
+                        if childElement["stocks"]! as! String == "0"{
+                            self.ref?.child("companies_of_users/" + ((Auth.auth().currentUser)?.uid)!).removeValue()
+                        }
                         self.arr = OwnStock(name: self.name, price: self.price, stocks: self.stocks)
                         self.items.append(self.arr)
                     }
@@ -273,6 +283,7 @@ class ProfileViewController: UIViewController {
             self.yearPointsArray = points
         }
         
+        
     }
 }
 //MARK:: List of Stocks, Table View
@@ -313,7 +324,7 @@ extension ProfileViewController: UICollectionViewDelegate,UICollectionViewDataSo
         cell.dateLabel.text = dateArray[indexPath.row]
         cell.backgroundColor = .backgroundColor
         if selectedIndexPath != nil && indexPath == selectedIndexPath {
-            collectionView.cellForItem(at: indexPath)?.setBottomBorder()
+            cell.dateLabel.font = UIFont(name: Standart.boldFont.rawValue, size: 18)
             
         }else{
             collectionView.cellForItem(at: indexPath)?.setWhiteBottomBorder()
@@ -355,10 +366,11 @@ extension ProfileViewController: UICollectionViewDelegate,UICollectionViewDataSo
 }
 extension UIView {
     func setBottomBorder() {
+        
         self.layer.backgroundColor = UIColor.backgroundColor.cgColor
         self.layer.masksToBounds = false
         self.layer.shadowColor = UIColor.white.cgColor
-        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 0.7)
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
     }
@@ -366,7 +378,7 @@ extension UIView {
         self.layer.backgroundColor = UIColor.clear.cgColor
         self.layer.masksToBounds = false
         self.layer.shadowColor = UIColor.clear.cgColor
-        self.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 0.7)
         self.layer.shadowOpacity = 0.0
         self.layer.shadowRadius = 0.0
     }
