@@ -24,7 +24,6 @@
 		18479AE01F286C1900AED6F0 /* AnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18479ADF1F286C1900AED6F0 /* AnswersTableViewCell.swift */; };
 		18479AE21F2882ED00AED6F0 /* jsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 18479AE11F2882ED00AED6F0 /* jsonFile.json */; };
 		1848A2001F4186C8002D1A0D /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848A1FF1F4186C8002D1A0D /* AlertViewController.swift */; };
-		1848A2021F42DF3C002D1A0D /* fetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848A2011F42DF3C002D1A0D /* fetchData.swift */; };
 		1849A2FE1F0CA0C80027159F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849A2FD1F0CA0C80027159F /* AppDelegate.swift */; };
 		1849A3061F0CA0C80027159F /* AIFC_project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1849A3041F0CA0C80027159F /* AIFC_project.xcdatamodeld */; };
 		1849A3081F0CA0C80027159F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1849A3071F0CA0C80027159F /* Assets.xcassets */; };
@@ -345,7 +344,6 @@
 		18479ADF1F286C1900AED6F0 /* AnswersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCell.swift; sourceTree = "<group>"; };
 		18479AE11F2882ED00AED6F0 /* jsonFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonFile.json; sourceTree = "<group>"; };
 		1848A1FF1F4186C8002D1A0D /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		1848A2011F42DF3C002D1A0D /* fetchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fetchData.swift; sourceTree = "<group>"; };
 		1849A2FA1F0CA0C80027159F /* AIFC project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIFC project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1849A2FD1F0CA0C80027159F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1849A3051F0CA0C80027159F /* AIFC_project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AIFC_project.xcdatamodel; sourceTree = "<group>"; };
@@ -512,7 +510,6 @@
 				184ABE071F2F1EDD00B6E0BC /* OwnStocks.swift */,
 				184558EF1F289ECD00422DEE /* Questions.swift */,
 				184049781F3DCDBB00EC7C47 /* PersonaInformation.swift */,
-				1848A2011F42DF3C002D1A0D /* fetchData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1139,7 +1136,6 @@
 				1848A2001F4186C8002D1A0D /* AlertViewController.swift in Sources */,
 				182DCEBF1F20B8AD009B3BF3 /* StockModel.swift in Sources */,
 				18B25BD11F17840100274CF0 /* NewsTableViewCell.swift in Sources */,
-				1848A2021F42DF3C002D1A0D /* fetchData.swift in Sources */,
 				182DCEBD1F20B85F009B3BF3 /* SearchTableViewCell.swift in Sources */,
 				182DCEB91F20A6E8009B3BF3 /* ShakeAnimation.swift in Sources */,
 				1849A2FE1F0CA0C80027159F /* AppDelegate.swift in Sources */,

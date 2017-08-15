@@ -32,7 +32,7 @@ class RegistrationViewController: UIViewController {
         let textField = CustomTextField()
         textField.placeholder = "Email"
         textField.placeholderColor = .white
-        textField.title = "Write your email"
+        textField.title = "Please write your real email"
         textField.titleColor = .white
         return textField
         
@@ -41,7 +41,7 @@ class RegistrationViewController: UIViewController {
         let textField = CustomTextField()
         textField.placeholder = "Password"
         textField.placeholderColor = .white
-        textField.title = "Write your password"
+        textField.title = "Password must be more than 6 symbols"
 
         textField.isSecureTextEntry = true
         return textField
@@ -74,12 +74,13 @@ class RegistrationViewController: UIViewController {
         let password = passwordTextField.text!
         let username = nameTextField.text!
         
-        if  password.isEmpty {
+        if  password.isEmpty || finalEmail.isEmpty || username.isEmpty {
             self.view.endEditing(true)
-            print("error")
+            self.showMessage("please check your text fields", type: .info)
         } else {
             self.view.endEditing(true)
             authService.signUp(finalEmail,password: password, username: username,vc: self)
+
         }
 
     }

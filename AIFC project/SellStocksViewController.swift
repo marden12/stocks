@@ -198,13 +198,22 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
     func sellAction(){
         let companiesItems = nameOfCompany.text
         let comItemRef = self.ref.child(Auth.auth().currentUser!.uid + "/" + companiesItems!)
-        let totalPrice = Int(stocks)! - Int(inputTextField.text!)!
-        if Int(inputTextField.text!)! > Int(stocks)!{
-            self.showMessage("You can't sell stocks larger than \(stocks)", type: .success)
+    
+        if stocks.isEmpty{
+            self.showMessage("Firstly, you must buy stocks", type: .success)
         }else{
-            comItemRef.updateChildValues(["stocks": String(totalPrice)])
-            self.dismiss(animated: true, completion: nil)
+            let totalPrice = Int(stocks)! - Int(inputTextField.text!)!
+            if Int(inputTextField.text!)! > Int(stocks)!{
+                self.showMessage("You can't sell stocks larger than \(stocks)", type: .success)
+            }else{
+                comItemRef.updateChildValues(["stocks": String(totalPrice)])
+                self.dismiss(animated: true, completion: nil)
+            }
+        
+        
         }
+        
+        
         
         
         

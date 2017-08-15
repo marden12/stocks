@@ -10,17 +10,11 @@ import UIKit
 import Cartography
 
 class CustomCashView: UIView {
+    var cashBalance = ""
     fileprivate lazy var cashLabel: UILabel = {
         let label = UILabel()
-        label.text = "$1206.08"
+        label.text = self.cashBalance
         label.font = UIFont(name: Standart.regularFont.rawValue, size: 48)
-        label.textColor = .white
-        return label
-    }()
-    fileprivate lazy var dateLabel: UILabel = {
-        let label = UILabel()
-        label.text = "+$83(16%)"
-        label.font = UIFont(name: Standart.regularFont.rawValue, size: 24)
         label.textColor = .white
         return label
     }()
@@ -46,19 +40,17 @@ class CustomCashView: UIView {
     func setupViews(){
         self.addSubview(cashLabel)
         self.addSubview(incomeLabel)
-        self.addSubview(dateLabel)
+    
     }
     
     func setupConstraints(){
-        constrain(self,cashLabel,incomeLabel,dateLabel){s,cash,date,income in
+        constrain(self,cashLabel,incomeLabel){s,cash,date in
         
             cash.top == s.top
             cash.left == s.left + 16
             date.top == cash.bottom
             date.left == s.left + 16
-            income.centerY == cash.centerY
-            income.right == s.right - 16
-            income.left == cash.right
+
         }
     }
 }

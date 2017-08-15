@@ -10,26 +10,26 @@ import Foundation
 import Firebase
 struct PersonalInformation {
     let name: String
-    let purse: String
+    let balance: String
     let ref: DatabaseReference?
     
-    init(name: String,purse: String) {
+    init(name: String,balance: String) {
         self.name = name
-        self.purse = purse
+        self.balance = balance
         self.ref = nil
     }
     
     init(snapshot: DataSnapshot) {
         let snapshotValue = snapshot.value as! [String: AnyObject]
         name = snapshotValue["name"] as! String
-        purse = snapshotValue["purse"] as! String
+        balance = snapshotValue["balance"] as! String
         ref = snapshot.ref
     }
     
     func toAnyObject() -> Any {
         return [
             "name": name,
-            "purse": purse
+            "balance": balance
         ]
     }
 

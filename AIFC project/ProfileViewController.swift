@@ -23,6 +23,8 @@ class ProfileViewController: UIViewController {
     var stocks = ""
     var price = ""
     var type = ""
+    var username = ""
+    var balance = ""
     var pointsArray:[Double] = []
     
     var dayPointsArray:[Double] = []
@@ -70,8 +72,7 @@ class ProfileViewController: UIViewController {
 
     fileprivate lazy var cashView: CustomCashView = {
         let view = CustomCashView()
-        view.isUserInteractionEnabled = true
-
+        view.cashBalance = self.balance
         return view
     }()
     fileprivate lazy var searchButton: UIButton = {
@@ -109,14 +110,13 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchUserInformation()
         setupViews()
         setupConstraints()
         spinner.startAnimating()
         fetchALL()
         fetchData()
         fetchGraph(newType: "day")
-        
-        
         listOfStocks.reloadData()
         
     }
@@ -220,7 +220,6 @@ class ProfileViewController: UIViewController {
             if let children = snapshot.children.allObjects as? [DataSnapshot] {
                 self.items.removeAll()
                 for child in children {
-                    
                     if let childElement = child.value as? [String: Any] {
                         self.name = childElement["name"]! as! String
                         self.price = childElement["price"]! as! String
@@ -242,6 +241,19 @@ class ProfileViewController: UIViewController {
             DispatchQueue.main.async {
                 self.listOfStocks.reloadData()
             }
+            
+        })
+    }
+    
+    func fetchUserInformation(){
+        let userID = Auth.auth().currentUser?.uid
+        ref = Database.database().reference()
+        ref?.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let username = value?["username"] as? String ?? ""
+            let balance = value?["balance"] as? String ?? ""
+            self.name = username
+            self.balance = balance
             
         })
     }

@@ -23,18 +23,7 @@ struct AuthenticationService {
         
         return Storage.storage().reference()
     }
-    
-    // 3 - We save the user info in the Database
-    fileprivate func saveInfo(_ user: User!, password: String,username: String){
-        
-        let userInfo = ["email": user.email!,"username": username]
-        
-        let userRef = databaseRef.child("users").child(user.uid)
-        
-        userRef.setValue(userInfo)
-        
-//        signIn(user.email!, password: password,vc:)
-    }
+
     
     func logout(){
         if Auth.auth().currentUser != nil {
@@ -80,7 +69,7 @@ struct AuthenticationService {
         } else {
             Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
-                
+                self.saveInfo(user, username: username, password: password, balance: "10000")
                 (UIApplication.shared.delegate as? AppDelegate)?.loadMainPages()
                 
                 
@@ -106,16 +95,12 @@ struct AuthenticationService {
     }
     
     // 2 - We set the User Info
-    fileprivate func saveInfo(_ user: User!, username: String, password: String, country: String, biography: String){
-        
-        let userInfo = ["email": user.email!, "name": username, "country": country]
+    func saveInfo(_ user: User!, username: String, password: String, balance: String){
+        let userInfo = ["email": user.email!, "username": username, "balance": balance]
         
         let userRef = databaseRef.child("users").child(user.uid)
         
         userRef.setValue(userInfo)
-        
-//        signIn(user.email!, password: password, vs: <#UIViewController#>)
-        
         
     }
     

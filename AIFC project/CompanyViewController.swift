@@ -19,7 +19,8 @@ class CompanyViewController: UIViewController {
     var dateArray = ["1D","1W","1M","3M","6M","1Y"]
     var pointsArray:[Double] = []
     var type = ""
-    
+    var canSell = false
+    var companiesArray: [OwnStock] = []
     var dayPointsArray:[Double] = []
     var weekPointsArray:[Double] = []
     var monthPointsArray:[Double] = []

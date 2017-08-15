@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
         let label = UILabel()
         label.text = "AIFC"
         label.font = UIFont(name: "OpenSans-Light", size: 64)
-        
         label.textColor = .white
         return label
     }()
@@ -28,6 +27,7 @@ class LoginViewController: UIViewController {
         textField.placeholderColor = .white
         textField.title = "Write yout email"
         textField.titleColor = .white
+        textField.tintColor = .white
         return textField
         
     }()
@@ -70,6 +70,7 @@ class LoginViewController: UIViewController {
         let finalEmail = email.trimmingCharacters(in: CharacterSet.whitespaces)
         let password = passwordTextField.text!
             authService.signIn(finalEmail, password: password, vs: self)
+            
         
     }
     
@@ -111,7 +112,7 @@ class LoginViewController: UIViewController {
         }
         
         constrain(regButton,submitButton,view){ reg,button,v in
-            reg.width == v.width/2
+            reg.width == v.width
             reg.height == 45
             reg.top == button.bottom + 10
             reg.centerX == button.centerX

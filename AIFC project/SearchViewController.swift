@@ -117,10 +117,17 @@ class SearchViewController: UIViewController {
         StocksModel.searchCompany(sender.text!) { finalResuts in
             
             for i in finalResuts{
+                if i.keys.contains("des"){
+                    self.results.append((i["des"])!)
+                    self.resultsOfCompanies.append((i["symbol"])!)
+                    print(self.results)
+                }else{
+                    print("not found")
+                }
                 
-                self.results.append((i["des"])!)
-                self.resultsOfCompanies.append((i["symbol"])!)
-                print(self.results)
+                
+                
+                
             }
         }
         
@@ -138,10 +145,15 @@ extension SearchViewController: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchTableViewCell
-        let text = results[indexPath.row]
-        let text2 = resultsOfCompanies[indexPath.row]
-        cell.newsTitle.text = text2
-        cell.postDate.text = text
+        if results.isEmpty && resultsOfCompanies.isEmpty{
+            cell.newsTitle.text = "Not Found"
+        }else{
+            let text = results[indexPath.row]
+            let text2 = resultsOfCompanies[indexPath.row]
+            cell.newsTitle.text = text2
+            cell.postDate.text = text
+        }
+        
 
         return cell
     }
@@ -157,6 +169,7 @@ extension SearchViewController: UITableViewDelegate,UITableViewDataSource{
         let currentCell = tableView.cellForRow(at: indexPath) as!SearchTableViewCell
         
         nextVC.nameOfCompany = currentCell.newsTitle.text!
+        nextVC.canSell = false
   
     }
 
