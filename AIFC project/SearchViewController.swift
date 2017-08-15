@@ -115,13 +115,15 @@ class SearchViewController: UIViewController {
         resultsOfCompanies.removeAll()
         results.removeAll()
         StocksModel.searchCompany(sender.text!) { finalResuts in
+            
             for i in finalResuts{
+                
                 self.results.append((i["des"])!)
                 self.resultsOfCompanies.append((i["symbol"])!)
                 print(self.results)
-               
             }
         }
+        
     }
     func closeAction(_: UIButton){
         self.dismiss(animated: true, completion: nil)

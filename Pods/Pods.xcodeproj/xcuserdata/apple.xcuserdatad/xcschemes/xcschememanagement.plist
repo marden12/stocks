@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GSMessages.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,17 +77,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04E8D3FD83EFD69C132F72EEF6C94092</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0B5308692E0510E9AB387C68543C448E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>446C1D2053AA2B30ADF67C3B91194F2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>50A3627918F4D5A413D1B9DDAA182FF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62AE28566AEC13EAF2392C033B5618DD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>851E55C9852ECB43A1C844F0F6005782</key>
+		<key>80A1AAD476BC6D0D87976DE91984E49D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +132,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>E0A3806B63CE3FCC83B972DAAFA2997B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1519FB1A128EEE28BE2AFAF5EB7C4F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

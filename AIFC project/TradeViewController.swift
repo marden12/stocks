@@ -207,8 +207,6 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
         comItemRef.setValue(otherItems.toAnyObject())
         items.append(otherItems)
         self.dismiss(animated: true, completion: nil)
-        
-        
     }
 
 }

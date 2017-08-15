@@ -5,14 +5,16 @@
 //  Created by Dayana Marden on 18.07.17.
 //  Copyright © 2017 Dayana Marden. All rights reserved.
 //
-
+import UIKit
 import Foundation
 import Firebase
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
+import GSMessages
 
 struct AuthenticationService {
+    
     var databaseRef: DatabaseReference! {
         return Database.database().reference()
     }
@@ -31,7 +33,7 @@ struct AuthenticationService {
         
         userRef.setValue(userInfo)
         
-        signIn(user.email!, password: password)
+//        signIn(user.email!, password: password,vc:)
     }
     
     func logout(){
@@ -48,10 +50,10 @@ struct AuthenticationService {
     }
     
     // 4 - We sign in the User
-    func signIn(_ email: String, password: String){
+    func signIn(_ email: String, password: String, vs: UIViewController){
         if email == "" || password == "" {
             
-            print("CHECK TF")
+            vs.showMessage("Check your email or password,please", type: .success)
             
         } else {
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
@@ -61,7 +63,8 @@ struct AuthenticationService {
                     (UIApplication.shared.delegate as? AppDelegate)?.loadMainPages()
     
                 } else {
-                    print("FIREBASE error")
+                    vs.showMessage("Check your email or password,please", type: .success)
+                    
                 }
             }
         }
@@ -69,18 +72,23 @@ struct AuthenticationService {
     }
     
     // 1 - We create firstly a New User
-    func signUp(_ email: String, password: String, username: String){
-        
-        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-            if error == nil {
+    func signUp(_ email: String, password: String, username: String,vc: UIViewController){
+        if email == "" || password == "" {
+            
+            vc.showMessage("Check your name,email or password,please", type: .success)
+            
+        } else {
+            Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                if error == nil {
                 
                 (UIApplication.shared.delegate as? AppDelegate)?.loadMainPages()
                 
                 
-            }else {
-                print("error")
-            }
-        })
+                }else {
+                    vc.showMessage("Check your name,email or password,please", type: .success)
+                }
+            })
+        }
         
     }
     
@@ -106,7 +114,7 @@ struct AuthenticationService {
         
         userRef.setValue(userInfo)
         
-        signIn(user.email!, password: password)
+//        signIn(user.email!, password: password, vs: <#UIViewController#>)
         
         
     }

@@ -10,6 +10,8 @@ import UIKit
 import Cartography
 import FirebaseAuth
 import SkyFloatingLabelTextField
+import GSMessages
+
 class LoginViewController: UIViewController {
     let authService = AuthenticationService()
     fileprivate lazy var logoTite: UILabel = {
@@ -67,7 +69,8 @@ class LoginViewController: UIViewController {
         let email = emailTextField.text!.lowercased()
         let finalEmail = email.trimmingCharacters(in: CharacterSet.whitespaces)
         let password = passwordTextField.text!
-        authService.signIn(finalEmail, password: password)
+            authService.signIn(finalEmail, password: password, vs: self)
+        
     }
     
     func setupViews(){

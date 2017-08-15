@@ -32,7 +32,7 @@ class RegistrationViewController: UIViewController {
         let textField = CustomTextField()
         textField.placeholder = "Email"
         textField.placeholderColor = .white
-        textField.title = "Write yout email"
+        textField.title = "Write your email"
         textField.titleColor = .white
         return textField
         
@@ -41,7 +41,7 @@ class RegistrationViewController: UIViewController {
         let textField = CustomTextField()
         textField.placeholder = "Password"
         textField.placeholderColor = .white
-        textField.title = "Write yout password"
+        textField.title = "Write your password"
 
         textField.isSecureTextEntry = true
         return textField
@@ -57,7 +57,7 @@ class RegistrationViewController: UIViewController {
     fileprivate lazy var submitButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
-        button.setTitle("SIGN IN", for: .normal)
+        button.setTitle("SIGN UP", for: .normal)
         button.setTitleColor(.backgroundColor, for: .normal)
         button.addTarget(self, action: #selector(submitAction(_:)), for: .touchUpInside)
         return button
@@ -79,12 +79,11 @@ class RegistrationViewController: UIViewController {
             print("error")
         } else {
             self.view.endEditing(true)
-            authService.signUp(finalEmail,password: password, username: username)
+            authService.signUp(finalEmail,password: password, username: username,vc: self)
         }
 
     }
     func gotoLogin(){
-        let nc = LoginViewController()
         self.dismiss(animated: true, completion: nil)
     }
     func setupViews(){
@@ -124,13 +123,11 @@ class RegistrationViewController: UIViewController {
             button.height == 45
             button.top == pTF.bottom + 16
             button.centerX == v.centerX
+            
             login.width == v.width/2
             login.height == 45
             login.top == button.bottom + 10
             login.centerX == button.centerX
         }
-        
     }
-    
-
 }

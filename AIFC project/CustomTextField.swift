@@ -15,15 +15,15 @@ class CustomTextField: SkyFloatingLabelTextField{
         super.init(frame: frame)
         self.frame = CGRect(x: 0, y: 0, width: 200, height: 45)
         self.titleColor = .white
+        self.tintColor = .white
         self.titleFont = UIFont(name: Standart.font.rawValue, size: 8)!
         self.textColor = .white
         self.font = UIFont(name: Standart.font.rawValue, size: 16)
         self.textAlignment = .left
-        self.tintColor = .white
         self.lineHeight = 1
         self.lineColor = .white
-        self.placeholderColor = .gray
         self.selectedLineColor = .white
+        self.tintColorDidChange()
         self.selectedLineHeight = 1
         self.autocapitalizationType = .none
         setupViews()

@@ -32,7 +32,7 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
         textField.font = UIFont(name: Standart.font.rawValue, size: 48)
         textField.textColor = .backgroundColor
         textField.tintColor = .backgroundColor
-        
+        textField.delegate = self
         textField.addTarget(self, action: #selector(textFieldDidChanged(textField:)), for: .editingChanged)
         textField.placeholder = "0"
         textField.inputView = keyboardView
@@ -199,8 +199,16 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
         let companiesItems = nameOfCompany.text
         let comItemRef = self.ref.child(Auth.auth().currentUser!.uid + "/" + companiesItems!)
         let totalPrice = Int(stocks)! - Int(inputTextField.text!)!
-        comItemRef.updateChildValues(["stocks": String(totalPrice)])
-        self.dismiss(animated: true, completion: nil)
+        if Int(inputTextField.text!)! > Int(stocks)!{
+            self.showMessage("You can't sell stocks larger than \(stocks)", type: .success)
+        }else{
+            comItemRef.updateChildValues(["stocks": String(totalPrice)])
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        
+        
+        
         
     }
     
@@ -208,6 +216,7 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
 
 extension SellStocksViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         guard let text = inputTextField.text else { return true }
         let newLength = text.characters.count + string.characters.count - range.length
         return newLength <= 5

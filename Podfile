@@ -15,6 +15,7 @@ pod 'IQKeyboardManagerSwift'
 pod 'Socket.IO-Client-Swift'
 pod 'Alamofire', '~> 4.4'
 pod 'ObjectMapper'
+pod 'GSMessages'
 
 
 
