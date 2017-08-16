@@ -17,8 +17,6 @@
 		182DCEBD1F20B85F009B3BF3 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DCEBC1F20B85F009B3BF3 /* SearchTableViewCell.swift */; };
 		182DCEBF1F20B8AD009B3BF3 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DCEBE1F20B8AD009B3BF3 /* StockModel.swift */; };
 		182DCEC31F276519009B3BF3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DCEC21F276519009B3BF3 /* QuizViewController.swift */; };
-		184049751F3C202200EC7C47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 184049741F3C202200EC7C47 /* GoogleService-Info.plist */; };
-		184049771F3D751800EC7C47 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 184049761F3D751100EC7C47 /* OpenSans-Bold.ttf */; };
 		184049791F3DCDBB00EC7C47 /* PersonaInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184049781F3DCDBB00EC7C47 /* PersonaInformation.swift */; };
 		184558F01F289ECD00422DEE /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184558EF1F289ECD00422DEE /* Questions.swift */; };
 		18479AE01F286C1900AED6F0 /* AnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18479ADF1F286C1900AED6F0 /* AnswersTableViewCell.swift */; };
@@ -55,6 +53,7 @@
 		18B25BD11F17840100274CF0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BD01F17840100274CF0 /* NewsTableViewCell.swift */; };
 		47469A442F5CC5260F77C182 /* Pods_AIFC_projectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B83D5090F385109FCC1CACC /* Pods_AIFC_projectUITests.framework */; };
 		B0D88900EA614A21B0A74B59 /* Pods_AIFC_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFA01886E22FE9DB7E8746F /* Pods_AIFC_project.framework */; };
+		CE4990301F43564D00DF6BF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE49902F1F43564D00DF6BF0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -337,8 +336,6 @@
 		182DCEBC1F20B85F009B3BF3 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		182DCEBE1F20B8AD009B3BF3 /* StockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		182DCEC21F276519009B3BF3 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		184049741F3C202200EC7C47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		184049761F3D751100EC7C47 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../Downloads/gakkuApp-master/GakkuApp/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		184049781F3DCDBB00EC7C47 /* PersonaInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonaInformation.swift; sourceTree = "<group>"; };
 		184558EF1F289ECD00422DEE /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		18479ADF1F286C1900AED6F0 /* AnswersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCell.swift; sourceTree = "<group>"; };
@@ -385,6 +382,8 @@
 		7EB597430B6E0DAFCBA0D723 /* Pods-AIFC projectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC projectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC projectTests/Pods-AIFC projectTests.release.xcconfig"; sourceTree = "<group>"; };
 		82333BAC604E947F8606BD01 /* Pods-AIFC projectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC projectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC projectUITests/Pods-AIFC projectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9BFA01886E22FE9DB7E8746F /* Pods_AIFC_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIFC_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE49902F1F43564D00DF6BF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE4990311F4356A500DF6BF0 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		F36C43EAC5962364527B2296 /* Pods-AIFC project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC project.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC project/Pods-AIFC project.release.xcconfig"; sourceTree = "<group>"; };
 		F4DEC13C2DFAE4B8BDF6AB6B /* Pods-AIFC projectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC projectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC projectUITests/Pods-AIFC projectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -535,7 +534,7 @@
 			children = (
 				18B25BC81F1636DD00274CF0 /* OpenSans-Light.ttf */,
 				18B25BC91F1636DD00274CF0 /* OpenSans-Regular.ttf */,
-				184049761F3D751100EC7C47 /* OpenSans-Bold.ttf */,
+				CE4990311F4356A500DF6BF0 /* OpenSans-Bold.ttf */,
 				1849A3331F0CA23A0027159F /* Colors.swift */,
 				18479AE11F2882ED00AED6F0 /* jsonFile.json */,
 			);
@@ -547,7 +546,7 @@
 			children = (
 				1849A3041F0CA0C80027159F /* AIFC_project.xcdatamodeld */,
 				1849A2FD1F0CA0C80027159F /* AppDelegate.swift */,
-				184049741F3C202200EC7C47 /* GoogleService-Info.plist */,
+				CE49902F1F43564D00DF6BF0 /* GoogleService-Info.plist */,
 				1849A30C1F0CA0C80027159F /* Info.plist */,
 				1849A3071F0CA0C80027159F /* Assets.xcassets */,
 				1849A3091F0CA0C80027159F /* LaunchScreen.storyboard */,
@@ -953,13 +952,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B25BCB1F1636EB00274CF0 /* OpenSans-Regular.ttf in Resources */,
+				CE4990301F43564D00DF6BF0 /* GoogleService-Info.plist in Resources */,
 				185ED65F1F2B428F00856038 /* NumbersKeyboard.xib in Resources */,
-				184049771F3D751800EC7C47 /* OpenSans-Bold.ttf in Resources */,
 				1849A30B1F0CA0C80027159F /* LaunchScreen.storyboard in Resources */,
 				18479AE21F2882ED00AED6F0 /* jsonFile.json in Resources */,
 				18B25BCA1F1636E900274CF0 /* OpenSans-Light.ttf in Resources */,
 				1849A3081F0CA0C80027159F /* Assets.xcassets in Resources */,
-				184049751F3C202200EC7C47 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,13 +999,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIFC projectUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0ED4365290BF953B5519273B /* [CP] Copy Pods Resources */ = {
@@ -1046,9 +1047,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AIFC project/Pods-AIFC project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/GSMessages/GSMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GSMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1061,13 +1085,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIFC project-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBC446F72EF47E5394769944 /* [CP] Copy Pods Resources */ = {
@@ -1091,13 +1118,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIFC projectTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD5E862F015B5E27FDECE210 /* [CP] Copy Pods Resources */ = {
@@ -1301,7 +1331,7 @@
 				INFOPLIST_FILE = "AIFC project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.capitalMarket;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trandinfgSimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1317,7 +1347,7 @@
 				INFOPLIST_FILE = "AIFC project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.capitalMarket;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trandinfgSimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

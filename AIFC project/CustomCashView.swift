@@ -12,8 +12,7 @@ import Cartography
 class CustomCashView: UIView {
     var cashBalance = ""
     fileprivate lazy var cashLabel: UILabel = {
-        let label = UILabel()
-        label.text = self.cashBalance
+        let label = UILabel()        
         label.font = UIFont(name: Standart.regularFont.rawValue, size: 48)
         label.textColor = .white
         return label

@@ -124,13 +124,8 @@ class SearchViewController: UIViewController {
                 }else{
                     print("not found")
                 }
-                
-                
-                
-                
             }
         }
-        
     }
     func closeAction(_: UIButton){
         self.dismiss(animated: true, completion: nil)
