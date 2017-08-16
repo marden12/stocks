@@ -72,7 +72,7 @@ class ProfileViewController: UIViewController {
 
     fileprivate lazy var cashView: CustomCashView = {
         let view = CustomCashView()
-        view.cashBalance = self.balance
+        view.cashBalance = "10000"
         return view
     }()
     fileprivate lazy var searchButton: UIButton = {
@@ -117,12 +117,15 @@ class ProfileViewController: UIViewController {
         fetchALL()
         fetchData()
         fetchGraph(newType: "day")
+        fetchUserInformation()
         listOfStocks.reloadData()
         
     }
 
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        
         let item1 = UIBarButtonItem(customView: searchButton)
         self.navigationItem.setRightBarButton(item1, animated: true)
         let item2 = UIBarButtonItem(customView: menuButton)
@@ -135,7 +138,6 @@ class ProfileViewController: UIViewController {
         containerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 64)
         view.addSubview(listOfStocks)
         view.addSubview(searchButton)
-        containerView.addSubview(cashView)
         containerView.addSubview(openTableButton)
         containerView.addSubview(collectionView)
         containerView.addSubview(spinner)
@@ -153,11 +155,7 @@ class ProfileViewController: UIViewController {
             menu.width == 24
             menu.height == 24
         }
-        constrain(containerView,cashView,openTableButton,view){container,cash, button, v in
-            cash.top == container.bottom - 150
-            cash.width == container.width
-            cash.height == container.height/2 - 64
-            cash.centerX == container.centerX
+        constrain(containerView,openTableButton,view){container, button, v in
             button.centerX == container.centerX
             button.bottom == container.bottom - 10
             button.width == 24
@@ -196,6 +194,16 @@ class ProfileViewController: UIViewController {
             graphView.height == v.height/2
         }
     }
+    func constraintToCash(){
+        constrain(containerView,cashView){container,cash in
+            cash.top == container.bottom - 150
+            cash.width == container.width
+            cash.height == container.height/2 - 64
+            cash.centerX == container.centerX
+
+            
+        }
+    }
     func logOutAction(_:UIButton){
         authService.logout()
     }
@@ -214,6 +222,7 @@ class ProfileViewController: UIViewController {
     }
     func fetchData(){
         ref = Database.database().reference()
+         let userID = Auth.auth().currentUser?.uid
         ref?.child("companies_of_users/" + ((Auth.auth().currentUser)?.uid)!).observe(.value, with: {(snapshot) in
             
             
@@ -224,7 +233,6 @@ class ProfileViewController: UIViewController {
                         self.name = childElement["name"]! as! String
                         self.price = childElement["price"]! as! String
                         self.stocks = childElement["stocks"]! as! String
-                        print(self.name)
                         if childElement["stocks"]! as! String == "0"{
                             self.ref?.child("companies_of_users/" + ((Auth.auth().currentUser)?.uid)!).removeValue()
                         }
@@ -243,19 +251,30 @@ class ProfileViewController: UIViewController {
             }
             
         })
-    }
-    
-    func fetchUserInformation(){
-        let userID = Auth.auth().currentUser?.uid
-        ref = Database.database().reference()
+        
         ref?.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let username = value?["username"] as? String ?? ""
             let balance = value?["balance"] as? String ?? ""
             self.name = username
-            self.balance = balance
+            self.cashView.cashBalance = balance
+//             = balance
+            self.containerView.addSubview(self.cashView)
+            self.constraintToCash()
+            DispatchQueue.main.async {
+                self.cashView.cashBalance = self.balance
+                self.cashView.setNeedsDisplay()
+                
+            }
             
         })
+
+        
+    }
+    
+    func fetchUserInformation(){
+        
+        
     }
     
     func fetchGraph(newType: String){

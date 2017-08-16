@@ -64,6 +64,10 @@ struct StocksModel {
             if let data = response.result.value as? NSArray {
                 let result = data.map{ return $0 as! [String: String]}
                 completion(result)
+                var finalResults = ""
+                for result in result{
+                    finalResults = result["des"]!
+                }
         
             } else {
                 print("no result value")
@@ -82,8 +86,6 @@ struct StocksModel {
         
         
         Alamofire.request("https://appstocks.herokuapp.com/stocksBySymbol", parameters: parameters).responseJSON { response in
-            
-            print("lego")
             
             if let data = response.result.value as? NSArray {
                 

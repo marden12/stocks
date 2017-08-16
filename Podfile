@@ -18,7 +18,6 @@ pod 'ObjectMapper'
 pod 'GSMessages'
 
 
-
   # Pods for AIFC project
 
   target 'AIFC projectTests' do
