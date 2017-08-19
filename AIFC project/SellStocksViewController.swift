@@ -19,9 +19,16 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
     var stocks = ""
     var items: [OwnStock] = []
     var ref = Database.database().reference(withPath: "companies_of_users")
+    let ref2 = Database.database().reference()
     let usersRef = Database.database().reference(withPath: "online")
     var user: User!
-    
+    let userID = Auth.auth().currentUser?.uid
+    var balance = ""
+    var price = ""
+    var sumArray:[String] = []
+    var intArray:[Double] = []
+    var sumedArr = 0.0
+
     fileprivate lazy var inputTextField: UITextField = {
         let textField = UITextField()
         
@@ -107,6 +114,8 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchData()
+        fetchUserInformation()
         navigationController?.navigationBar.barTintColor = .white
         marketPrice = 12.0
         print(items)
@@ -179,7 +188,7 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
     func textFieldDidChanged(textField: UITextField){
         if let text = textField.text as NSString? {
             let amount = text.doubleValue
-            totalCost.text = "$\(amount * marketPrice)"
+            totalCost.text = "\(amount * marketPrice)"
         }
     }
     func keyWasTapped(character: String) {
@@ -194,10 +203,48 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
     func closeAction(_: UIButton){
         self.dismiss(animated: true, completion: nil)
     }
+    func fetchData(){
+        print("fetchData")
+        ref2.child("companies_of_users/" + ((Auth.auth().currentUser)?.uid)!).observe(.value, with: {(snapshot) in
+            if let children = snapshot.children.allObjects as? [DataSnapshot] {
+                self.items.removeAll()
+                for child in children {
+                    if let childElement = child.value as? [String: Any] {
+                        self.price = childElement["price"]! as! String
+                        
+                        self.sumArray.append(self.price)
+                    }
+                    
+                    
+                }
+                let flatArray = self.sumArray.flatMap { $0 }
+                for i in flatArray{
+                    self.intArray.append(Double(i)!)
+                }
+                self.sumedArr = self.intArray.reduce(0, {$0 + $1})
+                print("SUM\(self.sumedArr)")
+                
+            } else {
+                print("parse failure ")
+            }
+        })
+    }
+    func fetchUserInformation(){
+        ref2.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            print("INFORMATION")
+            let value = snapshot.value as? NSDictionary
+            let balance = value?["balance"] as? String ?? ""
+            self.balance = balance
+            print("CURRENT BALANCE\(self.balance)")
+            
+        })
+        
+    }
     
     func sellAction(){
         let companiesItems = nameOfCompany.text
         let comItemRef = self.ref.child(Auth.auth().currentUser!.uid + "/" + companiesItems!)
+        let userCash = self.ref2.child("users").child(userID!)
     
         if stocks.isEmpty{
             self.showMessage("Firstly, you must buy stocks", type: .success)
@@ -207,20 +254,12 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
                 self.showMessage("You can't sell stocks larger than \(stocks)", type: .success)
             }else{
                 comItemRef.updateChildValues(["stocks": String(totalPrice)])
+                userCash.updateChildValues(["balance": Double(self.balance)! + Double(totalCost.text!)!])
                 self.dismiss(animated: true, completion: nil)
+                
             }
-        
-        
         }
-        
-        
-        
-        
-        
-        
-        
     }
-    
 }
 
 extension SellStocksViewController: UITextFieldDelegate {

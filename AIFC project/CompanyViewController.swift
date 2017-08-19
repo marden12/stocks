@@ -240,11 +240,16 @@ class CompanyViewController: UIViewController {
     }
     func fetchGraph(newType: String){
         StocksModel.getGraphPoints(nameOfCompanyLabel.text!, type: newType) { points in
-            self.graphView.maxRange = points.min()!
-            self.graphView.minRange = points.max()!
-            self.graphView.data = points
-            self.containerView.addSubview(self.graphView)
-            self.constraintsToGraph()
+            if points.isEmpty{
+                self.showMessage("Sorry, we do not have this company ", type: .success)
+            }else{
+                self.graphView.maxRange = points.min()!
+                self.graphView.minRange = points.max()!
+                self.graphView.data = points
+                self.containerView.addSubview(self.graphView)
+                self.constraintsToGraph()
+            }
+            
         }
     }
     func drawGraph(array: [Double]){

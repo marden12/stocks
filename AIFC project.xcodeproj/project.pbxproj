@@ -51,9 +51,10 @@
 		18B25BCB1F1636EB00274CF0 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B25BC91F1636DD00274CF0 /* OpenSans-Regular.ttf */; };
 		18B25BCF1F17446600274CF0 /* CompaniesIncomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BCE1F17446600274CF0 /* CompaniesIncomeView.swift */; };
 		18B25BD11F17840100274CF0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BD01F17840100274CF0 /* NewsTableViewCell.swift */; };
+		18F68D1F1F46B50600AECEFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F68D1E1F46B50600AECEFF /* GoogleService-Info.plist */; };
+		18F68D211F46B5BB00AECEFF /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F68D201F46B5AC00AECEFF /* OpenSans-Bold.ttf */; };
 		47469A442F5CC5260F77C182 /* Pods_AIFC_projectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B83D5090F385109FCC1CACC /* Pods_AIFC_projectUITests.framework */; };
 		B0D88900EA614A21B0A74B59 /* Pods_AIFC_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFA01886E22FE9DB7E8746F /* Pods_AIFC_project.framework */; };
-		CE4990301F43564D00DF6BF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE49902F1F43564D00DF6BF0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -376,14 +377,14 @@
 		18B25BC91F1636DD00274CF0 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		18B25BCE1F17446600274CF0 /* CompaniesIncomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompaniesIncomeView.swift; sourceTree = "<group>"; };
 		18B25BD01F17840100274CF0 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		18F68D1E1F46B50600AECEFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18F68D201F46B5AC00AECEFF /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../../Downloads/Open_Sans/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		2B83D5090F385109FCC1CACC /* Pods_AIFC_projectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIFC_projectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57BED87EC8942493937CC56C /* Pods-AIFC projectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC projectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC projectTests/Pods-AIFC projectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7322EBA26E71413043AF85B9 /* Pods_AIFC_projectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIFC_projectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB597430B6E0DAFCBA0D723 /* Pods-AIFC projectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC projectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC projectTests/Pods-AIFC projectTests.release.xcconfig"; sourceTree = "<group>"; };
 		82333BAC604E947F8606BD01 /* Pods-AIFC projectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC projectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC projectUITests/Pods-AIFC projectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9BFA01886E22FE9DB7E8746F /* Pods_AIFC_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIFC_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE49902F1F43564D00DF6BF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CE4990311F4356A500DF6BF0 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		F36C43EAC5962364527B2296 /* Pods-AIFC project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC project.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC project/Pods-AIFC project.release.xcconfig"; sourceTree = "<group>"; };
 		F4DEC13C2DFAE4B8BDF6AB6B /* Pods-AIFC projectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIFC projectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIFC projectUITests/Pods-AIFC projectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -534,7 +535,7 @@
 			children = (
 				18B25BC81F1636DD00274CF0 /* OpenSans-Light.ttf */,
 				18B25BC91F1636DD00274CF0 /* OpenSans-Regular.ttf */,
-				CE4990311F4356A500DF6BF0 /* OpenSans-Bold.ttf */,
+				18F68D201F46B5AC00AECEFF /* OpenSans-Bold.ttf */,
 				1849A3331F0CA23A0027159F /* Colors.swift */,
 				18479AE11F2882ED00AED6F0 /* jsonFile.json */,
 			);
@@ -546,7 +547,7 @@
 			children = (
 				1849A3041F0CA0C80027159F /* AIFC_project.xcdatamodeld */,
 				1849A2FD1F0CA0C80027159F /* AppDelegate.swift */,
-				CE49902F1F43564D00DF6BF0 /* GoogleService-Info.plist */,
+				18F68D1E1F46B50600AECEFF /* GoogleService-Info.plist */,
 				1849A30C1F0CA0C80027159F /* Info.plist */,
 				1849A3071F0CA0C80027159F /* Assets.xcassets */,
 				1849A3091F0CA0C80027159F /* LaunchScreen.storyboard */,
@@ -952,12 +953,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B25BCB1F1636EB00274CF0 /* OpenSans-Regular.ttf in Resources */,
-				CE4990301F43564D00DF6BF0 /* GoogleService-Info.plist in Resources */,
 				185ED65F1F2B428F00856038 /* NumbersKeyboard.xib in Resources */,
+				18F68D211F46B5BB00AECEFF /* OpenSans-Bold.ttf in Resources */,
 				1849A30B1F0CA0C80027159F /* LaunchScreen.storyboard in Resources */,
 				18479AE21F2882ED00AED6F0 /* jsonFile.json in Resources */,
 				18B25BCA1F1636E900274CF0 /* OpenSans-Light.ttf in Resources */,
 				1849A3081F0CA0C80027159F /* Assets.xcassets in Resources */,
+				18F68D1F1F46B50600AECEFF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

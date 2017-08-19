@@ -14,6 +14,7 @@ class CustomCashView: UIView {
     fileprivate lazy var cashLabel: UILabel = {
         let label = UILabel()        
         label.font = UIFont(name: Standart.regularFont.rawValue, size: 48)
+        label.text = self.cashBalance
         label.textColor = .white
         return label
     }()

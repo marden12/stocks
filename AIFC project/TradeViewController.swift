@@ -18,10 +18,16 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     var buttonName = ""
     var items: [OwnStock] = []
     var ref = Database.database().reference(withPath: "companies_of_users")
+    let ref2 = Database.database().reference()
     let usersRef = Database.database().reference(withPath: "online")
     var user: User!
-    
-    
+    var balance = ""
+    var price = ""
+    var sumArray:[String] = []
+    var intArray:[Double] = []
+    var sumedArr = 0.0
+    var databaseHandle:DatabaseHandle?
+    let userID = Auth.auth().currentUser?.uid
     
     fileprivate lazy var inputTextField: UITextField = {
         let textField = UITextField()
@@ -107,6 +113,8 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchData()
+        fetchUserInformation()
         let appDel: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDel.hideDoneBotton()
         deleteKey()
@@ -182,7 +190,7 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     func textFieldDidChanged(textField: UITextField){
         if let text = textField.text as NSString? {
             let amount = text.doubleValue
-            totalCost.text = "$\(amount * marketPrice)"
+            totalCost.text = "\(amount * marketPrice)"
         }
     }
     func keyWasTapped(character: String) {
@@ -204,11 +212,55 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
         let companiesItems = nameOfCompany.text
         let comItemRef = self.ref.child(Auth.auth().currentUser!.uid + "/" + companiesItems!)
         let otherItems = OwnStock(name: nameOfCompany.text! , price: totalCost.text!, stocks: inputTextField.text!)
-        comItemRef.setValue(otherItems.toAnyObject())
-        items.append(otherItems)
-        self.dismiss(animated: true, completion: nil)
+        let userCash = self.ref2.child("users").child(userID!)
+        
+        if Double(self.balance)! < 0{
+            self.showMessage("Please, check your current Balance", type: .success)
+        }else{
+            items.append(otherItems)
+            userCash.updateChildValues(["balance": "\(Double(self.balance)! - sumedArr)"])
+            comItemRef.setValue(otherItems.toAnyObject())
+            self.dismiss(animated: true, completion: nil)
+        }
     }
+    
+    func fetchData(){
+        print("fetchData")
+        ref2.child("companies_of_users/" + ((Auth.auth().currentUser)?.uid)!).observe(.value, with: {(snapshot) in
+            if let children = snapshot.children.allObjects as? [DataSnapshot] {
+                self.items.removeAll()
+                for child in children {
+                    if let childElement = child.value as? [String: Any] {
+                        self.price = childElement["price"]! as! String
+                       
+                        self.sumArray.append(self.price)
+                    }
+                    
+                    
+                }
+                let flatArray = self.sumArray.flatMap { $0 }
+                for i in flatArray{
+                    self.intArray.append(Double(i)!)
+                }
+                self.sumedArr = self.intArray.reduce(0, {$0 + $1})
+                print("SUM\(self.sumedArr)")
+                
+            } else {
+                print("parse failure ")
+            }
+        })
+    }
+    func fetchUserInformation(){
+        ref2.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            print("INFORMATION")
+            let value = snapshot.value as? NSDictionary
+            let balance = value?["balance"] as? String ?? ""
+            self.balance = balance
+            print("CURRENT BALANCE\(self.balance)")
+          
+        })
 
+    }
 }
 
 extension TradeViewController: UITextFieldDelegate {

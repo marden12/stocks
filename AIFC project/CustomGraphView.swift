@@ -11,7 +11,7 @@ import ScrollableGraphView
 import Cartography
 
 class CustomGraphView: UIView{
-    let dateArray = ["1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m","1m"]
+    let dateArray = ["1m","1m"]
     lazy var labels: [String] = []
     var data: [Double] = [] {
         didSet{
@@ -59,11 +59,6 @@ class CustomGraphView: UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.isUserInteractionEnabled = true
-        let label = String()
-        for i in 1...dateArray.count{
-            labels.append(label)
-            print(i)
-        }
         setupViews()
         setupConstraints()
     }

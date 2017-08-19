@@ -66,7 +66,13 @@ struct StocksModel {
                 completion(result)
                 var finalResults = ""
                 for result in result{
-                    finalResults = result["des"]!
+                    if result.isEmpty{
+                        print("error")
+                    }else{
+                        finalResults = result["des"]!
+                        print(finalResults)
+                    }
+                    
                 }
         
             } else {

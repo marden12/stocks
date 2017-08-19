@@ -26,7 +26,10 @@ class ProfileViewController: UIViewController {
     var username = ""
     var balance = ""
     var pointsArray:[Double] = []
-    
+    var sumOfCash = ""
+    var sumArray:[String] = []
+    var intArray:[Double] = []
+    var sumedArr = 0.0
     var dayPointsArray:[Double] = []
     var weekPointsArray:[Double] = []
     var monthPointsArray:[Double] = []
@@ -34,15 +37,15 @@ class ProfileViewController: UIViewController {
     var sixMonthsPointsArray:[Double] = []
     var yearPointsArray:[Double] = []
     
-    var ref: DatabaseReference?
+    let ref = Database.database().reference()
     var databaseHandle:DatabaseHandle?
-    
+    let userID = Auth.auth().currentUser?.uid
     fileprivate lazy var spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView()
         spinner.activityIndicatorViewStyle = .white
         return spinner
     }()
-
+    
     fileprivate lazy var  containerView: UIView = {
         let view = UIView()
         view.isUserInteractionEnabled = true
@@ -69,11 +72,21 @@ class ProfileViewController: UIViewController {
         layout.scrollDirection = .vertical
         return layout
     }()
-
-    fileprivate lazy var cashView: CustomCashView = {
-        let view = CustomCashView()
-        view.cashBalance = "10000"
+    
+    fileprivate lazy var cashView: UILabel = {
+        let view = UILabel()
+        view.font = UIFont(name: Standart.regularFont.rawValue, size: 48)
+        view.textColor = .white
+        view.textAlignment = .left
         return view
+    }()
+    fileprivate lazy var today: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: Standart.regularFont.rawValue, size: 28)
+        label.textColor = .white
+        label.textAlignment = .left
+        label.text = "today"
+        return label
     }()
     fileprivate lazy var searchButton: UIButton = {
         let button = UIButton()
@@ -88,7 +101,7 @@ class ProfileViewController: UIViewController {
         button.addTarget(self, action: #selector(logOutAction(_:)), for: .touchUpInside)
         return button
     }()
-
+    
     fileprivate lazy var listOfStocks: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .backgroundColor
@@ -107,30 +120,31 @@ class ProfileViewController: UIViewController {
         return button
     }()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchUserInformation()
         setupViews()
         setupConstraints()
-        spinner.startAnimating()
         fetchALL()
-        fetchData()
-        fetchGraph(newType: "day")
-        fetchUserInformation()
-        listOfStocks.reloadData()
         
+        spinner.startAnimating()
+        fetchUserInformation()
+        getInteger()
+        fetchGraph(newType: "day")
+        listOfStocks.reloadData()
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        fetchData()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         
         let item1 = UIBarButtonItem(customView: searchButton)
         self.navigationItem.setRightBarButton(item1, animated: true)
         let item2 = UIBarButtonItem(customView: menuButton)
         self.navigationItem.setLeftBarButton(item2, animated: true)
-   
+        
         
     }
     
@@ -141,6 +155,9 @@ class ProfileViewController: UIViewController {
         containerView.addSubview(openTableButton)
         containerView.addSubview(collectionView)
         containerView.addSubview(spinner)
+        containerView.addSubview(cashView)
+        containerView.addSubview(today)
+        
         
     }
     
@@ -149,17 +166,25 @@ class ProfileViewController: UIViewController {
             list.left == v.left
             list.right == v.right
             list.bottom == v.bottom
-            list.top == v.top 
+            list.top == v.top
             search.width == 24
             search.height == 24
             menu.width == 24
             menu.height == 24
         }
-        constrain(containerView,openTableButton,view){container, button, v in
+        constrain(containerView,openTableButton,view,cashView,today){container, button, v, cash, today in
             button.centerX == container.centerX
             button.bottom == container.bottom - 10
             button.width == 24
             button.height == 24
+            
+            cash.top == container.bottom - 200
+            cash.width == container.width - 16
+            cash.centerX == container.centerX
+            
+            today.top == cash.bottom + 4
+            today.width == container.width - 16
+            today.centerX == container.centerX
         }
         
         constrain(containerView,spinner){ containerView,spinner in
@@ -178,12 +203,13 @@ class ProfileViewController: UIViewController {
             graphView.centerX == v.centerX
             graphView.width == v.width - 16
             graphView.height == v.height/2
-    
+            
             collectionView.width == v.width
             collectionView.height == 45
             collectionView.top == graphView.bottom + 16
             collectionView.centerX == v.centerX
-
+            
+            
         }
     }
     func constraintsToGraphWeek(){
@@ -196,11 +222,7 @@ class ProfileViewController: UIViewController {
     }
     func constraintToCash(){
         constrain(containerView,cashView){container,cash in
-            cash.top == container.bottom - 150
-            cash.width == container.width
-            cash.height == container.height/2 - 64
-            cash.centerX == container.centerX
-
+            
             
         }
     }
@@ -221,26 +243,31 @@ class ProfileViewController: UIViewController {
         navigationController?.present(nextViewController, animated: true, completion: nil)
     }
     func fetchData(){
-        ref = Database.database().reference()
-         let userID = Auth.auth().currentUser?.uid
-        ref?.child("companies_of_users/" + ((Auth.auth().currentUser)?.uid)!).observe(.value, with: {(snapshot) in
-            
-            
+        
+        
+        ref.child("companies_of_users/" + ((Auth.auth().currentUser)?.uid)!).observe(.value, with: {(snapshot) in
             if let children = snapshot.children.allObjects as? [DataSnapshot] {
                 self.items.removeAll()
+                self.sumArray.removeAll()
                 for child in children {
                     if let childElement = child.value as? [String: Any] {
                         self.name = childElement["name"]! as! String
                         self.price = childElement["price"]! as! String
                         self.stocks = childElement["stocks"]! as! String
                         if childElement["stocks"]! as! String == "0"{
-                            self.ref?.child("companies_of_users/" + ((Auth.auth().currentUser)?.uid)!).removeValue()
+                            self.ref.child("companies_of_users/" + ((Auth.auth().currentUser)?.uid)!).removeValue()
                         }
                         self.arr = OwnStock(name: self.name, price: self.price, stocks: self.stocks)
+                        self.sumArray.append(self.price)
                         self.items.append(self.arr)
                     }
-
                 }
+                let flatArray = self.sumArray.flatMap { $0 }
+                for i in flatArray{
+                    self.intArray.append(Double(i)!)
+                }
+                self.sumedArr = self.intArray.reduce(0, {$0 + $1})
+                print(self.sumedArr)
                 
             } else {
                 print("parse failure ")
@@ -252,30 +279,49 @@ class ProfileViewController: UIViewController {
             
         })
         
-        ref?.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+    }
+    
+    func fetchUserInformation(){
+        //        ref.child("users").child(userID!).observeSingleEvent(of: .childAdded, with: { (snapshot) in
+        //            print("INFORMATION")
+        //            let value = snapshot.value as? NSDictionary
+        //            let username = value?["username"] as? String ?? ""
+        //            let balance = value?["balance"] as? String ?? ""
+        //            self.name = username
+        //            self.balance = balance
+        //            self.cashView.text = ("$\(self.balance)")
+        //
+        //        })
+        
+        ref.child("users").child(userID!).observe(.value, with: { (snapshot) in
+            print("INFORMATION LOAD")
             let value = snapshot.value as? NSDictionary
             let username = value?["username"] as? String ?? ""
             let balance = value?["balance"] as? String ?? ""
             self.name = username
-            self.cashView.cashBalance = balance
-//             = balance
-            self.containerView.addSubview(self.cashView)
-            self.constraintToCash()
-            DispatchQueue.main.async {
-                self.cashView.cashBalance = self.balance
-                self.cashView.setNeedsDisplay()
-                
-            }
+            self.balance = balance
+            self.cashView.text = ("$\(self.balance)")
             
-        })
-
+        }) { (error) in
+            print("error")
+        }
+        
+        
+        
+        
+        //        observeSingleEvent(of: .childAdded, with: { (snapshot) in
+        //            print("INFORMATION")
+        //            let value = snapshot.value as? NSDictionary
+        //            let username = value?["username"] as? String ?? ""
+        //            let balance = value?["balance"] as? String ?? ""
+        //            self.name = username
+        //            self.balance = balance
+        //            self.cashView.text = ("$\(self.balance)")
+        //
+        //        })
         
     }
     
-    func fetchUserInformation(){
-        
-        
-    }
     
     func fetchGraph(newType: String){
         StocksModel.getGraphPoints("GOOG", type: newType) { points in
@@ -292,6 +338,9 @@ class ProfileViewController: UIViewController {
         self.graphView.data = array
         self.containerView.addSubview(self.graphView)
         self.constraintsToGraph()
+    }
+    func getInteger(){
+        
     }
     
     func fetchALL(){
@@ -392,7 +441,7 @@ extension ProfileViewController: UICollectionViewDelegate,UICollectionViewDataSo
         selectedIndexPath = nil
     }
     
- 
+    
     
 }
 extension UIView {
