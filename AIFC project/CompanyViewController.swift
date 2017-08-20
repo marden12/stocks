@@ -230,10 +230,12 @@ class CompanyViewController: UIViewController {
         if sender.tag == 1{
             self.present(tradeViewController, animated: true, completion: nil)
             tradeViewController.name = nameOfCompanyLabel.text!
+            tradeViewController.trade = self.dayPointsArray.last!
         }else if sender.tag == 2{
             self.present(sellViewController, animated: true, completion: nil)
             sellViewController.name = nameOfCompanyLabel.text!
             sellViewController.stocks = stocks
+            sellViewController.trade = self.dayPointsArray.last!
             
         }
         

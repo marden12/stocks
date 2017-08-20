@@ -19,13 +19,13 @@ class CustomGraphView: UIView{
             graphView.reloadInputViews()
         }
     }
-    var minRange = Double() {
+    var minRange:Double = 0.0 {
         didSet{
             graphView.rangeMin = self.minRange
             graphView.reloadInputViews()
         }
     }
-    var maxRange = Double() {
+    var maxRange:Double = 0.0 {
         didSet{
             graphView.rangeMax = self.maxRange
             graphView.reloadInputViews()
@@ -47,12 +47,12 @@ class CustomGraphView: UIView{
         graphView.lineColor = UIColor.white
         graphView.lineStyle = ScrollableGraphViewLineStyle.smooth
         graphView.shouldAnimateOnStartup = false
-        graphView.animationDuration = 0.07
+        graphView.shouldAdaptRange = true
         graphView.shouldFill = true
         graphView.dataPointSpacing = 3
         graphView.dataPointFillColor = UIColor.clear
         graphView.referenceLineLabelColor = .white
-        graphView.topMargin = 32
+
         return graphView
     }()
 

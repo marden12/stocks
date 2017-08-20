@@ -28,7 +28,7 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
     var sumArray:[String] = []
     var intArray:[Double] = []
     var sumedArr = 0.0
-
+    var trade = 0.0
     fileprivate lazy var inputTextField: UITextField = {
         let textField = UITextField()
         
@@ -117,7 +117,7 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
         fetchData()
         fetchUserInformation()
         navigationController?.navigationBar.barTintColor = .white
-        marketPrice = 12.0
+        
         print(items)
         view.backgroundColor = .white
         setupViews()
@@ -126,6 +126,7 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
         nameOfCompany.text = name
+        marketPrice = trade
     }
     override func viewDidAppear(_ animated: Bool) {
         inputTextField.becomeFirstResponder()
@@ -250,11 +251,13 @@ class SellStocksViewController: UIViewController, NumbersKeyboardDelegate {
             self.showMessage("Firstly, you must buy stocks", type: .success)
         }else{
             let totalPrice = Int(stocks)! - Int(inputTextField.text!)!
+            let newTotalPrice = Double(totalCost.text!)! + Double(balance)!
+            print("THISS\(newTotalPrice)")
             if Int(inputTextField.text!)! > Int(stocks)!{
                 self.showMessage("You can't sell stocks larger than \(stocks)", type: .success)
             }else{
                 comItemRef.updateChildValues(["stocks": String(totalPrice)])
-                userCash.updateChildValues(["balance": Double(self.balance)! + Double(totalCost.text!)!])
+                userCash.updateChildValues(["balance": String(newTotalPrice)])
                 self.dismiss(animated: true, completion: nil)
                 
             }

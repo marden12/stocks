@@ -28,6 +28,7 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     var sumedArr = 0.0
     var databaseHandle:DatabaseHandle?
     let userID = Auth.auth().currentUser?.uid
+    var trade = 0.0
     
     fileprivate lazy var inputTextField: UITextField = {
         let textField = UITextField()
@@ -119,7 +120,7 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
         appDel.hideDoneBotton()
         deleteKey()
         navigationController?.navigationBar.barTintColor = .white
-        marketPrice = 12.0
+        
         print(items)
         view.backgroundColor = .white
         setupViews()
@@ -128,6 +129,7 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
         nameOfCompany.text = name
+        marketPrice = trade
     }
     override func viewDidAppear(_ animated: Bool) {
         inputTextField.becomeFirstResponder()
