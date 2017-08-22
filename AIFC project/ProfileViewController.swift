@@ -13,19 +13,21 @@ import FirebaseDatabase
 import FirebaseAuth
 class ProfileViewController: UIViewController {
     var selectedIndexPath: IndexPath?
-    var array: [CDOwnStocks] = []
+    var array: [Int] = []
+    var pointsArray: [Double] = []
     var height = CGFloat()
     let authService = AuthenticationService()
     var items: [OwnStock] = []
-    var arr = OwnStock(name: "", price: "", stocks: "")
+    var arr = OwnStock(name: "", stocks: "")
     var dateArray = ["1D","1W","1M","3M","6M","1Y"]
     var name = ""
     var stocks = ""
     var price = ""
     var type = ""
     var username = ""
+    var todayGraph:[Double] = []
     var balance = ""
-    var pointsArray:[Double] = []
+    var newpointsArray:[[Double]] = [[]]
     var sumOfCash = ""
     var sumArray:[String] = []
     var intArray:[Double] = []
@@ -36,9 +38,14 @@ class ProfileViewController: UIViewController {
     var threeMonthsPointsArray:[Double] = []
     var sixMonthsPointsArray:[Double] = []
     var yearPointsArray:[Double] = []
-    
+    var myNewArray: [Double] = []
+    var myNew2Array: [Double] = []
+    var totalPriceSumArray = [[Double]]()
+    var summArrayTotal = [Double]()
     let ref = Database.database().reference()
     var databaseHandle:DatabaseHandle?
+    var arrayofsumtotal = [String]()
+    var arrayofsumtotal2 = [Double]()
     let userID = Auth.auth().currentUser?.uid
     fileprivate lazy var spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView()
@@ -53,7 +60,6 @@ class ProfileViewController: UIViewController {
     }()
     fileprivate lazy var graphView: CustomGraphView = {
         let view = CustomGraphView()
-        view.data = self.pointsArray
         return view
     }()
     fileprivate lazy var collectionView: UICollectionView = {
@@ -243,8 +249,6 @@ class ProfileViewController: UIViewController {
         navigationController?.present(nextViewController, animated: true, completion: nil)
     }
     func fetchData(){
-        
-        
         ref.child("companies_of_users/" + ((Auth.auth().currentUser)?.uid)!).observe(.value, with: {(snapshot) in
             if let children = snapshot.children.allObjects as? [DataSnapshot] {
                 self.items.removeAll()
@@ -252,22 +256,64 @@ class ProfileViewController: UIViewController {
                 for child in children {
                     if let childElement = child.value as? [String: Any] {
                         self.name = childElement["name"]! as! String
-                        self.price = childElement["price"]! as! String
                         self.stocks = childElement["stocks"]! as! String
                         if childElement["stocks"]! as! String == "0"{
                             self.ref.child("companies_of_users/" + ((Auth.auth().currentUser)?.uid)!).removeValue()
                         }
-                        self.arr = OwnStock(name: self.name, price: self.price, stocks: self.stocks)
-                        self.sumArray.append(self.price)
+                        self.array.append(Int(self.stocks)!)
+                        
+                        self.arr = OwnStock(name: self.name, stocks:self.stocks)
+                        
                         self.items.append(self.arr)
                     }
                 }
-                let flatArray = self.sumArray.flatMap { $0 }
-                for i in flatArray{
-                    self.intArray.append(Double(i)!)
+                var bla = [Double]()
+                for i in 0...self.items.count-1{
+                    StocksModel.getGraphPoints(self.items[i].name, type: "day", { points in
+                        bla = points
+                        print("\(i)---->\(Double(bla.last!))")
+                        let some = bla.last.map{$0 * Double(self.array[i])}
+                        self.arrayofsumtotal.append("$\(some!)")
+                        self.arrayofsumtotal2.append(some!)
+                   })
                 }
-                self.sumedArr = self.intArray.reduce(0, {$0 + $1})
-                print(self.sumedArr)
+////TODO:: Finding sum of graphs
+//                if self.sumArray.isEmpty{
+//                    print("Please wait")
+//                }else{
+//                    for i in 0...self.sumArray.count-1{
+//                        self.myNewArray = self.items[i].todayGraph.map{$0 * Double(self.array[i])}
+//                        self.totalPriceSumArray.append(self.myNewArray)
+//                        
+//                    }
+//                    
+//                    for _ in 0...self.totalPriceSumArray[0].count{
+//                        self.summArrayTotal.append(0.0)
+//                    }
+//                    print(self.totalPriceSumArray)
+//                    for a in self.totalPriceSumArray{
+//                        var counter = 0
+//                        for b in a{
+//                            self.summArrayTotal[counter] += a[counter]
+//                            counter += 1
+//                        }
+//                        
+//                        
+//                    }
+//
+//                }
+//                
+//                print("NUMMMM\(self.summArrayTotal)")
+
+
+//TODO:: Balance
+//                
+//                let flatArray = self.arrayofsumtotal2 .flatMap { $0 }
+//                for i in flatArray{
+//                    self.intArray.append(Double(i))
+//                }
+//                self.sumedArr = self.intArray.reduce(0, {$0 + $1})
+//                print(self.sumedArr)
                 
             } else {
                 print("parse failure ")
@@ -282,17 +328,6 @@ class ProfileViewController: UIViewController {
     }
     
     func fetchUserInformation(){
-        //        ref.child("users").child(userID!).observeSingleEvent(of: .childAdded, with: { (snapshot) in
-        //            print("INFORMATION")
-        //            let value = snapshot.value as? NSDictionary
-        //            let username = value?["username"] as? String ?? ""
-        //            let balance = value?["balance"] as? String ?? ""
-        //            self.name = username
-        //            self.balance = balance
-        //            self.cashView.text = ("$\(self.balance)")
-        //
-        //        })
-        
         ref.child("users").child(userID!).observe(.value, with: { (snapshot) in
             print("INFORMATION LOAD")
             let value = snapshot.value as? NSDictionary
@@ -300,26 +335,11 @@ class ProfileViewController: UIViewController {
             let balance = value?["balance"] as? String ?? ""
             self.name = username
             self.balance = balance
-            self.cashView.text = ("$\(self.balance)")
+            self.cashView.text = ("$\(Double(self.balance)! - self.sumedArr)")
             
         }) { (error) in
             print("error")
         }
-        
-        
-        
-        
-        //        observeSingleEvent(of: .childAdded, with: { (snapshot) in
-        //            print("INFORMATION")
-        //            let value = snapshot.value as? NSDictionary
-        //            let username = value?["username"] as? String ?? ""
-        //            let balance = value?["balance"] as? String ?? ""
-        //            self.name = username
-        //            self.balance = balance
-        //            self.cashView.text = ("$\(self.balance)")
-        //
-        //        })
-        
     }
     
     
@@ -344,8 +364,10 @@ class ProfileViewController: UIViewController {
     }
     
     func fetchALL(){
+       
         StocksModel.getGraphPoints("GOOG", type: "day") { points in
             self.dayPointsArray = points
+            print("DAY\(self.dayPointsArray)")
         }
         StocksModel.getGraphPoints("GOOG", type: "week") { points in
             self.weekPointsArray = points
@@ -376,7 +398,8 @@ extension ProfileViewController: UITableViewDelegate,UITableViewDataSource{
         cell.selectionStyle = .none
         cell.companyNameLabel.text = items[indexPath.row].name
         cell.stockCount.text = items[indexPath.row].stocks
-        cell.сompanyRevenue.text = items[indexPath.row].price
+        print("THIS IS AR2 \(arrayofsumtotal2)")
+        cell.сompanyRevenue.text = "\(arrayofsumtotal[indexPath.row])"
         return cell
     }
     
@@ -420,7 +443,8 @@ extension ProfileViewController: UICollectionViewDelegate,UICollectionViewDataSo
             print("Waiting please")
         }else{
             if selectedRow.dateLabel.text == "1D"{
-                drawGraph(array: self.dayPointsArray)
+                drawGraph(array: self.weekPointsArray)
+//                drawGraph(array: self.totalPriceSumArray)
             }else if selectedRow.dateLabel.text == "1W"{
                 drawGraph(array: self.weekPointsArray)
             }else if selectedRow.dateLabel.text == "1M"{

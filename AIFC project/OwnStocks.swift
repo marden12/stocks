@@ -13,14 +13,14 @@ struct OwnStock {
     
     let key: String
     let name: String
-    let price: String
+
     let stocks: String
+
     let ref: DatabaseReference?
     
-    init(name: String, price: String, stocks: String, key: String = "") {
+    init(name: String, stocks: String, key: String = "") {
         self.key = key
         self.name = name
-        self.price = price
         self.stocks = stocks
         self.ref = nil
     }
@@ -31,15 +31,14 @@ struct OwnStock {
         let snapshotValue = snapshot.value as! [String: AnyObject]
         name = snapshotValue["name"] as! String
         stocks = snapshotValue["stocks"] as! String
-        price = snapshotValue["price"] as! String
         ref = snapshot.ref
     }
     
     func toAnyObject() -> Any {
         return [
             "name": name,
-            "price": price,
-            "stocks": stocks
+            "stocks": stocks,
+ 
         ]
     }
     

@@ -11,9 +11,26 @@ import Cartography
 import ScrollableGraphView
 
 class OwnStocksTableViewCell: UITableViewCell {
-    lazy var data: [Double] = []
-    lazy var maxRange = Double()
-    lazy var minRange = Double()
+    let dateArray = ["1m","1m"]
+    lazy var labels: [String] = []
+    var data: [Double] = [] {
+        didSet{
+            tinyGraphView.set(data: self.data, withLabels: [String(describing: self.data)])
+            tinyGraphView.reloadInputViews()
+        }
+    }
+    var minRange:Double = 0.0 {
+        didSet{
+            tinyGraphView.rangeMin = self.minRange
+            tinyGraphView.reloadInputViews()
+        }
+    }
+    var maxRange:Double = 0.0 {
+        didSet{
+            tinyGraphView.rangeMax = self.maxRange
+            tinyGraphView.reloadInputViews()
+        }
+    }
     public lazy var companyNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -21,14 +38,29 @@ class OwnStocksTableViewCell: UITableViewCell {
         label.font = UIFont(name: Standart.font.rawValue, size: 24)
         return label
     }()
-    public lazy var tinyGraphView: CustomGraphView = {
-        let graphView = CustomGraphView()
-        graphView.data = self.data
-        graphView.maxRange = self.maxRange
-        graphView.minRange = self.minRange
+    public lazy var tinyGraphView: ScrollableGraphView = {
+        let graphView = ScrollableGraphView()
+        graphView.referenceLineColor = .clear
+        graphView.shouldShowLabels = false
+        graphView.shouldShowReferenceLineUnits = false
+        graphView.set(data: self.data, withLabels: self.dateArray)
+        graphView.rangeMin = 908
+        graphView.rangeMax = self.maxRange
+        graphView.backgroundFillColor = .white
+        graphView.fillColor = .clear
+        graphView.lineWidth = 0.8
+        graphView.lineColor = UIColor.backgroundColor
+        graphView.lineStyle = ScrollableGraphViewLineStyle.smooth
+        graphView.shouldAnimateOnStartup = false
+        graphView.shouldAdaptRange = true
+        graphView.shouldFill = true
+        graphView.dataPointSpacing = 1
+        graphView.referenceLineNumberOfDecimalPlaces = 2
+        graphView.dataPointFillColor = UIColor.clear
+        graphView.referenceLineLabelColor = .white
         return graphView
-
     }()
+    
     public lazy var stockCount: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.lightGray
@@ -75,7 +107,7 @@ class OwnStocksTableViewCell: UITableViewCell {
             stock.left == s.left + 10
             gV.centerX == s.centerX
             gV.height == s.height
-            gV.width == s.width/4
+            gV.width == s.width/3
             cR.width == s.width/4
             cR.height == 50
             cR.right == s.right - 10

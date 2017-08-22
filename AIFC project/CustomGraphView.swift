@@ -15,7 +15,7 @@ class CustomGraphView: UIView{
     lazy var labels: [String] = []
     var data: [Double] = [] {
         didSet{
-            graphView.set(data: self.data, withLabels: [String(describing: self.data)])
+            graphView.set(data: self.data, withLabels: self.dateArray)
             graphView.reloadInputViews()
         }
     }
@@ -35,24 +35,22 @@ class CustomGraphView: UIView{
     var last = Double()
     fileprivate lazy var graphView: ScrollableGraphView = {
         let graphView = ScrollableGraphView()
+        graphView.rangeMax = self.minRange
+        graphView.rangeMin = self.maxRange
+        graphView.set(data: self.data, withLabels: self.labels)
         graphView.referenceLineColor = .white
         graphView.shouldShowLabels = false
-        graphView.shouldShowReferenceLineUnits = true
-        graphView.set(data: self.data, withLabels: self.dateArray)
-        graphView.rangeMin = self.minRange
-        graphView.rangeMax = self.maxRange
+        graphView.shouldShowReferenceLineUnits = false
         graphView.backgroundFillColor = .backgroundColor
         graphView.fillColor = .clear
         graphView.lineWidth = 2
         graphView.lineColor = UIColor.white
-        graphView.lineStyle = ScrollableGraphViewLineStyle.smooth
         graphView.shouldAnimateOnStartup = false
-        graphView.shouldAdaptRange = true
-        graphView.shouldFill = true
+        graphView.lineStyle = ScrollableGraphViewLineStyle.smooth
         graphView.dataPointSpacing = 3
         graphView.dataPointFillColor = UIColor.clear
         graphView.referenceLineLabelColor = .white
-
+        graphView.leftmostPointPadding = 50
         return graphView
     }()
 
@@ -77,6 +75,7 @@ class CustomGraphView: UIView{
             graphView.height == s.height
             graphView.top == s.top + 16
             graphView.centerX == s.centerX
+            
 
         }
     }

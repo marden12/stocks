@@ -51,6 +51,7 @@
 		18B25BCB1F1636EB00274CF0 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B25BC91F1636DD00274CF0 /* OpenSans-Regular.ttf */; };
 		18B25BCF1F17446600274CF0 /* CompaniesIncomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BCE1F17446600274CF0 /* CompaniesIncomeView.swift */; };
 		18B25BD11F17840100274CF0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B25BD01F17840100274CF0 /* NewsTableViewCell.swift */; };
+		18C826431F4CBB5400D6A447 /* GrathCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C826421F4CBB5400D6A447 /* GrathCheckViewController.swift */; };
 		18F68D1F1F46B50600AECEFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F68D1E1F46B50600AECEFF /* GoogleService-Info.plist */; };
 		18F68D211F46B5BB00AECEFF /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F68D201F46B5AC00AECEFF /* OpenSans-Bold.ttf */; };
 		47469A442F5CC5260F77C182 /* Pods_AIFC_projectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B83D5090F385109FCC1CACC /* Pods_AIFC_projectUITests.framework */; };
@@ -377,6 +378,7 @@
 		18B25BC91F1636DD00274CF0 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		18B25BCE1F17446600274CF0 /* CompaniesIncomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompaniesIncomeView.swift; sourceTree = "<group>"; };
 		18B25BD01F17840100274CF0 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		18C826421F4CBB5400D6A447 /* GrathCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrathCheckViewController.swift; sourceTree = "<group>"; };
 		18F68D1E1F46B50600AECEFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18F68D201F46B5AC00AECEFF /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../../Downloads/Open_Sans/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		2B83D5090F385109FCC1CACC /* Pods_AIFC_projectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIFC_projectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -498,6 +500,7 @@
 				182DCEBA1F20B838009B3BF3 /* SearchViewController.swift */,
 				185ED6571F2B2D4A00856038 /* TradeViewController.swift */,
 				184BC1C11F3431FB007B8B9A /* SellStocksViewController.swift */,
+				18C826421F4CBB5400D6A447 /* GrathCheckViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -912,7 +915,7 @@
 				TargetAttributes = {
 					1849A2F91F0CA0C80027159F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = AB65P3C5XF;
+						DevelopmentTeam = 2Y62544U83;
 						ProvisioningStyle = Automatic;
 					};
 					1849A3101F0CA0C80027159F = {
@@ -1166,6 +1169,7 @@
 				18B25BBA1F14978C00274CF0 /* DateCollectionViewCell.swift in Sources */,
 				18584EED1F31D09600E18EA5 /* MenuTableViewCell.swift in Sources */,
 				1848A2001F4186C8002D1A0D /* AlertViewController.swift in Sources */,
+				18C826431F4CBB5400D6A447 /* GrathCheckViewController.swift in Sources */,
 				182DCEBF1F20B8AD009B3BF3 /* StockModel.swift in Sources */,
 				18B25BD11F17840100274CF0 /* NewsTableViewCell.swift in Sources */,
 				182DCEBD1F20B85F009B3BF3 /* SearchTableViewCell.swift in Sources */,
@@ -1329,7 +1333,7 @@
 			baseConfigurationReference = 0E5FA2AEFAF79D2F60B858D4 /* Pods-AIFC project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AB65P3C5XF;
+				DEVELOPMENT_TEAM = 2Y62544U83;
 				INFOPLIST_FILE = "AIFC project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1345,7 +1349,7 @@
 			baseConfigurationReference = F36C43EAC5962364527B2296 /* Pods-AIFC project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AB65P3C5XF;
+				DEVELOPMENT_TEAM = 2Y62544U83;
 				INFOPLIST_FILE = "AIFC project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

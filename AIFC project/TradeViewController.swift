@@ -29,6 +29,7 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     var databaseHandle:DatabaseHandle?
     let userID = Auth.auth().currentUser?.uid
     var trade = 0.0
+    var dayArray:[Double] = []
     
     fileprivate lazy var inputTextField: UITextField = {
         let textField = UITextField()
@@ -213,7 +214,8 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
     func buyAction(){
         let companiesItems = nameOfCompany.text
         let comItemRef = self.ref.child(Auth.auth().currentUser!.uid + "/" + companiesItems!)
-        let otherItems = OwnStock(name: nameOfCompany.text! , price: totalCost.text!, stocks: inputTextField.text!)
+//        let otherItems = OwnStock(name: nameOfCompany.text! , price: totalCost.text!, stocks: inputTextField.text!)
+        let otherItems = OwnStock(name: nameOfCompany.text!,stocks: inputTextField.text!)
         let userCash = self.ref2.child("users").child(userID!)
         
         if Double(self.balance)! < 0{
@@ -233,19 +235,19 @@ class TradeViewController: UIViewController,NumbersKeyboardDelegate {
                 self.items.removeAll()
                 for child in children {
                     if let childElement = child.value as? [String: Any] {
-                        self.price = childElement["price"]! as! String
+//                        self.price = childElement["price"]! as! String
                        
-                        self.sumArray.append(self.price)
+//                        self.sumArray.append(self.price)
                     }
                     
                     
                 }
-                let flatArray = self.sumArray.flatMap { $0 }
-                for i in flatArray{
-                    self.intArray.append(Double(i)!)
-                }
-                self.sumedArr = self.intArray.reduce(0, {$0 + $1})
-                print("SUM\(self.sumedArr)")
+//                let flatArray = self.sumArray.flatMap { $0 }
+//                for i in flatArray{
+//                    self.intArray.append(Double(i)!)
+//                }
+//                self.sumedArr = self.intArray.reduce(0, {$0 + $1})
+//                print("SUM\(self.sumedArr)")
                 
             } else {
                 print("parse failure ")
